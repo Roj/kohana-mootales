@@ -10,7 +10,7 @@ class Model_Fragment extends Model {
 		DB::update("users")->set(array("count_fragments"=>intval($amount_frags)+1))->where("id","=",$info["author_id"])->execute();
 		return DB::insert("fragments",array_keys($info))->values($info)->execute();
 	}
-	public function get_latest_fragments($limit = 10)
+	public function get_most_recent($limit = 10)
 	{
 		return DB::select()->from("fragments")->order_by("when","DESC")->limit($limit)->execute();
 	}

@@ -32,7 +32,7 @@ class Controller_Login extends Controller_Website {
 			$this->request->redirect("home");
 		}
 		$this->errors="The combination of user and password does not match.";
-		$this->action_index8();
+		$this->action_index();
 	}
 }
 ?>

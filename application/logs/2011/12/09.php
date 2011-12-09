@@ -482,3 +482,18 @@
 --
 #0 [internal function]: Kohana_Core::shutdown_handler()
 #1 {main}
+2011-12-09 15:52:09 --- ERROR: ErrorException [ 1 ]: Class 'Model_fragments' not found ~ SYSPATH\classes\kohana\model.php [ 26 ]
+2011-12-09 15:52:09 --- STRACE: ErrorException [ 1 ]: Class 'Model_fragments' not found ~ SYSPATH\classes\kohana\model.php [ 26 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-12-09 15:52:17 --- ERROR: ErrorException [ 1 ]: Call to undefined method Model_Fragment::get_recent() ~ APPPATH\classes\controller\home.php [ 12 ]
+2011-12-09 15:52:17 --- STRACE: ErrorException [ 1 ]: Call to undefined method Model_Fragment::get_recent() ~ APPPATH\classes\controller\home.php [ 12 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-12-09 16:21:12 --- ERROR: ErrorException [ 1 ]: Call to undefined method Controller_Login::action_index8() ~ APPPATH\classes\controller\login.php [ 35 ]
+2011-12-09 16:21:12 --- STRACE: ErrorException [ 1 ]: Call to undefined method Controller_Login::action_index8() ~ APPPATH\classes\controller\login.php [ 35 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}

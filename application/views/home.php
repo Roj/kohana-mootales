@@ -1,11 +1,19 @@
 <?php include Kohana::find_file('views', 'header'); ?>
 		<div class="sidebar">
 			<div class="recent_blogs">
-				<h4>Recent blogs</h4>
+				<h3>recent blogs</h3>
 				<ul>
 <?php foreach ($recent_blogs as $blog): 
 $link = "blog/".$blog['id']."/".str_replace(array(" ","/"),array("-",""),$blog['title']);?>
-					<li><?php echo HTML::anchor($link,$blog['title'],null,null,false);?><span class="like_count"><?php echo $blog['amount_votes']; ?></span></li>
+					<li><span class="like_count"><?php echo $blog['amount_votes']; ?></span><?php echo HTML::anchor($link,$blog['title'],null,null,false);?></li>
+<?php endforeach; ?>
+				</ul>
+			</div>
+			<div class="recent_frags">
+				<h3>recent frags</h3>
+				<ul>
+<?php foreach ($recent_frags as $frag): ?>
+					<li><?php echo $frag['content']; ?> <?php echo HTML::anchor("user/".$users_data[$frag['author_id']],'by '.$users_data[$frag['author_id']],null,null,false); ?></li>
 <?php endforeach; ?>
 				</ul>
 			</div>

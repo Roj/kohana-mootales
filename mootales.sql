@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 09-12-2011 a las 21:52:32
+-- Tiempo de generación: 09-12-2011 a las 23:26:46
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `fragments` (
   `author_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Volcar la base de datos para la tabla `fragments`
@@ -105,7 +105,8 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 (3, 'okay, done', 7, '2011-12-09 14:44:28'),
 (4, 'fixed *my* frag_count', 7, '2011-12-09 14:47:18'),
 (5, '&lt;b&gt;xss&lt;/b&gt;?', 7, '2011-12-09 14:47:26'),
-(6, 'html_entities &lt;3', 7, '2011-12-09 14:47:37');
+(6, 'html_entities &lt;3', 7, '2011-12-09 14:47:37'),
+(7, 'i noticed all frags in the frontpage were by admin. jojo''s jealous', 10, '2011-12-09 16:23:01');
 
 -- --------------------------------------------------------
 
@@ -139,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
 (7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 1, 6, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 0),
-(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 0),
+(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 0, 1, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 0),
 (11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 0);
 
 -- --------------------------------------------------------
