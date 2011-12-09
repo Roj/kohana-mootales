@@ -1,0 +1,1 @@
+		<div class="footer">			<span style="font-weight:bold;">Mootales v.0.3 Alpha</span> <br/>			Mootales is a copy of VuTales, with no authorization whatsoever from the original author. <br/>			The code will be shortly available on GitHub, under a CC-BY-SA license.		</div>	</body></html>

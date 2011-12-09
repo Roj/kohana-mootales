@@ -1,0 +1,53 @@
+Mootales version 0.3 (alpha release) (development status) 9/december/11
+uses kohana.
+
+install:
+create database, execute commands in mootales.sql.
+edit .htaccess
+edit application/bootstrap.php line 83, with trailing /
+edit modules/database/config/database.php lines 21-24
+
+
+list:
+[+] = done
+[-] = halfway-done
+[ ] = todo
+---
+SQL
+[+] user table
+[+] blogs table
+[+] votes table
+[+] blog_comments table
+[+] fragments table
+[ ] messages table
+[ ] forum_threads table
+[ ] forum_comments table
+[ ] friends table
+etc
+OTHER
+[+] register
+[+] login
+[+] logout
+[+] create a blog
+[+] like/unlike a blog
+[+] add a comment to a blog
+[+] create fragments
+[-] frontpage (add comments, fragments, etc)
+[-] dashboard (need to add threads, notifications, etc)
+[-] user profiles (- need to do the stats thing, add fragments, threads, user info, ping, etc)
+[-] view blog (needs comments)
+[-] update user stats all the time
+[ ] delete fragments
+[ ] bbcode
+[ ] forum
+[ ] picture blogs
+[ ] mail
+[ ] friendship
+[ ] admin cp
+[ ] block user
+[ ] help page
+[ ] contact/report bug page
+
+
+
+etc
