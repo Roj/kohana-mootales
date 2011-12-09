@@ -2,6 +2,11 @@
 <html>
 	<head>
 		<title>Mootales</title>
+		<style>
+		@font-face { font-family: delicious; src: url('<?php echo URL::base(); ?>styles/Delicious-Roman.otf'); }
+		@font-face { font-family: delicious; font-weight: bold; src: url('<?php echo URL::base(); ?>styles/Delicious-Bold.otf'); }
+		@font-face { font-family: delicious; font-style: italic; src: url('<?php echo URL::base(); ?>styles/Delicious-Italic.otf'); }
+		</style>
 		<link rel="stylesheet" type="text/css" href="<?php echo URL::base();?>styles/styles.css"/>
 	</head>
 	<body>

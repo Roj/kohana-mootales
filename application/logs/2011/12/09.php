@@ -497,3 +497,17 @@
 --
 #0 [internal function]: Kohana_Core::shutdown_handler()
 #1 {main}
+2011-12-09 16:50:38 --- ERROR: ErrorException [ 8 ]: Undefined index: controller ~ SYSPATH\classes\kohana\request.php [ 812 ]
+2011-12-09 16:50:38 --- ERROR: ErrorException [ 8 ]: Undefined index: controller ~ SYSPATH\classes\kohana\request.php [ 812 ]
+2011-12-09 16:50:38 --- STRACE: ErrorException [ 8 ]: Undefined index: controller ~ SYSPATH\classes\kohana\request.php [ 812 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(812): Kohana_Core::error_handler(8, 'Undefined index...', 'C:\xampp\htdocs...', 812, Array)
+#1 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(198): Kohana_Request->__construct('/styles/Delicio...', NULL)
+#2 C:\xampp\htdocs\mootales\index.php(108): Kohana_Request::factory()
+#3 {main}
+2011-12-09 16:50:38 --- STRACE: ErrorException [ 8 ]: Undefined index: controller ~ SYSPATH\classes\kohana\request.php [ 812 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(812): Kohana_Core::error_handler(8, 'Undefined index...', 'C:\xampp\htdocs...', 812, Array)
+#1 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(198): Kohana_Request->__construct('/styles/Delicio...', NULL)
+#2 C:\xampp\htdocs\mootales\index.php(108): Kohana_Request::factory()
+#3 {main}
