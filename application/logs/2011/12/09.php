@@ -511,3 +511,33 @@
 #1 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(198): Kohana_Request->__construct('/styles/Delicio...', NULL)
 #2 C:\xampp\htdocs\mootales\index.php(108): Kohana_Request::factory()
 #3 {main}
+2011-12-09 20:04:50 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/xss,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2011-12-09 20:04:50 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/xss,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-12-09 20:04:52 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/xss,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2011-12-09 20:04:52 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/xss,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-12-09 22:48:19 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/xss,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2011-12-09 22:48:19 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/xss,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-12-09 22:49:16 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/&lt;b&gt;xss&lt;b&gt;,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2011-12-09 22:49:16 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/&lt;b&gt;xss&lt;b&gt;,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-12-09 22:50:03 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/-b-xss--b-,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2011-12-09 22:50:03 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/-b-xss--b-,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-12-09 22:50:13 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/--xss--b-,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2011-12-09 22:50:13 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/12/--xss--b-,-again ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#1 {main}

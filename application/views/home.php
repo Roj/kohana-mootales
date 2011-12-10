@@ -4,7 +4,7 @@
 				<h3>recent blogs</h3>
 				<ul>
 <?php foreach ($recent_blogs as $blog): 
-$link = "blog/".$blog['id']."/".str_replace(array(" ","/"),array("-",""),$blog['title']);?>
+$link = "blog/".$blog['id']."/".str_replace(array(" ","/","<",">","&","?",","),"-",$blog['title']);?>
 					<li><span class="like_count"><?php echo $blog['amount_votes']; ?></span><?php echo HTML::anchor($link,$blog['title'],null,null,false);?></li>
 <?php endforeach; ?>
 				</ul>
