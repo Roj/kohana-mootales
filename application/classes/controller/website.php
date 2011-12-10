@@ -15,6 +15,5 @@ abstract class Controller_Website extends Controller {
 		View::bind_global('logged_in',$this->logged_in);
 		View::set_global('username',$this->session->get('username','anonymous'));
 		$this->page_title = 'Mootales';
-		
 	}
 }

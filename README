@@ -32,11 +32,12 @@ OTHER
 [+] like/unlike a blog
 [+] add a comment to a blog
 [+] create fragments
-[-] frontpage (add comments, fragments, etc)
+[+] view blog
+[-] frontpage (add comments, etc)
 [-] dashboard (need to add threads, notifications, etc)
 [-] user profiles (- need to do the stats thing, add fragments, threads, user info, ping, etc)
-[-] view blog (needs comments)
 [-] update user stats all the time
+[ ] manage blogs (mark as draft, rename, edit, delete)
 [ ] delete fragments
 [ ] bbcode
 [ ] forum

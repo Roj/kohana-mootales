@@ -3,9 +3,9 @@ class Model_User extends Model {
 	public function create($post)
 	{
 		$info = array(
-			'username'=> $post['username'],
+			'username'=> htmlentities($post['username']),
 			'password'=> md5($post['password']),
-			'email'=> $post['email'],
+			'email'=> htmlentities($post['email']),
 			'date_joined'=> date("Y-m-d"),
 			'date_last_seen'=> date("Y-m-d H:i:s")
 		);

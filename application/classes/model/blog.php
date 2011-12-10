@@ -3,8 +3,8 @@ class Model_Blog extends Model {
 	public function create($post)
 	{
 		$info = array(
-			'title'=> $post['title'],
-			'tags'=> $post['tags'],
+			'title'=> htmlentities($post['title']),
+			'tags'=> htmlentities($post['tags']),
 			'content'=> htmlentities($post['content']),
 			'author_id'=> intval($post['author_id']),
 			'time_posted'=> date("Y-m-d H:i:s")			

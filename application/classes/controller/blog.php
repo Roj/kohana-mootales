@@ -29,7 +29,7 @@ class Controller_Blog extends Controller_Website {
 			->set("blog", array(
 				"id"=>$blog->get("id"),
 				"title"=>$blog->get("title"),
-				"content"=>$this->parse_content($blog->get("content")),
+				"content"=>$blog->get("content"),
 				"tags"=>$blog->get("tags"),
 				"time_posted"=>$blog->get("time_posted"),
 				"amount_votes"=>$blog->get("amount_votes"),
@@ -92,17 +92,13 @@ class Controller_Blog extends Controller_Website {
 		$info = array(
 			'blog_id'=>$blog_id,
 			'author_id'=>$this->session->get('user_id'),
-			'content'=>$this->parse_content($post['content']),
+			'content'=>htmlentities($post['content']),
 			'when'=>date("Y-m-d H:i:s")
 		);
 		$blog_model->add_comment($info);
 		$this->request->redirect("blog/{$blog_id}");
 	}
-	public function parse_content($content)
-	{
-		//I'll add, later, bbcode and stuff.
-		return str_replace(array("\n","\r\n"),"<br/>",$content);
-	}
+	
 
 }
 ?>

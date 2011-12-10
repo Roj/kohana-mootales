@@ -30,7 +30,7 @@ $link = "blog/".$blog['id']."/".str_replace(array(" ","/"),array("-",""),$blog['
 					<span class="other">likes</span>
 				</div>
 				<div class="blog_preview">
-<?php echo substr($blog['content'],0,400); ?>
+<?php echo BBCode::parse(substr($blog['content'],0,400)); ?>
 				</div>
 				<div class="blog_info"><span class="bold">Author:</span> <?php echo HTML::anchor("user/".$users_data[$blog['author_id']],$users_data[$blog['author_id']],null,null,false); ?> <span class="bold">Comments:</span> <?php echo $blog['amount_comments']; ?> <span class="bold">Submitted:</span> <?php echo $blog['time_posted']; ?></div>
 			</div>
