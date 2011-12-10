@@ -57,17 +57,10 @@ class Controller_Register extends Controller_Website {
 			//Everything is okay. proceed to insert a new row on the users table.	
 			$id = $model->create($post);
 			$id = $id[0];
-			$this->request->redirect("/register/success/{$id}");
+			$this->request->redirect("home");
 			return true;
 		}
 		
 		$this->action_index();
-	}
-	public function action_success()
-	{
-		$user_id=$this->request->param('id');
-		$model = Model::factory('user');
-		$username = $model->get_username($user_id);
-		$this->response->body("ahoy, {$username}!");
 	}
 }

@@ -541,3 +541,37 @@
 --
 #0 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
 #1 {main}
+2011-12-09 23:11:03 --- ERROR: ErrorException [ 2 ]: preg_replace() [function.preg-replace]: Unknown modifier 'g' ~ SYSPATH\classes\bbcode.php [ 8 ]
+2011-12-09 23:11:03 --- STRACE: ErrorException [ 2 ]: preg_replace() [function.preg-replace]: Unknown modifier 'g' ~ SYSPATH\classes\bbcode.php [ 8 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(2, 'preg_replace() ...', 'C:\xampp\htdocs...', 8, Array)
+#1 C:\xampp\htdocs\mootales\system\classes\bbcode.php(8): preg_replace('/\[b\](.+)\[\/b...', '<b>$1</b>', 'The Hundred Yea...')
+#2 C:\xampp\htdocs\mootales\application\views\home.php(33): BBCode::parse('The Hundred Yea...')
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(61): include('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(343): Kohana_View::capture('C:\xampp\htdocs...', Array)
+#5 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(228): Kohana_View->render()
+#6 C:\xampp\htdocs\mootales\system\classes\kohana\response.php(160): Kohana_View->__toString()
+#7 C:\xampp\htdocs\mootales\application\classes\controller\home.php(38): Kohana_Response->body(Object(View))
+#8 [internal function]: Controller_Home->action_index()
+#9 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Home))
+#10 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#11 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#12 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#13 {main}
+2011-12-09 23:11:14 --- ERROR: ErrorException [ 2 ]: preg_replace() [function.preg-replace]: Unknown modifier 'g' ~ SYSPATH\classes\bbcode.php [ 8 ]
+2011-12-09 23:11:14 --- STRACE: ErrorException [ 2 ]: preg_replace() [function.preg-replace]: Unknown modifier 'g' ~ SYSPATH\classes\bbcode.php [ 8 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(2, 'preg_replace() ...', 'C:\xampp\htdocs...', 8, Array)
+#1 C:\xampp\htdocs\mootales\system\classes\bbcode.php(8): preg_replace('/\[b\](.+)\[\/b...', '<b>$1</b>', 'The Hundred Yea...')
+#2 C:\xampp\htdocs\mootales\application\views\home.php(33): BBCode::parse('The Hundred Yea...')
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(61): include('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(343): Kohana_View::capture('C:\xampp\htdocs...', Array)
+#5 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(228): Kohana_View->render()
+#6 C:\xampp\htdocs\mootales\system\classes\kohana\response.php(160): Kohana_View->__toString()
+#7 C:\xampp\htdocs\mootales\application\classes\controller\home.php(38): Kohana_Response->body(Object(View))
+#8 [internal function]: Controller_Home->action_index()
+#9 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Home))
+#10 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#11 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#12 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#13 {main}

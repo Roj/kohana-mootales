@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 09-12-2011 a las 23:26:46
+-- Tiempo de generación: 10-12-2011 a las 06:46:31
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `blogs` (
   `amount_votes` int(11) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Volcar la base de datos para la tabla `blogs`
@@ -44,12 +44,15 @@ CREATE TABLE IF NOT EXISTS `blogs` (
 INSERT INTO `blogs` (`id`, `title`, `content`, `tags`, `author_id`, `time_posted`, `amount_votes`, `amount_comments`) VALUES
 (2, 'hello world', 'hello world! this is the first blog of the site. \nright now I''m coding more stuff so I probably won''t make more blogs :(\nanyway, my cat is making a mess in the kitchen so I should probably check that out...', 'hello, world, first post', 7, '2011-12-08 21:51:32', 0, 0),
 (4, 'XSS test!', '&amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;\n&amp;lt;i&amp;gt;italic&amp;lt;/i&amp;gt;\n&amp;lt;script language=&amp;quot;javascript&amp;quot;&amp;gt;\nconsole.log(&amp;quot;xss&amp;quot;);\n//alert(&amp;quot;xss&amp;quot;);\n&amp;lt;/script&amp;gt;\n140chars140chars140chars140chars140chars140chars140chars140chars', '', 7, '2011-12-08 22:33:17', 0, 0),
-(5, 'xss test', '&lt;b&gt;bold&lt;/b&gt;\n&lt;i&gt;italic&lt;/i&gt;\n&lt;script language=&quot;javascript&quot;&gt;\nconsole.log(&quot;xss&quot;);\n//alert(&quot;xss&quot;);\n&lt;/script&gt;\n140chars140chars140chars140chars140chars140chars140chars140chars', '', 7, '2011-12-08 22:33:54', 1, 0),
+(5, 'xss test', '&lt;b&gt;bold&lt;/b&gt;\n&lt;i&gt;italic&lt;/i&gt;\n&lt;script language=&quot;javascript&quot;&gt;\nconsole.log(&quot;xss&quot;);\n//alert(&quot;xss&quot;);\n&lt;/script&gt;\n140chars140chars140chars140chars140chars140chars140chars140chars', '', 7, '2011-12-08 22:33:54', 2, 0),
 (6, 'Axolotl', 'The axolotl ( /&Euml;?&Atilde;&brvbar;ks&Eacute;?l&Eacute;?t&Eacute;?l/), Ambystoma mexicanum, is a neotenic salamander, closely related to the Tiger Salamander. Larvae of this species fail to undergo metamorphosis, so the adults remain aquatic and gilled. It is also called ajolote (which is also a common name for different types of salamander).[1] The species originates from numerous lakes, such as Lake Xochimilco underlying Mexico City.[2] Axolotls are used extensively in scientific research due to their ability to regenerate limbs.\nAxolotls should not be confused with waterdogs, the larval stage of the closely related Tiger Salamanders (Ambystoma tigrinum and Ambystoma mavortium), which are widespread in much of North America and also occasionally become neotenic, nor with mudpuppies (Necturus spp.), fully aquatic salamanders which are not closely related to the axolotl but bear a superficial resemblance.[1]\nAs of 2010, wild axolotls are near extinction[3] due to urbanization in Mexico City and polluted waters. Nonnative fish such as African tilapia and Asian carp have also recently been introduced to the waters. These new fish have been eating the axolotls'' young, as well as its primary source of food.[4] The axolotl is currently on the International Union for Conservation of Nature''s annual Red List of threatened species.[5]', '', 7, '2011-12-08 23:56:08', 1, 0),
-(7, 'Hundred years'' war', 'The Hundred Years'' War was a series of separate wars waged from 1337 to 1453 by the House of Valois and the House of Plantagenet, also known as the House of Anjou, for the French throne, which had become vacant upon the extinction of the senior Capetian line of French kings. The House of Valois claimed the title of King of France, while the Plantagenets claimed the thrones of both France and England. The Plantagenet kings were the 12th-century rulers of the kingdom of England, and had their roots in the French regions of Anjou and Normandy.\nThe conflict was punctuated by several periods of peace, before it finally ended in the expulsion of the Plantagenets from France (except from the Pale of Calais). The final outcome was a victory for the house of Valois, which succeeded in recovering early gains made by the Plantagenets and expelling them from the majority of France by the 1450s. However, the war nearly ruined the Valois, while the Plantagenets enriched themselves with plunder. France suffered greatly from the war, since most of the conflict occurred in that country.\nThe &quot;war&quot; was in fact a series of conflicts and is commonly divided into three or four phases: the Edwardian War (1337&acirc;??1360), the Caroline War (1369&acirc;??1389), the Lancastrian War (1415&acirc;??1429), and the slow decline of Plantagenet fortunes after the appearance of Joan of Arc (1412&acirc;??1431). Several other contemporary European conflicts were directly related to this conflict: the Breton War of Succession, the Castilian Civil War, the War of the Two Peters, and the 1383-1385 Crisis. The term &quot;Hundred Years'' War&quot; was a later term invented by historians to describe the series of events.\nThe war owes its historical significance to a number of factors. Though primarily a dynastic conflict, the war gave impetus to ideas of both French and English nationalism. Militarily, it saw the introduction of new weapons and tactics, which eroded the older system of feudal armies dominated by heavy cavalry in Western Europe. The first standing armies in Western Europe since the time of the Western Roman Empire were introduced for the war, thus changing the role of the peasantry. For all this, as well as for its long duration, it is often viewed as one of the most significant conflicts in the history of medieval warfare. In France, civil wars, deadly epidemics, famines and marauding mercenary armies (turned to banditry) reduced the population by about one-half.[1]', '', 10, '2011-12-09 03:17:55', 2, 2),
+(7, 'Hundred years'' war', 'The Hundred Years'' War was a series of separate wars waged from 1337 to 1453 by the House of Valois and the House of Plantagenet, also known as the House of Anjou, for the French throne, which had become vacant upon the extinction of the senior Capetian line of French kings. The House of Valois claimed the title of King of France, while the Plantagenets claimed the thrones of both France and England. The Plantagenet kings were the 12th-century rulers of the kingdom of England, and had their roots in the French regions of Anjou and Normandy.\nThe conflict was punctuated by several periods of peace, before it finally ended in the expulsion of the Plantagenets from France (except from the Pale of Calais). The final outcome was a victory for the house of Valois, which succeeded in recovering early gains made by the Plantagenets and expelling them from the majority of France by the 1450s. However, the war nearly ruined the Valois, while the Plantagenets enriched themselves with plunder. France suffered greatly from the war, since most of the conflict occurred in that country.\nThe &quot;war&quot; was in fact a series of conflicts and is commonly divided into three or four phases: the Edwardian War (1337&acirc;??1360), the Caroline War (1369&acirc;??1389), the Lancastrian War (1415&acirc;??1429), and the slow decline of Plantagenet fortunes after the appearance of Joan of Arc (1412&acirc;??1431). Several other contemporary European conflicts were directly related to this conflict: the Breton War of Succession, the Castilian Civil War, the War of the Two Peters, and the 1383-1385 Crisis. The term &quot;Hundred Years'' War&quot; was a later term invented by historians to describe the series of events.\nThe war owes its historical significance to a number of factors. Though primarily a dynastic conflict, the war gave impetus to ideas of both French and English nationalism. Militarily, it saw the introduction of new weapons and tactics, which eroded the older system of feudal armies dominated by heavy cavalry in Western Europe. The first standing armies in Western Europe since the time of the Western Roman Empire were introduced for the war, thus changing the role of the peasantry. For all this, as well as for its long duration, it is often viewed as one of the most significant conflicts in the history of medieval warfare. In France, civil wars, deadly epidemics, famines and marauding mercenary armies (turned to banditry) reduced the population by about one-half.[1]', '', 10, '2011-12-09 03:17:55', 2, 3),
 (8, 'test', '140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*', '', 7, '2011-12-09 03:27:07', 0, 1),
 (9, 'this blog has 0 likes', 'let''s see if it gets to front page!\n140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*140 chars *sigh*\n140 chars *sigh*140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*\n', '', 7, '2011-12-09 03:35:25', 0, 0),
-(10, 'update!', 'now every time you submit a blog, the system will properly update the amount of blogs you have :)\r\n140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars', '', 7, '2011-12-09 13:16:30', 0, 0);
+(10, 'update!', 'now every time you submit a blog, the system will properly update the amount of blogs you have :)\r\n140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars', '', 7, '2011-12-09 13:16:30', 0, 0),
+(11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 0, 3),
+(12, '<b>xss</b>, again', '&lt;b&gt;xss&lt;/b&gt;\n140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars ', '<b>xss</b>', 10, '2011-12-09 19:25:44', 0, 0),
+(13, 'bbcode test', '[b]bold [/b]\r\n[i]talics[/i]\r\n[b]this bold\r\ncontinues\r\nthrough\r\nnewlines [/b]\r\n[i]italics[/i]\r\n[b][i]bolditalic[/i][/b]\r\n[img]http://i.imgur.com/8a6QA.jpg[/img]\r\n[divider]\r\n[url]http://google.com[/url]\r\n[url=http://google.com]google[/url]\r\n[code]\r\nfunction sex($condom = false) {\r\n    return baby * intval(!$condom);\r\n}\r\n[/code]\r\n[quote]hello[/quote]\r\n140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars ', '', 10, '2011-12-09 23:13:47', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -64,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `blog_comments` (
   `content` text NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Volcar la base de datos para la tabla `blog_comments`
@@ -79,7 +82,12 @@ INSERT INTO `blog_comments` (`id`, `author_id`, `blog_id`, `content`, `when`) VA
 (6, 10, 6, 'bitches', '2011-12-09 03:02:40'),
 (7, 7, 7, 'okay, now every time someone comments, the system will properly update the row on the blogs table.', '2011-12-09 03:25:46'),
 (8, 7, 8, 'just checking the redirect function.<br/>', '2011-12-09 03:27:22'),
-(9, 7, 7, 'teeest.!', '2011-12-09 13:30:59');
+(9, 7, 7, 'teeest.!', '2011-12-09 13:30:59'),
+(10, 10, 11, '<b>xss</b>?', '2011-12-09 19:21:29'),
+(11, 10, 11, 'fuck', '2011-12-09 19:21:33'),
+(12, 10, 11, '&lt;i&gt;can''t xss now&lt;/i&gt;', '2011-12-09 19:28:16'),
+(13, 10, 7, 'break line\nbreak line\n', '2011-12-09 19:53:07'),
+(14, 10, 13, 'you said\n[quote]140 chars\n140 chars[/quote]\nbut you went over that limit\n(actually testing for comment bbcode and multi line bbcode)', '2011-12-09 23:45:16');
 
 -- --------------------------------------------------------
 
@@ -93,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `fragments` (
   `author_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcar la base de datos para la tabla `fragments`
@@ -106,7 +114,9 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 (4, 'fixed *my* frag_count', 7, '2011-12-09 14:47:18'),
 (5, '&lt;b&gt;xss&lt;/b&gt;?', 7, '2011-12-09 14:47:26'),
 (6, 'html_entities &lt;3', 7, '2011-12-09 14:47:37'),
-(7, 'i noticed all frags in the frontpage were by admin. jojo''s jealous', 10, '2011-12-09 16:23:01');
+(7, 'i noticed all frags in the frontpage were by admin. jojo''s jealous', 10, '2011-12-09 16:23:01'),
+(8, 'ajaosdfjaoisfj aiosdfasdfasf', 10, '2011-12-09 18:33:42'),
+(9, '&lt;b&gt;xss&lt;/b&gt;?', 10, '2011-12-09 19:25:04');
 
 -- --------------------------------------------------------
 
@@ -140,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
 (7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 1, 6, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 0),
-(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 0, 1, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 0),
+(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 3, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 0),
 (11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 0);
 
 -- --------------------------------------------------------
@@ -155,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
   `blog_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Volcar la base de datos para la tabla `votes`
@@ -165,4 +175,5 @@ INSERT INTO `votes` (`id`, `user_id`, `blog_id`, `when`) VALUES
 (3, 7, 5, '2011-12-09 01:01:04'),
 (4, 7, 6, '2011-12-09 01:28:02'),
 (5, 10, 8, '2011-12-09 03:18:52'),
-(7, 11, 7, '2011-12-09 03:22:26');
+(7, 11, 7, '2011-12-09 03:22:26'),
+(13, 10, 5, '2011-12-09 22:02:36');
