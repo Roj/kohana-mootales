@@ -23,7 +23,8 @@ class Controller_Thread extends Controller_Website {
 			->set("thread", $thread)
 			->set("user", $user)
 			->set("comments",$comments)
-			->set("users_data",$users_data);
+			->set("users_data",$users_data)
+			->set("show_comment_form",$this->session->get("logged_in"));
 		//echo var_dump($thread->get("content")); 
 		$this->response->body($view);
 	}

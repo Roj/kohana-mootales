@@ -291,3 +291,13 @@
 #5 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #6 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
 #7 {main}
+2011-12-12 01:24:03 --- ERROR: ErrorException [ 8 ]: Undefined property: Session_Native::$logged_in ~ APPPATH\classes\controller\thread.php [ 27 ]
+2011-12-12 01:24:03 --- STRACE: ErrorException [ 8 ]: Undefined property: Session_Native::$logged_in ~ APPPATH\classes\controller\thread.php [ 27 ]
+--
+#0 C:\xampp\htdocs\mootales\application\classes\controller\thread.php(27): Kohana_Core::error_handler(8, 'Undefined prope...', 'C:\xampp\htdocs...', 27, Array)
+#1 [internal function]: Controller_Thread->action_view()
+#2 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Thread))
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#6 {main}

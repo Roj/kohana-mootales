@@ -25,13 +25,17 @@ $user_data = $users_data[$comment['author_id']];?>
 			
 		</div>
 <?php endforeach; ?>
-<?php endif; ?>
+<?php endif;  ?>
 		<h4>Leave a comment</h4>
+<?php if ($show_comment_form): ?>
 		<form action="<?php echo URL::base();?>thread/comment/<?php echo $thread->get('id'); ?>" method="POST">
 			<label for="content">comment</label>
 			<textarea name="content" rows="10" cols="50"></textarea><br/>
 			<label>&nbsp;</label><input type="submit" value="Submit comment"/>
 		</form>
+<?php else: ?>
+		<p>You need to <?php echo HTML::anchor("login","login",null,null,false); ?> or <?php echo HTML::anchor("register","register",null,null,false);?> in order to be able to comment.</p>
 
-
-<?php  include Kohana::find_file('views', 'footer');  ?>
+<?php
+endif;
+include Kohana::find_file('views', 'footer');  ?>

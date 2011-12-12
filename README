@@ -1,4 +1,4 @@
-Mootales version 0.5 (alpha release) (development status) 12/december/11 4:03 am
+Mootales version 0.5 (alpha release) (development status) 12/december/11 4:27 am
 uses kohana.
 
 install:
@@ -58,7 +58,7 @@ Specific things to do
 
 [+] use array_merge instead of multiple foreach
 [ ] make blog does not exist error
-[ ] do not display comment form if user ain't logged in
+[+] do not display comment form if user ain't logged in
 [ ] do not submit comments full of spaces
 [ ] add info of user in views/blog.php and views/thread.php
 [ ] css tidy-up

@@ -43,7 +43,8 @@ class Controller_Blog extends Controller_Website {
 			))
 			->set("liked",$liked)
 			->set("comments",$comments)
-			->set("users_data",$users_data);
+			->set("users_data",$users_data)
+			->set("show_comment_form",$this->session->get("logged_in"));
 		$this->response->body($view);
 	}
 	public function action_like()
