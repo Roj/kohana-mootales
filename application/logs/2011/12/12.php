@@ -280,3 +280,14 @@
 --
 #0 [internal function]: Kohana_Core::shutdown_handler()
 #1 {main}
+2011-12-12 01:10:41 --- ERROR: ErrorException [ 2 ]: array_merge() [function.array-merge]: Argument #1 is not an array ~ APPPATH\classes\controller\home.php [ 17 ]
+2011-12-12 01:10:41 --- STRACE: ErrorException [ 2 ]: array_merge() [function.array-merge]: Argument #1 is not an array ~ APPPATH\classes\controller\home.php [ 17 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(2, 'array_merge() [...', 'C:\xampp\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\mootales\application\classes\controller\home.php(17): array_merge(Object(Database_MySQL_Result), Object(Database_MySQL_Result))
+#2 [internal function]: Controller_Home->action_index()
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Home))
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#5 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#6 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#7 {main}

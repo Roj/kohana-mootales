@@ -14,21 +14,13 @@ class Controller_Home extends Controller_Website {
 		//We'll do it the same way we query for the commenters' info on Controller_Blog->action_view()
 		
 		$users_data = array();  //here we'll store each user's info
-		foreach ($best_blogs as $blog) 
+		foreach (array_merge($best_blogs->as_array(),$recent_frags->as_array()) as $item) 
 		{
-			if(array_key_exists($blog['author_id'],$users_data)) // Why query two times for the same user?
+			if(array_key_exists($item['author_id'],$users_data)) // Why query two times for the same user?
 				continue;
-			$users_data[$blog['author_id']]=$user_model->get_username($blog['author_id']);
+			$users_data[$item['author_id']]=$user_model->get_username($item['author_id']);
 			
 		}
-		//Now we have to do the same, but w/ fragments.
-		foreach ($recent_frags as $frag)
-		{
-			if(array_key_exists($frag['author_id'],$users_data))
-				continue;
-			$users_data[$frag['author_id']]=$user_model->get_username($frag['author_id']);
-		}
-		
 		$view = View::factory('home')	
 			->set('app_name',$this->page_title)
 			->set('recent_blogs',$recent_blogs)
