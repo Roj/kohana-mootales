@@ -111,7 +111,11 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-
+Route::set('thread','thread/<id>(/<title>)',array('id'=>'[0-9]*'))
+	->defaults(array(
+		'controller' => 'thread',
+		'action' => 'view'
+	));
 Route::set('blog','blog/<id>(/<title>)',array('id'=>'[0-9]*'))
 	->defaults(array(
 		'controller' => 'blog',

@@ -12,12 +12,16 @@ class Controller_Dashboard extends Controller_Website {
 	}
 	public function action_index()
 	{
+		$empty_values = array("title"=>"","tags"=>"","content"=>"","fragment_content"=>"","thread_content"=>"","thread_title"=>"");
 		$this->form_values = ($this->form_values == NULL)
-			? array("title"=>"","tags"=>"","content"=>"","fragment_content"=>"")
-			: array_merge(array("title"=>"","tags"=>"","content"=>"","fragment_content"=>""),$this->form_values);
+			? $empty_values
+			: array_merge($empty_values,$this->form_values);
+		$forum_model = Model::factory("forum");
+		$categories = $forum_model->get_categories();
 		$view = View::factory("dashboard")
-			->bind("errors",$this->errors)
-			->bind("form_values",$this->form_values);
+			->set("errors",$this->errors)
+			->set("form_values",$this->form_values)
+			->set("categories",$categories);
 		$this->response->body($view);
 	}
 	public function action_create_fragment()
@@ -29,7 +33,8 @@ class Controller_Dashboard extends Controller_Website {
 			$this->request->redirect("dashboard");
 			return;
 		}
-		if ( ! Valid::max_length($post['fragment_content'],140))
+		if ( ! Valid::max_length($post['fragment_content'],140) OR
+			! Valid::not_empty($post['fragment_content']))
 		{
 			$this->errors.="The fragment can contain up to 140 characters, including spaces. It can't be left empty.";
 		}
@@ -63,9 +68,9 @@ class Controller_Dashboard extends Controller_Website {
 		{
 			$this->errors.=" The tags can not accumulate more than 100 characters (including commas and spaces).";
 		}
-		if ( !Valid::min_length($post['content'],140))
+		if ( !Valid::min_length($post['content'],141))
 		{
-			$this->errors.=" The blog's content has to be longer than 140 characters, you should use a fragment or a forum thread instead.";
+			$this->errors.=" The blog's content has to be longer than 140 characters, you should use a fragment instead.";
 		}
 		if($this->errors == '')
 		{
@@ -82,6 +87,48 @@ class Controller_Dashboard extends Controller_Website {
 		$this->form_values = $post; //to not to lose the information.
 		$this->action_index();
 		
+	}
+	public function action_create_thread()
+	{
+		$this->errors = '';
+		$post = $_POST;
+		if ($post == array())
+		{
+			$this->request->redirect("dashboard");
+			return;
+		}
+		if ( ! Valid::min_length($post['thread_title'],4) OR 
+			! Valid::max_length($post['thread_title'],100) OR 
+			! Valid::not_empty($post['thread_title']))
+		{
+			$this->errors.=" The title should be between 4 and 100 characters.";
+		}
+		if ( ! Valid::numeric($post['thread_category']))
+		{
+			$this->errors.=" The category is invalid.";
+		}
+		if ( ! Valid::min_length($post['thread_content'],141))
+		{
+			$this->errors.=" The thread content has to be longer than 140 characters, you should use a fragment instead.";
+		}
+		if ($this->errors == '')
+		{
+			$model = Model::factory("forum");
+			$info = array(
+				'author_id' => $this->session->get("user_id"),
+				'category_id' => intval($post['thread_category']),
+				'title' => htmlentities($post['thread_title']),
+				'content' => htmlentities($post['thread_content']),
+				'time_posted' => date("Y-m-d H:i:s"),
+				'last_active' => date("Y-m-d H:i:s")
+			);
+			$thread_id = $model->create_thread($info);
+			$this->request->redirect("thread/{$thread_id[0]}");
+			return;
+		}
+		
+		$this->form_values = $post;
+		$this->action_index();
 	}
 }
 ?>

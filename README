@@ -1,4 +1,4 @@
-Mootales version 0.3 (alpha release) (development status) 9/december/11
+Mootales version 0.5 (alpha release) (development status) 12/december/11 4:03 am
 uses kohana.
 
 install:
@@ -19,9 +19,10 @@ SQL
 [+] votes table
 [+] blog_comments table
 [+] fragments table
+[+] forum_categories table
+[+] forum_threads table
+[+] forum_comments table
 [ ] messages table
-[ ] forum_threads table
-[ ] forum_comments table
 [ ] friends table
 etc
 OTHER
@@ -33,22 +34,35 @@ OTHER
 [+] add a comment to a blog
 [+] create fragments
 [+] view blog
-[-] frontpage (add comments, etc)
-[-] dashboard (need to add threads, notifications, etc)
-[-] user profiles (- need to do the stats thing, add fragments, threads, user info, ping, etc)
+[+] bbcode
+[+] add thread
+[+] add thread_comment
+[-] frontpage (add threads, etc)
+[-] dashboard (need to add notifications, etc)
+[-] user profiles (- need to do the stats thing, threads, user info, ping, etc)
 [-] update user stats all the time
 [ ] manage blogs (mark as draft, rename, edit, delete)
 [ ] delete fragments
-[ ] bbcode
-[ ] forum
+[ ] textarea buttons (bbcode, emoticons, etc)
 [ ] picture blogs
 [ ] mail
 [ ] friendship
 [ ] admin cp
+[ ] admin cms
 [ ] block user
 [ ] help page
 [ ] contact/report bug page
 
 
+Specific things to do
 
-etc
+-use array_merge instead of multiple foreach
+-make blog does not exist error
+-do not display comment form if user ain't logged in
+-do not submit comments full of spaces
+-add info of user in views/blog.php and views/thread.php
+-css tidy-up
+-general code tidy-up
+-se table instead of... whatever that is on views/forum_category
+-beautify views (especially forum_category and forum_categories)
+-take advantage of cascading filesystem

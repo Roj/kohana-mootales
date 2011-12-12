@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-12-2011 a las 06:46:31
+-- Tiempo de generación: 12-12-2011 a las 08:04:21
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `blogs` (
   `amount_votes` int(11) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Volcar la base de datos para la tabla `blogs`
@@ -52,7 +52,8 @@ INSERT INTO `blogs` (`id`, `title`, `content`, `tags`, `author_id`, `time_posted
 (10, 'update!', 'now every time you submit a blog, the system will properly update the amount of blogs you have :)\r\n140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars', '', 7, '2011-12-09 13:16:30', 0, 0),
 (11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 0, 3),
 (12, '<b>xss</b>, again', '&lt;b&gt;xss&lt;/b&gt;\n140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars ', '<b>xss</b>', 10, '2011-12-09 19:25:44', 0, 0),
-(13, 'bbcode test', '[b]bold [/b]\r\n[i]talics[/i]\r\n[b]this bold\r\ncontinues\r\nthrough\r\nnewlines [/b]\r\n[i]italics[/i]\r\n[b][i]bolditalic[/i][/b]\r\n[img]http://i.imgur.com/8a6QA.jpg[/img]\r\n[divider]\r\n[url]http://google.com[/url]\r\n[url=http://google.com]google[/url]\r\n[code]\r\nfunction sex($condom = false) {\r\n    return baby * intval(!$condom);\r\n}\r\n[/code]\r\n[quote]hello[/quote]\r\n140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars ', '', 10, '2011-12-09 23:13:47', 0, 1);
+(13, 'bbcode test', '[b]bold [/b]\r\n[i]talics[/i]\r\n[b]this bold\r\ncontinues\r\nthrough\r\nnewlines [/b]\r\n[i]italics[/i]\r\n[b][i]bolditalic[/i][/b]\r\n[img]http://i.imgur.com/8a6QA.jpg[/img]\r\n[divider]\r\n[url]http://google.com[/url]\r\n[url=http://google.com]google[/url]\r\n[code]\r\nfunction sex($condom = false) {\r\n    return baby * intval(!$condom);\r\n}\r\n[/code]\r\n[quote]hello[/quote]\r\n140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars ', '', 10, '2011-12-09 23:13:47', 0, 1),
+(14, 'IT AINT ENUF', 'WE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n', '', 7, '2011-12-11 10:35:55', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -88,6 +89,85 @@ INSERT INTO `blog_comments` (`id`, `author_id`, `blog_id`, `content`, `when`) VA
 (12, 10, 11, '&lt;i&gt;can''t xss now&lt;/i&gt;', '2011-12-09 19:28:16'),
 (13, 10, 7, 'break line\nbreak line\n', '2011-12-09 19:53:07'),
 (14, 10, 13, 'you said\n[quote]140 chars\n140 chars[/quote]\nbut you went over that limit\n(actually testing for comment bbcode and multi line bbcode)', '2011-12-09 23:45:16');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `forum_categories`
+--
+
+CREATE TABLE IF NOT EXISTS `forum_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `count_threads` int(11) NOT NULL DEFAULT '0',
+  `count_comments` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Volcar la base de datos para la tabla `forum_categories`
+--
+
+INSERT INTO `forum_categories` (`id`, `name`, `description`, `count_threads`, `count_comments`) VALUES
+(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 4, 0),
+(2, 'The train wreck and forum games', 'Mindless rubbish here!', 4, 0),
+(3, 'Project discussion', 'Discuss about this project.', 4, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `forum_comments`
+--
+
+CREATE TABLE IF NOT EXISTS `forum_comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author_id` int(11) NOT NULL,
+  `thread_id` int(11) NOT NULL,
+  `content` text NOT NULL,
+  `when` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Volcar la base de datos para la tabla `forum_comments`
+--
+
+INSERT INTO `forum_comments` (`id`, `author_id`, `thread_id`, `content`, `when`) VALUES
+(1, 7, 1, 'first comment!', '2011-12-12 00:23:05'),
+(2, 7, 1, 'YAY!', '2011-12-12 00:23:11'),
+(3, 7, 1, 'i''m so happy right now, it worked on first try &lt;3', '2011-12-12 00:23:22'),
+(4, 7, 1, '''&quot;);', '2011-12-12 00:26:03');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `forum_threads`
+--
+
+CREATE TABLE IF NOT EXISTS `forum_threads` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `content` text NOT NULL,
+  `time_posted` datetime NOT NULL,
+  `last_active` datetime NOT NULL,
+  `sticky` tinyint(1) NOT NULL DEFAULT '0',
+  `closed` tinyint(1) NOT NULL DEFAULT '0',
+  `amount_comments` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Volcar la base de datos para la tabla `forum_threads`
+--
+
+INSERT INTO `forum_threads` (`id`, `author_id`, `category_id`, `title`, `content`, `time_posted`, `last_active`, `sticky`, `closed`, `amount_comments`) VALUES
+(1, 7, 1, 'first thread', 'hasoihoasi foiasufhasuf asf a\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters', '2011-12-11 12:32:30', '2011-12-11 12:32:30', 0, 0, 4),
+(2, 7, 1, 'First thread, man!', 'yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! ', '2011-12-11 23:40:55', '2011-12-11 23:40:55', 0, 0, 4),
+(3, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 0),
+(4, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:33', '2011-12-12 00:27:33', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -149,7 +229,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
-(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 1, 6, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 0),
+(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 2, 8, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 0),
 (10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 3, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 0),
 (11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 0);
 
@@ -165,7 +245,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
   `blog_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Volcar la base de datos para la tabla `votes`
@@ -176,4 +256,5 @@ INSERT INTO `votes` (`id`, `user_id`, `blog_id`, `when`) VALUES
 (4, 7, 6, '2011-12-09 01:28:02'),
 (5, 10, 8, '2011-12-09 03:18:52'),
 (7, 11, 7, '2011-12-09 03:22:26'),
-(13, 10, 5, '2011-12-09 22:02:36');
+(13, 10, 5, '2011-12-09 22:02:36'),
+(14, 7, 14, '2011-12-11 10:36:03');
