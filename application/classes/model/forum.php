@@ -14,11 +14,11 @@ class Model_Forum extends Model {
 	}
 	public function get_recent_threads($limit = 10)
 	{
-			return DB::select()->from("forum_threads")->limit($limit)->execute();
+			return DB::select()->from("forum_threads")->limit($limit)->order_by("time_posted","DESC")->execute();
 	}
 	public function get_recent_in_category($category_id,$limit = 10)
 	{
-		return DB::select()->from("forum_threads")->where("category_id","=",intval($category_id))->limit($limit)->execute();
+		return DB::select()->from("forum_threads")->where("category_id","=",intval($category_id))->limit($limit)->order_by("time_posted","DESC")->execute();
 	}
 	public function get_thread($id)
 	{
