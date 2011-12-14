@@ -2,7 +2,6 @@
 
 // Unique error identifier
 $error_id = uniqid('error');
-
 ?>
 <style type="text/css">
 #kohana_error { background: #ddd; font-size: 1em; font-family:sans-serif; text-align: left; color: #111; }

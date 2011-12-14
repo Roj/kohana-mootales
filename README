@@ -57,7 +57,7 @@ OTHER
 Specific things to do
 
 [+] use array_merge instead of multiple foreach
-[ ] make blog does not exist error
+[+] make blog/thread does not exist error
 [+] do not display comment form if user ain't logged in
 [ ] do not submit comments full of spaces
 [ ] add info of user in views/blog.php and views/thread.php
@@ -66,3 +66,4 @@ Specific things to do
 [ ] use table instead of... whatever that is on views/forum_category
 [ ] beautify views (especially forum_category and forum_categories)
 [ ] take advantage of cascading filesystem
+[ ] pagination

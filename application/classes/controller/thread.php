@@ -7,6 +7,14 @@ class Controller_Thread extends Controller_Website {
 		$user_model = Model::factory("user");
 		$id = intval($this->request->param("id"));
 		$thread = $forum_model->get_thread($id);
+		
+		if(intval($thread->get("id")) == 0)
+		{
+			$view = View::factory("thread_notexist");
+			$this->response->body($view);
+			return 1;
+		}
+		
 		$user = $user_model->get_user_info($thread->get("author_id"));
 		$comments = $forum_model->get_comments($id);
 		

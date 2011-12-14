@@ -11,6 +11,12 @@ class Controller_Blog extends Controller_Website {
 		$user_model = Model::factory("user");
 		$id = intval($this->request->param("id"));
 		$blog = $blog_model->get_blog($id);
+		if(intval($blog->get("id")) == 0)
+		{
+			$view = View::factory("blog_notexist");
+			$this->response->body($view);
+			return 1;
+		}
 		$comments = $blog_model->get_blog_comments($id);
 		$user = $user_model->get_user_info($blog->get('author_id'));
 		$liked = $blog_model->liked($this->session->get('user_id',0),$blog->get('id'));
