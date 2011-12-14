@@ -17,6 +17,15 @@ $link = "blog/".$blog['id']."/".str_replace(array(" ","/","<",">","&","?",","),"
 <?php endforeach; ?>
 				</ul>
 			</div>
+			<div class="recent_threads">
+				<h3>recent threads</h3>
+				<ul>
+<?php foreach($recent_threads as $thread): 
+$link = "thread/".$thread['id']."/".str_replace(array(" ","/","<",">","&","?",","),"-",$thread['title']);?>
+					<li><?php echo HTML::anchor($link,$thread['title'],array("style"=>"color:black;"),null,false); ?>&nbsp;<?php echo HTML::anchor("user/".$users_data[$thread['author_id']],'by '.$users_data[$frag['author_id']],null,null,false);?></li>
+<?php endforeach; ?>
+				</ul>
+			</div>
 		</div>
 		<div class="main_wrap">
 			<h3>frontpage: featured blogs</h3>

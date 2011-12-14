@@ -12,6 +12,10 @@ class Model_Forum extends Model {
 		DB::update("forum_threads")->set(array("amount_comments"=>intval($amount_comments)+1))->execute();
 		return DB::insert("forum_comments",array_keys($info))->values($info)->execute();
 	}
+	public function get_recent_threads($limit = 10)
+	{
+			return DB::select()->from("forum_threads")->limit($limit)->execute();
+	}
 	public function get_recent_in_category($category_id,$limit = 10)
 	{
 		return DB::select()->from("forum_threads")->where("category_id","=",intval($category_id))->limit($limit)->execute();
