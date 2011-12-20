@@ -54,7 +54,7 @@ class Controller_Thread extends Controller_Website {
 		$info = array(
 			"thread_id"=>$thread_id,
 			"author_id"=>$this->session->get("user_id"),
-			"content"=>htmlentities($post['content']),
+			"content"=>htmlentities($post['content'],ENT_IGNORE,"UTF-8"),
 			'when'=>date("Y-m-d H:i:s")
 		);
 		$forum_model->add_comment($info);

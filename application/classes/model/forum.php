@@ -37,5 +37,10 @@ class Model_Forum extends Model {
 	{
 		return DB::select("name")->from("forum_categories")->where("id","=",intval($id))->execute()->get("name");
 	}
+	public function edit_thread($info)
+	{
+		return DB::update("forum_threads")->set($info)->where("id","=",$info['id'])->execute();
+	}
 }
+
 ?>

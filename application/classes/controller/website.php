@@ -9,11 +9,14 @@ abstract class Controller_Website extends Controller {
 	public function before()
 	{
 		parent::before();
+		header('Content-Type: text/html; charset=utf-8');
 		$this->session = Session::instance();
 		$this->logged_in = $this->session->get('logged_in',false);
 		View::bind_global('page_title',$this->page_title);
 		View::bind_global('logged_in',$this->logged_in);
+		View::set_global('user_rank',$this->session->get("rank",0));
 		View::set_global('username',$this->session->get('username','anonymous'));
+		View::set_global('user_id',$this->session->get("user_id",0));
 		$this->page_title = 'Mootales';
 	}
 }

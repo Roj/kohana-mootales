@@ -111,6 +111,11 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+ Route::set('fragment','fragment/<id>',array('id'=>'[0-9]*'))
+	->defaults(array(
+		'controller' => 'fragment',
+		'action' => 'view'
+	));
 Route::set('thread','thread/<id>(/<title>)',array('id'=>'[0-9]*'))
 	->defaults(array(
 		'controller' => 'thread',

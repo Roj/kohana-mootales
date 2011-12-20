@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Mootales</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<style>
 		@font-face { font-family: delicious; src: url('<?php echo URL::base(); ?>styles/Delicious-Roman.otf'); }
 		@font-face { font-family: delicious; font-weight: bold; src: url('<?php echo URL::base(); ?>styles/Delicious-Bold.otf'); }

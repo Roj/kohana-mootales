@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-12-2011 a las 08:04:21
+-- Tiempo de generación: 20-12-2011 a las 19:05:07
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -27,33 +27,28 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `blogs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(140) NOT NULL,
-  `content` text NOT NULL,
-  `tags` varchar(200) NOT NULL,
+  `title` varchar(140) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `tags` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `author_id` int(11) NOT NULL,
   `time_posted` datetime NOT NULL,
   `amount_votes` int(11) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Volcar la base de datos para la tabla `blogs`
 --
 
 INSERT INTO `blogs` (`id`, `title`, `content`, `tags`, `author_id`, `time_posted`, `amount_votes`, `amount_comments`) VALUES
-(2, 'hello world', 'hello world! this is the first blog of the site. \nright now I''m coding more stuff so I probably won''t make more blogs :(\nanyway, my cat is making a mess in the kitchen so I should probably check that out...', 'hello, world, first post', 7, '2011-12-08 21:51:32', 0, 0),
-(4, 'XSS test!', '&amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;\n&amp;lt;i&amp;gt;italic&amp;lt;/i&amp;gt;\n&amp;lt;script language=&amp;quot;javascript&amp;quot;&amp;gt;\nconsole.log(&amp;quot;xss&amp;quot;);\n//alert(&amp;quot;xss&amp;quot;);\n&amp;lt;/script&amp;gt;\n140chars140chars140chars140chars140chars140chars140chars140chars', '', 7, '2011-12-08 22:33:17', 0, 0),
-(5, 'xss test', '&lt;b&gt;bold&lt;/b&gt;\n&lt;i&gt;italic&lt;/i&gt;\n&lt;script language=&quot;javascript&quot;&gt;\nconsole.log(&quot;xss&quot;);\n//alert(&quot;xss&quot;);\n&lt;/script&gt;\n140chars140chars140chars140chars140chars140chars140chars140chars', '', 7, '2011-12-08 22:33:54', 2, 0),
-(6, 'Axolotl', 'The axolotl ( /&Euml;?&Atilde;&brvbar;ks&Eacute;?l&Eacute;?t&Eacute;?l/), Ambystoma mexicanum, is a neotenic salamander, closely related to the Tiger Salamander. Larvae of this species fail to undergo metamorphosis, so the adults remain aquatic and gilled. It is also called ajolote (which is also a common name for different types of salamander).[1] The species originates from numerous lakes, such as Lake Xochimilco underlying Mexico City.[2] Axolotls are used extensively in scientific research due to their ability to regenerate limbs.\nAxolotls should not be confused with waterdogs, the larval stage of the closely related Tiger Salamanders (Ambystoma tigrinum and Ambystoma mavortium), which are widespread in much of North America and also occasionally become neotenic, nor with mudpuppies (Necturus spp.), fully aquatic salamanders which are not closely related to the axolotl but bear a superficial resemblance.[1]\nAs of 2010, wild axolotls are near extinction[3] due to urbanization in Mexico City and polluted waters. Nonnative fish such as African tilapia and Asian carp have also recently been introduced to the waters. These new fish have been eating the axolotls'' young, as well as its primary source of food.[4] The axolotl is currently on the International Union for Conservation of Nature''s annual Red List of threatened species.[5]', '', 7, '2011-12-08 23:56:08', 1, 0),
+(2, 'first post', 'hello world, this is the first official fifa post.\nnah, jk, just testing the edit thingy.\nhan kj tsuj gnitest eth tide inthyg.\nahn kj tusj gintset eth dite hyntig.\nsouthpark did it too', 'hello, world, first post', 7, '2011-12-08 21:51:32', 0, 0),
 (7, 'Hundred years'' war', 'The Hundred Years'' War was a series of separate wars waged from 1337 to 1453 by the House of Valois and the House of Plantagenet, also known as the House of Anjou, for the French throne, which had become vacant upon the extinction of the senior Capetian line of French kings. The House of Valois claimed the title of King of France, while the Plantagenets claimed the thrones of both France and England. The Plantagenet kings were the 12th-century rulers of the kingdom of England, and had their roots in the French regions of Anjou and Normandy.\nThe conflict was punctuated by several periods of peace, before it finally ended in the expulsion of the Plantagenets from France (except from the Pale of Calais). The final outcome was a victory for the house of Valois, which succeeded in recovering early gains made by the Plantagenets and expelling them from the majority of France by the 1450s. However, the war nearly ruined the Valois, while the Plantagenets enriched themselves with plunder. France suffered greatly from the war, since most of the conflict occurred in that country.\nThe &quot;war&quot; was in fact a series of conflicts and is commonly divided into three or four phases: the Edwardian War (1337&acirc;??1360), the Caroline War (1369&acirc;??1389), the Lancastrian War (1415&acirc;??1429), and the slow decline of Plantagenet fortunes after the appearance of Joan of Arc (1412&acirc;??1431). Several other contemporary European conflicts were directly related to this conflict: the Breton War of Succession, the Castilian Civil War, the War of the Two Peters, and the 1383-1385 Crisis. The term &quot;Hundred Years'' War&quot; was a later term invented by historians to describe the series of events.\nThe war owes its historical significance to a number of factors. Though primarily a dynastic conflict, the war gave impetus to ideas of both French and English nationalism. Militarily, it saw the introduction of new weapons and tactics, which eroded the older system of feudal armies dominated by heavy cavalry in Western Europe. The first standing armies in Western Europe since the time of the Western Roman Empire were introduced for the war, thus changing the role of the peasantry. For all this, as well as for its long duration, it is often viewed as one of the most significant conflicts in the history of medieval warfare. In France, civil wars, deadly epidemics, famines and marauding mercenary armies (turned to banditry) reduced the population by about one-half.[1]', '', 10, '2011-12-09 03:17:55', 2, 3),
-(8, 'test', '140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*140chars, *sigh*', '', 7, '2011-12-09 03:27:07', 0, 1),
-(9, 'this blog has 0 likes', 'let''s see if it gets to front page!\n140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*140 chars *sigh*\n140 chars *sigh*140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*\n140 chars *sigh*\n', '', 7, '2011-12-09 03:35:25', 0, 0),
-(10, 'update!', 'now every time you submit a blog, the system will properly update the amount of blogs you have :)\r\n140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars140 chars', '', 7, '2011-12-09 13:16:30', 0, 0),
 (11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 0, 3),
 (12, '<b>xss</b>, again', '&lt;b&gt;xss&lt;/b&gt;\n140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars ', '<b>xss</b>', 10, '2011-12-09 19:25:44', 0, 0),
-(13, 'bbcode test', '[b]bold [/b]\r\n[i]talics[/i]\r\n[b]this bold\r\ncontinues\r\nthrough\r\nnewlines [/b]\r\n[i]italics[/i]\r\n[b][i]bolditalic[/i][/b]\r\n[img]http://i.imgur.com/8a6QA.jpg[/img]\r\n[divider]\r\n[url]http://google.com[/url]\r\n[url=http://google.com]google[/url]\r\n[code]\r\nfunction sex($condom = false) {\r\n    return baby * intval(!$condom);\r\n}\r\n[/code]\r\n[quote]hello[/quote]\r\n140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars ', '', 10, '2011-12-09 23:13:47', 0, 1),
-(14, 'IT AINT ENUF', 'WE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n\nWE NEED MORE BLOGS \n', '', 7, '2011-12-11 10:35:55', 1, 0);
+(13, 'bbcode test', '[b]bold [/b]\n[i]talics[/i]\n[b]this bold\ncontinues\nthrough\nnewlines [/b]\n[i]italics[/i]\n[b][i]bolditalic[/i][/b]\n[img]http://i.imgur.com/8a6QA.jpg[/img]\n[divider]\n[url]http://google.com[/url]\n[url=http://google.com]google[/url]\n[code]\nfunction sex($condom = false) {\n    sleep(9 months);\n    return baby * intval(!$condom);\n}\n[/code]\n[quote]hello[/quote]\n140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars ', '', 10, '2011-12-09 23:13:47', 0, 1),
+(24, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:25:43', 0, 0),
+(25, 'Biography of the Wolf Queen', '[center] Biography of the Wolf Queen\nby Katar Eriphanes \n[i]A history of the unambiguously evil Queen Potema, the so-called Wolf Queen of Solitude[/i][/center]\nFew historic figures are viewed as unambiguously evil, but Potema, the so-called Wolf Queen of Solitude, surely qualifies for that dishonour Born to the Imperial Family in the sixty-seventh year of the third era, Potema was immediately presented to her grandfather, the Emperor Uriel Septim II, a famously kindhearted man, who viewed the solemn, intense babe and whispered, &amp;amp;amp;ldquo;She looks like a she-wolf about ready to pounce.&amp;amp;amp;rdquo;\nPotema''s childhood in the Imperial City was certainly difficult from the start. Her father, Prince Pelagius Septim, and her mother, Qizara, showed little affection for their brood. Her eldest brother Antiochus, sixteen at Potema''s birth, was already a drunkard and womaniser, infamous in the empire. Her younger brothers Cephorus and Magnus were born much later, so for years she was the only child in the Imperial Court.\nBy the age of 14, Potema was a famous beauty with many suitors, but she was married to cement relations with King Mantiarco of the Nordic kingdom of Solitude. She entered the court, it was said, as a pawn, but she quickly became a queen. The elderly King Mantiarco loved her and allowed her all the power she wished, which was total.\nWhen Uriel Septim II died the following year, her father was made emperor, and he faced a greatly depleted treasury, thanks to his father''s poor management. Pelagius II dismissed the Elder Council, forcing them to buy back their positions. In 3E 97, after many miscarriages, the Queen of Solitude gave birth to a son, who she named Uriel after her grandfather. Mantiarco quickly made Uriel his heir, but the Queen had much larger ambitions for her child.\nTwo years later, Pelagius II died -- many say poisoned by a vengeful former Council member -- and his son, Potema''s brother Antiochus took the throne. At age forty-eight, it could be said that Antiochus'' wild seeds had yet to be sown, and the history books are nearly pornographic in their depictions of life at the Imperial court during the years of his reign. Potema, whose passion was for power not fornication, was scandalised every time she visited the Imperial City.\nMantiarco, King of Solitude, died the springtide after Pelagius II. Uriel ascended to the throne, ruling jointly with his mother. Doubtless, Uriel had the right and would have preferred to rule alone, but Potema convinced him that his position was only temporary. He would have the Empire, not merely the kingdom. In Castle Solitude, she entertained dozens of diplomats from other kingdoms of Skyrim, sowing seeds of discontent. Her guest list over the years expanded to include kings and queens of High Rock and Morrowind as well.\nFor thirteen years, Antiochus ruled Tamriel, and proved an able leader despite his moral laxity. Several historians point to proof that Potema cast the spell that ended her brother''s life, but evidence one way or another is lost in the sands of time. In any event, both she and her son Uriel were visiting the Imperial court in 3E 112 when Antiochus died, and immediately challenged the rule of his daughter and heir, Kintyra.\nPotema''s speech to the Elder Council is perhaps helpful to students of public speaking.\nShe began with flattery and self-abasement: &amp;amp;amp;ldquo;My most august and wise friends, members of the Elder Council, I am but a provincial queen, and I can only assume to bring to issue what you yourselves must have already pondered.&amp;amp;amp;rdquo;\nShe continued on to praise the late Emperor, who was a popular ruler in spite of his flaws: &amp;amp;amp;ldquo;He was a true Septim and a great warrior, destroying -- with your counsel -- the near invincible armada of Pyandonea.&amp;amp;amp;rdquo;\nBut little time was wasted, before she came to her point: &amp;amp;amp;ldquo;The Empress Magna unfortunately did nothing to temper my brother''s lustful spirits. In point of fact, no whore in the slums of the city spread out on more beds than she. Had she attended to her duties in the Imperial bedchamber more faithfully, we would have a true heir to the Empire, not the halfwit, milksop bastards who call themselves the Emperor''s children. The girl called Kintyra is popularly believed to be the daughter of Magna and the Captain of the Guard. It may be that she is the daughter of Magna and the boy who cleans the cistern. We can never know for certain. Not as certainly as we can know the lineage of my son, Uriel. The last of the Septim Dynasty.&amp;amp;amp;rdquo;\nDespite Potema''s eloquence, the Elder Council allowed Kintyra to assume the throne as the Empress Kintyra II. Potema and Uriel angrily returned to Skyrim and began assembling the rebellion.\nDetails of the War of the Red Diamond are included in other histories: we need not recount the Empress Kintyra II''s capture and eventual execution in High Rock in the year 3E 114, nor the ascension of Potema''s son, Uriel III, seven years later. Her surviving brothers, Cephorus and Magnus, fought the Emperor and his mother for years, tearing the Empire apart in a civil war.\nWhen Uriel III fought his uncle Cephorus in Hammerfell at the Battle of Ichidag in 3E 127, Potema was fighting her other brother, Uriel''s uncle Magnus in Skyrim at the Battle of Falconstar. She received word of her son''s defeat and capture just as she was preparing to mount an attack on Magnus''s weakest flank. The sixty-one-year-old Wolf Queen flew into a rage and led the assault herself. It was a success, and Magnus and his army fled. In the midst of the victory celebration, Potema heard the news that her son the Emperor had been killed by an angry mob before he had even made it for trial in the Imperial City. He had been burned to death within his carriage.\nWhen Cephorus was proclaimed Emperor, Potema''s fury was terrible to behold. She summoned daedra to fight for her, had her necromancers resurrect her fallen enemies as undead warriors, and mounted attack after attack on the forces of the Emperor Cephorus I. Her allies began leaving her as her madness grew, and her only companions were the zombies and skeletons she had amassed over the years. The kingdom of Solitude became a land of death. Stories of the ancient Wolf Queen being waited on by rotting skeletal chambermaids and holding war plans with vampiric generals terrified her subjects.\nPotema died after a month-long siege on her castle in the year 3E 137 at the age of 90. While she lived, she had been the Wolf Queen of Solitude, Daughter of the Emperor Pelagius II, Wife of King Mantiarco, Aunt of the Empress Kintyra II, Mother of Emperor Uriel III, and Sister of the Emperors Antiochus and Cephorus. Three years after her death, Antiochus died, and his -- and Potema''s -- brother Magnus took the throne.\nHer death has hardly diminished her notoriety. Though there is little direct evidence of this, some theologians maintain that her spirit was so strong, she became a daedra after her death, inspiring mortals to mad ambition and treason. It is also said that her madness so infused Castle Solitude that it infected the next king to rule there. Ironically, that was her 18-year-old nephew Pelagius, the son of Magnus. Whatever the truth of the legend, it is undeniable that when Pelagius left Solitude in 3E 145 to assume the title of the Emperor Pelagius III, he quickly became known as Pelagius The Mad. It is even widely rumoured that he murdered his father Magnus.\nThe Wolf Queen must surely have had the last laugh.\n', '', 7, '2011-12-20 10:45:48', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -65,10 +60,10 @@ CREATE TABLE IF NOT EXISTS `blog_comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `author_id` int(11) NOT NULL,
   `blog_id` int(11) NOT NULL,
-  `content` text NOT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Volcar la base de datos para la tabla `blog_comments`
@@ -88,7 +83,8 @@ INSERT INTO `blog_comments` (`id`, `author_id`, `blog_id`, `content`, `when`) VA
 (11, 10, 11, 'fuck', '2011-12-09 19:21:33'),
 (12, 10, 11, '&lt;i&gt;can''t xss now&lt;/i&gt;', '2011-12-09 19:28:16'),
 (13, 10, 7, 'break line\nbreak line\n', '2011-12-09 19:53:07'),
-(14, 10, 13, 'you said\n[quote]140 chars\n140 chars[/quote]\nbut you went over that limit\n(actually testing for comment bbcode and multi line bbcode)', '2011-12-09 23:45:16');
+(14, 10, 13, 'you said\n[quote]140 chars\n140 chars[/quote]\nbut you went over that limit\n(actually testing for comment bbcode and multi line bbcode)', '2011-12-09 23:45:16'),
+(15, 7, 14, 'so brave', '2011-12-12 01:29:56');
 
 -- --------------------------------------------------------
 
@@ -98,8 +94,8 @@ INSERT INTO `blog_comments` (`id`, `author_id`, `blog_id`, `content`, `when`) VA
 
 CREATE TABLE IF NOT EXISTS `forum_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(200) NOT NULL,
-  `description` varchar(200) NOT NULL,
+  `name` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `count_threads` int(11) NOT NULL DEFAULT '0',
   `count_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
@@ -110,9 +106,9 @@ CREATE TABLE IF NOT EXISTS `forum_categories` (
 --
 
 INSERT INTO `forum_categories` (`id`, `name`, `description`, `count_threads`, `count_comments`) VALUES
-(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 4, 0),
-(2, 'The train wreck and forum games', 'Mindless rubbish here!', 4, 0),
-(3, 'Project discussion', 'Discuss about this project.', 4, 0);
+(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 5, 0),
+(2, 'The train wreck and forum games', 'Mindless rubbish here!', 5, 0),
+(3, 'Project discussion', 'Discuss about this project.', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -124,10 +120,10 @@ CREATE TABLE IF NOT EXISTS `forum_comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `author_id` int(11) NOT NULL,
   `thread_id` int(11) NOT NULL,
-  `content` text NOT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcar la base de datos para la tabla `forum_comments`
@@ -137,7 +133,8 @@ INSERT INTO `forum_comments` (`id`, `author_id`, `thread_id`, `content`, `when`)
 (1, 7, 1, 'first comment!', '2011-12-12 00:23:05'),
 (2, 7, 1, 'YAY!', '2011-12-12 00:23:11'),
 (3, 7, 1, 'i''m so happy right now, it worked on first try &lt;3', '2011-12-12 00:23:22'),
-(4, 7, 1, '''&quot;);', '2011-12-12 00:26:03');
+(4, 7, 1, '''&quot;);', '2011-12-12 00:26:03'),
+(5, 7, 5, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', '2011-12-20 10:29:17');
 
 -- --------------------------------------------------------
 
@@ -149,25 +146,26 @@ CREATE TABLE IF NOT EXISTS `forum_threads` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `author_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL,
-  `title` varchar(200) NOT NULL,
-  `content` text NOT NULL,
+  `title` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `time_posted` datetime NOT NULL,
   `last_active` datetime NOT NULL,
   `sticky` tinyint(1) NOT NULL DEFAULT '0',
   `closed` tinyint(1) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcar la base de datos para la tabla `forum_threads`
 --
 
 INSERT INTO `forum_threads` (`id`, `author_id`, `category_id`, `title`, `content`, `time_posted`, `last_active`, `sticky`, `closed`, `amount_comments`) VALUES
-(1, 7, 1, 'first thread', 'hasoihoasi foiasufhasuf asf a\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters', '2011-12-11 12:32:30', '2011-12-11 12:32:30', 0, 0, 4),
-(2, 7, 1, 'First thread, man!', 'yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! ', '2011-12-11 23:40:55', '2011-12-11 23:40:55', 0, 0, 4),
-(3, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 0),
-(4, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:33', '2011-12-12 00:27:33', 0, 0, 0);
+(1, 7, 1, 'first thread', 'hasoihoasi foiasufhasuf asf a\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters', '2011-12-11 12:32:30', '2011-12-11 12:32:30', 0, 0, 1),
+(2, 7, 1, 'First thread, man!', 'yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! ', '2011-12-11 23:40:55', '2011-12-11 23:40:55', 0, 0, 1),
+(3, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 1),
+(4, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:33', '2011-12-12 00:27:33', 0, 0, 1),
+(5, 7, 3, 'General discussion', 'Post your ideas for the project here.\n                                                                                                                                                                                                                                                                                                                                  ', '2011-12-13 18:38:21', '2011-12-13 18:38:21', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -177,11 +175,11 @@ INSERT INTO `forum_threads` (`id`, `author_id`, `category_id`, `title`, `content
 
 CREATE TABLE IF NOT EXISTS `fragments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `content` varchar(300) NOT NULL,
+  `content` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `author_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
 -- Volcar la base de datos para la tabla `fragments`
@@ -196,7 +194,17 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 (6, 'html_entities &lt;3', 7, '2011-12-09 14:47:37'),
 (7, 'i noticed all frags in the frontpage were by admin. jojo''s jealous', 10, '2011-12-09 16:23:01'),
 (8, 'ajaosdfjaoisfj aiosdfasdfasf', 10, '2011-12-09 18:33:42'),
-(9, '&lt;b&gt;xss&lt;/b&gt;?', 10, '2011-12-09 19:25:04');
+(9, '&lt;b&gt;xss&lt;/b&gt;?', 10, '2011-12-09 19:25:04'),
+(11, 'I&Atilde;&plusmn;t&Atilde;&laquo;rn&Atilde;&cent;ti&Atilde;&acute;n&Atilde;&nbsp;liz&Atilde;&brvbar;ti&Atilde;&cedil;n', 7, '2011-12-20 09:18:22'),
+(15, 'IÃ±tÃ«rnÃ¢tiÃ´nÃ lizÃ¦tiÃ¸n', 7, '2011-12-20 09:25:21'),
+(21, 'I?t?rn?ti?n?liz?ti?n', 7, '2011-12-20 09:34:20'),
+(22, 'IÃ±tÃ«rnÃ¢tiÃ´nÃ lizÃ¦tiÃ¸n', 7, '2011-12-20 09:37:16'),
+(23, 'IÃ±tÃ«rnÃ¢tiÃ´nÃ lizÃ¦tiÃ¸n', 7, '2011-12-20 09:39:22'),
+(24, 'Iñtërnâtiônàlizætiøn', 7, '2011-12-20 09:39:38'),
+(25, 'Iñtërnâtiônàlizætiøn', 7, '2011-12-20 10:11:35'),
+(26, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:15:45'),
+(27, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:24:54'),
+(28, 'testing the date system', 7, '2011-12-20 12:01:12');
 
 -- --------------------------------------------------------
 
@@ -206,14 +214,14 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(30) NOT NULL,
-  `password` varchar(200) NOT NULL,
-  `avatar` varchar(200) NOT NULL DEFAULT 'http://i.imgur.com/Wrado.png',
-  `name` varchar(200) NOT NULL DEFAULT 'unknown',
+  `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `avatar` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'http://i.imgur.com/Wrado.png',
+  `name` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
   `age` int(11) NOT NULL DEFAULT '-1',
-  `country` varchar(70) NOT NULL DEFAULT 'unknown',
-  `gender` varchar(10) NOT NULL DEFAULT 'unknown',
-  `email` varchar(200) NOT NULL,
+  `country` varchar(70) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
+  `gender` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
+  `email` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `count_blogs` int(11) NOT NULL DEFAULT '0',
   `count_fragments` int(11) NOT NULL DEFAULT '0',
   `count_pageviews` int(11) NOT NULL DEFAULT '0',
@@ -229,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
-(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 2, 8, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 0),
+(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 27, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
 (10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 3, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 0),
 (11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 0);
 
@@ -245,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
   `blog_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Volcar la base de datos para la tabla `votes`
@@ -253,8 +261,11 @@ CREATE TABLE IF NOT EXISTS `votes` (
 
 INSERT INTO `votes` (`id`, `user_id`, `blog_id`, `when`) VALUES
 (3, 7, 5, '2011-12-09 01:01:04'),
-(4, 7, 6, '2011-12-09 01:28:02'),
 (5, 10, 8, '2011-12-09 03:18:52'),
 (7, 11, 7, '2011-12-09 03:22:26'),
 (13, 10, 5, '2011-12-09 22:02:36'),
-(14, 7, 14, '2011-12-11 10:36:03');
+(14, 7, 14, '2011-12-11 10:36:03'),
+(16, 7, 6, '2011-12-13 18:57:05'),
+(17, 7, 15, '2011-12-19 23:38:16'),
+(18, 7, 23, '2011-12-20 10:04:47'),
+(19, 7, 25, '2011-12-20 10:52:35');
