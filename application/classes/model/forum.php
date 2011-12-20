@@ -41,6 +41,10 @@ class Model_Forum extends Model {
 	{
 		return DB::update("forum_threads")->set($info)->where("id","=",$info['id'])->execute();
 	}
+	public function delete_thread($id)
+	{
+		return DB::delete("forum_threads")->where("id","=",$id)->limit(1)->execute();
+	}
 }
 
 ?>

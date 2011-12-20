@@ -234,6 +234,20 @@ class Controller_Dashboard extends Controller_Website {
 		$id = $this->request->param("id");
 		$blog_model = Model::factory("blog");
 		$blog = $blog_model->get_blog($id);
+		if (intval($blog->get("id")) == 0)
+		{
+			$this->errors=" That blog does not exist.";
+			$this->action_index();
+			return 0;
+		}
+		if (intval($blog->get("author_id")) != $this->session->get("user_id") AND 
+			$this->session->get("rank") < 2)
+		{
+			//The user is neither the author of the blog or a moderator
+			$this->errors = " You can not delete this blog.";
+			$this->action_index();
+			return 0;
+		}
 		if ($_POST == array() OR 
 			intval($_POST['confirm']) != 1) // has the user gone through the confirm page?
 		{
@@ -242,21 +256,43 @@ class Controller_Dashboard extends Controller_Website {
 			$this->response->body($view);
 			return 0;
 		}
-		if (intval($blog->get("id")) == 0)
+		
+		$blog_model->delete_blog($id,$blog->get("author_id"));
+		$this->action_manage();
+	}
+	public function action_delete_thread()
+	{
+		// This function actually handles two pages.
+		// The first one asks the user if (s)he does want to delete the blog,
+		// and also prevents some hacking by implementing POST to confirm
+		// if the request is valid.
+		// The second one actually deletes the blog.
+		$id = $this->request->param("id");
+		$forum_model = Model::factory("forum");
+		$thread = $forum_model->get_thread($id);
+		if (intval($thread->get("id")) == 0)
 		{
 			$this->errors=" That blog does not exist.";
 			$this->action_index();
 			return 0;
 		}
-		if (intval($blog->get("author_id")) != $this->session->get("user_id") AND 
-			$this->session->get("author_id") < 2)
+		if (intval($thread->get("author_id")) != $this->session->get("user_id") AND 
+			$this->session->get("rank") < 2)
 		{
 			//The user is neither the author of the blog or a moderator
 			$this->errors = " You can not delete this blog.";
 			$this->action_index();
 			return 0;
 		}
-		$blog_model->delete_blog($id,$blog->get("author_id"));
+		if ($_POST == array() OR 
+			intval($_POST['confirm']) != 1) // has the user gone through the confirm page?
+		{
+			$view = View::factory("confirm_thread_delete")
+				->set("thread",$thread);
+			$this->response->body($view);
+			return 0;
+		}
+		$forum_model->delete_thread($id);
 		$this->action_manage();
 	}
 }

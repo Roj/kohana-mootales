@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-12-2011 a las 19:05:07
+-- Tiempo de generación: 20-12-2011 a las 20:07:52
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -47,8 +47,7 @@ INSERT INTO `blogs` (`id`, `title`, `content`, `tags`, `author_id`, `time_posted
 (11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 0, 3),
 (12, '<b>xss</b>, again', '&lt;b&gt;xss&lt;/b&gt;\n140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars ', '<b>xss</b>', 10, '2011-12-09 19:25:44', 0, 0),
 (13, 'bbcode test', '[b]bold [/b]\n[i]talics[/i]\n[b]this bold\ncontinues\nthrough\nnewlines [/b]\n[i]italics[/i]\n[b][i]bolditalic[/i][/b]\n[img]http://i.imgur.com/8a6QA.jpg[/img]\n[divider]\n[url]http://google.com[/url]\n[url=http://google.com]google[/url]\n[code]\nfunction sex($condom = false) {\n    sleep(9 months);\n    return baby * intval(!$condom);\n}\n[/code]\n[quote]hello[/quote]\n140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars ', '', 10, '2011-12-09 23:13:47', 0, 1),
-(24, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:25:43', 0, 0),
-(25, 'Biography of the Wolf Queen', '[center] Biography of the Wolf Queen\nby Katar Eriphanes \n[i]A history of the unambiguously evil Queen Potema, the so-called Wolf Queen of Solitude[/i][/center]\nFew historic figures are viewed as unambiguously evil, but Potema, the so-called Wolf Queen of Solitude, surely qualifies for that dishonour Born to the Imperial Family in the sixty-seventh year of the third era, Potema was immediately presented to her grandfather, the Emperor Uriel Septim II, a famously kindhearted man, who viewed the solemn, intense babe and whispered, &amp;amp;amp;ldquo;She looks like a she-wolf about ready to pounce.&amp;amp;amp;rdquo;\nPotema''s childhood in the Imperial City was certainly difficult from the start. Her father, Prince Pelagius Septim, and her mother, Qizara, showed little affection for their brood. Her eldest brother Antiochus, sixteen at Potema''s birth, was already a drunkard and womaniser, infamous in the empire. Her younger brothers Cephorus and Magnus were born much later, so for years she was the only child in the Imperial Court.\nBy the age of 14, Potema was a famous beauty with many suitors, but she was married to cement relations with King Mantiarco of the Nordic kingdom of Solitude. She entered the court, it was said, as a pawn, but she quickly became a queen. The elderly King Mantiarco loved her and allowed her all the power she wished, which was total.\nWhen Uriel Septim II died the following year, her father was made emperor, and he faced a greatly depleted treasury, thanks to his father''s poor management. Pelagius II dismissed the Elder Council, forcing them to buy back their positions. In 3E 97, after many miscarriages, the Queen of Solitude gave birth to a son, who she named Uriel after her grandfather. Mantiarco quickly made Uriel his heir, but the Queen had much larger ambitions for her child.\nTwo years later, Pelagius II died -- many say poisoned by a vengeful former Council member -- and his son, Potema''s brother Antiochus took the throne. At age forty-eight, it could be said that Antiochus'' wild seeds had yet to be sown, and the history books are nearly pornographic in their depictions of life at the Imperial court during the years of his reign. Potema, whose passion was for power not fornication, was scandalised every time she visited the Imperial City.\nMantiarco, King of Solitude, died the springtide after Pelagius II. Uriel ascended to the throne, ruling jointly with his mother. Doubtless, Uriel had the right and would have preferred to rule alone, but Potema convinced him that his position was only temporary. He would have the Empire, not merely the kingdom. In Castle Solitude, she entertained dozens of diplomats from other kingdoms of Skyrim, sowing seeds of discontent. Her guest list over the years expanded to include kings and queens of High Rock and Morrowind as well.\nFor thirteen years, Antiochus ruled Tamriel, and proved an able leader despite his moral laxity. Several historians point to proof that Potema cast the spell that ended her brother''s life, but evidence one way or another is lost in the sands of time. In any event, both she and her son Uriel were visiting the Imperial court in 3E 112 when Antiochus died, and immediately challenged the rule of his daughter and heir, Kintyra.\nPotema''s speech to the Elder Council is perhaps helpful to students of public speaking.\nShe began with flattery and self-abasement: &amp;amp;amp;ldquo;My most august and wise friends, members of the Elder Council, I am but a provincial queen, and I can only assume to bring to issue what you yourselves must have already pondered.&amp;amp;amp;rdquo;\nShe continued on to praise the late Emperor, who was a popular ruler in spite of his flaws: &amp;amp;amp;ldquo;He was a true Septim and a great warrior, destroying -- with your counsel -- the near invincible armada of Pyandonea.&amp;amp;amp;rdquo;\nBut little time was wasted, before she came to her point: &amp;amp;amp;ldquo;The Empress Magna unfortunately did nothing to temper my brother''s lustful spirits. In point of fact, no whore in the slums of the city spread out on more beds than she. Had she attended to her duties in the Imperial bedchamber more faithfully, we would have a true heir to the Empire, not the halfwit, milksop bastards who call themselves the Emperor''s children. The girl called Kintyra is popularly believed to be the daughter of Magna and the Captain of the Guard. It may be that she is the daughter of Magna and the boy who cleans the cistern. We can never know for certain. Not as certainly as we can know the lineage of my son, Uriel. The last of the Septim Dynasty.&amp;amp;amp;rdquo;\nDespite Potema''s eloquence, the Elder Council allowed Kintyra to assume the throne as the Empress Kintyra II. Potema and Uriel angrily returned to Skyrim and began assembling the rebellion.\nDetails of the War of the Red Diamond are included in other histories: we need not recount the Empress Kintyra II''s capture and eventual execution in High Rock in the year 3E 114, nor the ascension of Potema''s son, Uriel III, seven years later. Her surviving brothers, Cephorus and Magnus, fought the Emperor and his mother for years, tearing the Empire apart in a civil war.\nWhen Uriel III fought his uncle Cephorus in Hammerfell at the Battle of Ichidag in 3E 127, Potema was fighting her other brother, Uriel''s uncle Magnus in Skyrim at the Battle of Falconstar. She received word of her son''s defeat and capture just as she was preparing to mount an attack on Magnus''s weakest flank. The sixty-one-year-old Wolf Queen flew into a rage and led the assault herself. It was a success, and Magnus and his army fled. In the midst of the victory celebration, Potema heard the news that her son the Emperor had been killed by an angry mob before he had even made it for trial in the Imperial City. He had been burned to death within his carriage.\nWhen Cephorus was proclaimed Emperor, Potema''s fury was terrible to behold. She summoned daedra to fight for her, had her necromancers resurrect her fallen enemies as undead warriors, and mounted attack after attack on the forces of the Emperor Cephorus I. Her allies began leaving her as her madness grew, and her only companions were the zombies and skeletons she had amassed over the years. The kingdom of Solitude became a land of death. Stories of the ancient Wolf Queen being waited on by rotting skeletal chambermaids and holding war plans with vampiric generals terrified her subjects.\nPotema died after a month-long siege on her castle in the year 3E 137 at the age of 90. While she lived, she had been the Wolf Queen of Solitude, Daughter of the Emperor Pelagius II, Wife of King Mantiarco, Aunt of the Empress Kintyra II, Mother of Emperor Uriel III, and Sister of the Emperors Antiochus and Cephorus. Three years after her death, Antiochus died, and his -- and Potema''s -- brother Magnus took the throne.\nHer death has hardly diminished her notoriety. Though there is little direct evidence of this, some theologians maintain that her spirit was so strong, she became a daedra after her death, inspiring mortals to mad ambition and treason. It is also said that her madness so infused Castle Solitude that it infected the next king to rule there. Ironically, that was her 18-year-old nephew Pelagius, the son of Magnus. Whatever the truth of the legend, it is undeniable that when Pelagius left Solitude in 3E 145 to assume the title of the Emperor Pelagius III, he quickly became known as Pelagius The Mad. It is even widely rumoured that he murdered his father Magnus.\nThe Wolf Queen must surely have had the last laugh.\n', '', 7, '2011-12-20 10:45:48', 1, 0);
+(24, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:25:43', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -106,9 +105,9 @@ CREATE TABLE IF NOT EXISTS `forum_categories` (
 --
 
 INSERT INTO `forum_categories` (`id`, `name`, `description`, `count_threads`, `count_comments`) VALUES
-(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 5, 0),
-(2, 'The train wreck and forum games', 'Mindless rubbish here!', 5, 0),
-(3, 'Project discussion', 'Discuss about this project.', 5, 0);
+(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 6, 0),
+(2, 'The train wreck and forum games', 'Mindless rubbish here!', 6, 0),
+(3, 'Project discussion', 'Discuss about this project.', 6, 0);
 
 -- --------------------------------------------------------
 
@@ -154,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `forum_threads` (
   `closed` tinyint(1) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Volcar la base de datos para la tabla `forum_threads`
@@ -164,7 +163,6 @@ INSERT INTO `forum_threads` (`id`, `author_id`, `category_id`, `title`, `content
 (1, 7, 1, 'first thread', 'hasoihoasi foiasufhasuf asf a\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters', '2011-12-11 12:32:30', '2011-12-11 12:32:30', 0, 0, 1),
 (2, 7, 1, 'First thread, man!', 'yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! ', '2011-12-11 23:40:55', '2011-12-11 23:40:55', 0, 0, 1),
 (3, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 1),
-(4, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:33', '2011-12-12 00:27:33', 0, 0, 1),
 (5, 7, 3, 'General discussion', 'Post your ideas for the project here.\n                                                                                                                                                                                                                                                                                                                                  ', '2011-12-13 18:38:21', '2011-12-13 18:38:21', 0, 0, 1);
 
 -- --------------------------------------------------------
@@ -179,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `fragments` (
   `author_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
 -- Volcar la base de datos para la tabla `fragments`
@@ -204,7 +202,8 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 (25, 'Iñtërnâtiônàlizætiøn', 7, '2011-12-20 10:11:35'),
 (26, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:15:45'),
 (27, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:24:54'),
-(28, 'testing the date system', 7, '2011-12-20 12:01:12');
+(28, 'testing the date system', 7, '2011-12-20 12:01:12'),
+(29, 'testing a quite long fragment. it''s funny how at nite you become a super programmer! ', 7, '2011-12-20 12:32:40');
 
 -- --------------------------------------------------------
 
@@ -228,7 +227,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `count_friends` int(11) NOT NULL DEFAULT '0',
   `date_joined` date NOT NULL,
   `date_last_seen` datetime NOT NULL,
-  `rank` int(11) NOT NULL DEFAULT '0',
+  `rank` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
@@ -237,9 +236,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
-(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 27, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
-(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 3, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 0),
-(11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 0);
+(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 2, 28, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
+(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 3, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
+(11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1);
 
 -- --------------------------------------------------------
 
@@ -253,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
   `blog_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Volcar la base de datos para la tabla `votes`
@@ -268,4 +267,5 @@ INSERT INTO `votes` (`id`, `user_id`, `blog_id`, `when`) VALUES
 (16, 7, 6, '2011-12-13 18:57:05'),
 (17, 7, 15, '2011-12-19 23:38:16'),
 (18, 7, 23, '2011-12-20 10:04:47'),
-(19, 7, 25, '2011-12-20 10:52:35');
+(19, 7, 25, '2011-12-20 10:52:35'),
+(20, 7, 24, '2011-12-20 12:24:04');

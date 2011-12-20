@@ -1,6 +1,16 @@
 <?php include Kohana::find_file('views', 'header');  ?>
 		<div class="thread_wrap">
-			<span class="thread_info"> written by <?php echo $user->get("username");?> <?php echo DateHelper::human_readable($thread->get("time_posted")); ?></span>
+			<span class="thread_info"> written by <?php 
+			echo HTML::anchor("user/".$user->get("username"),$user->get("username"),null,null,false); 
+			echo "&nbsp;";
+			echo DateHelper::human_readable($thread->get("time_posted")); 
+			echo " (";
+			if($user_rank > 1 OR $thread->get('author_id') == $user_id): 
+				echo HTML::anchor("dashboard/edit_thread/{$thread->get('id')}","edit",null,null,false);
+				echo "/";
+				echo HTML::anchor("dashboard/delete_thread/{$thread->get('id')}","delete",null,null,false);
+			endif;
+			echo ")"; ?></span>
 			<h3><?php echo $thread->get("title");?></h3>
 			
 			<div class="thread_content">

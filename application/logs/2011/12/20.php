@@ -379,3 +379,77 @@
 #11 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #12 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
 #13 {main}
+2011-12-20 12:46:17 --- ERROR: ErrorException [ 2 ]: mysql_data_seek() expects parameter 2 to be long, string given ~ MODPATH\database\classes\kohana\database\mysql\result.php [ 33 ]
+2011-12-20 12:46:17 --- STRACE: ErrorException [ 2 ]: mysql_data_seek() expects parameter 2 to be long, string given ~ MODPATH\database\classes\kohana\database\mysql\result.php [ 33 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(2, 'mysql_data_seek...', 'C:\xampp\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\mootales\modules\database\classes\kohana\database\mysql\result.php(33): mysql_data_seek(Resource id #85, 'username')
+#2 C:\xampp\htdocs\mootales\modules\database\classes\kohana\database\result.php(236): Kohana_Database_MySQL_Result->seek('username')
+#3 C:\xampp\htdocs\mootales\application\views\thread.php(4): Kohana_Database_Result->offsetGet('username')
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(61): include('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(343): Kohana_View::capture('C:\xampp\htdocs...', Array)
+#6 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(228): Kohana_View->render()
+#7 C:\xampp\htdocs\mootales\system\classes\kohana\response.php(160): Kohana_View->__toString()
+#8 C:\xampp\htdocs\mootales\application\classes\controller\thread.php(37): Kohana_Response->body(Object(View))
+#9 [internal function]: Controller_Thread->action_view()
+#10 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Thread))
+#11 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#12 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#13 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#14 {main}
+2011-12-20 12:50:51 --- ERROR: ErrorException [ 4096 ]: Argument 3 passed to Kohana_HTML::anchor() must be an array, boolean given, called in C:\xampp\htdocs\mootales\application\views\thread.php on line 4 and defined ~ SYSPATH\classes\kohana\html.php [ 101 ]
+2011-12-20 12:50:51 --- STRACE: ErrorException [ 4096 ]: Argument 3 passed to Kohana_HTML::anchor() must be an array, boolean given, called in C:\xampp\htdocs\mootales\application\views\thread.php on line 4 and defined ~ SYSPATH\classes\kohana\html.php [ 101 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\html.php(101): Kohana_Core::error_handler(4096, 'Argument 3 pass...', 'C:\xampp\htdocs...', 101, Array)
+#1 C:\xampp\htdocs\mootales\application\views\thread.php(4): Kohana_HTML::anchor('user/admin', 'admin', false, false, NULL)
+#2 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(61): include('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(343): Kohana_View::capture('C:\xampp\htdocs...', Array)
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(228): Kohana_View->render()
+#5 C:\xampp\htdocs\mootales\system\classes\kohana\response.php(160): Kohana_View->__toString()
+#6 C:\xampp\htdocs\mootales\application\classes\controller\thread.php(37): Kohana_Response->body(Object(View))
+#7 [internal function]: Controller_Thread->action_view()
+#8 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Thread))
+#9 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#10 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#11 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#12 {main}
+2011-12-20 12:51:23 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL dashboard/edit/5 was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 113 ]
+2011-12-20 12:51:23 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL dashboard/edit/5 was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 113 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#3 {main}
+2011-12-20 12:51:45 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL dashboard/edit/5 was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 113 ]
+2011-12-20 12:51:45 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL dashboard/edit/5 was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 113 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#3 {main}
+2011-12-20 12:52:44 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL dashboard/edit/5 was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 113 ]
+2011-12-20 12:52:44 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL dashboard/edit/5 was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 113 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#3 {main}
+2011-12-20 12:52:50 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL dashboard/delete_thread/5 was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 113 ]
+2011-12-20 12:52:50 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL dashboard/delete_thread/5 was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 113 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#3 {main}
+2011-12-20 12:58:56 --- ERROR: View_Exception [ 0 ]: The requested view confirm_thread_delete could not be found ~ SYSPATH\classes\kohana\view.php [ 252 ]
+2011-12-20 12:58:56 --- STRACE: View_Exception [ 0 ]: The requested view confirm_thread_delete could not be found ~ SYSPATH\classes\kohana\view.php [ 252 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(137): Kohana_View->set_filename('confirm_thread_...')
+#1 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(30): Kohana_View->__construct('confirm_thread_...', NULL)
+#2 C:\xampp\htdocs\mootales\application\classes\controller\dashboard.php(290): Kohana_View::factory('confirm_thread_...')
+#3 [internal function]: Controller_Dashboard->action_delete_thread()
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Dashboard))
+#5 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#8 {main}
