@@ -1,6 +1,6 @@
 <?php include Kohana::find_file('views', 'header');  ?>
 		<div class="thread_wrap">
-			<span class="thread_info"> written by <?php echo $user->get("username");?> on <?php echo $thread->get("time_posted"); ?></span>
+			<span class="thread_info"> written by <?php echo $user->get("username");?> <?php echo DateHelper::human_readable($thread->get("time_posted")); ?></span>
 			<h3><?php echo $thread->get("title");?></h3>
 			
 			<div class="thread_content">

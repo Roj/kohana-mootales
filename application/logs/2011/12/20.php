@@ -352,3 +352,30 @@
 #11 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #12 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
 #13 {main}
+2011-12-20 12:18:28 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/24/I-ntilde;t-euml;rn-acirc;ti-ocirc;n-agrave;liz-aelig;ti-oslash;n ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2011-12-20 12:18:28 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: blog/24/I-ntilde;t-euml;rn-acirc;ti-ocirc;n-agrave;liz-aelig;ti-oslash;n ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#1 {main}
+2011-12-20 12:22:28 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected ';' ~ APPPATH\views\thread.php [ 3 ]
+2011-12-20 12:22:28 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected ';' ~ APPPATH\views\thread.php [ 3 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2011-12-20 12:23:18 --- ERROR: ErrorException [ 8 ]: A non well formed numeric value encountered ~ SYSPATH\classes\datehelper.php [ 40 ]
+2011-12-20 12:23:18 --- STRACE: ErrorException [ 8 ]: A non well formed numeric value encountered ~ SYSPATH\classes\datehelper.php [ 40 ]
+--
+#0 [internal function]: Kohana_Core::error_handler(8, 'A non well form...', 'C:\xampp\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\mootales\system\classes\datehelper.php(40): getdate('2011-12-13 18:3...')
+#2 C:\xampp\htdocs\mootales\application\views\thread.php(3): DateHelper::human_readable('2011-12-13 18:3...')
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(61): include('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(343): Kohana_View::capture('C:\xampp\htdocs...', Array)
+#5 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(228): Kohana_View->render()
+#6 C:\xampp\htdocs\mootales\system\classes\kohana\response.php(160): Kohana_View->__toString()
+#7 C:\xampp\htdocs\mootales\application\classes\controller\thread.php(37): Kohana_Response->body(Object(View))
+#8 [internal function]: Controller_Thread->action_view()
+#9 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_Thread))
+#10 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#11 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#12 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#13 {main}

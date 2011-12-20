@@ -3,8 +3,8 @@
 class DateHelper {
 	public static function human_readable($from)
 	{
-		
-		$difference = abs(time()- strtotime($from));
+		$from = strtotime($from);
+		$difference = abs(time()- $from);
 		if ($difference < 3600) //less than an hour from now
 		{
 			$amount_minutes = floor($difference/60);
@@ -37,8 +37,8 @@ class DateHelper {
 			return "yesterday";
 		} else
 		{
-	/*		$date_info =getdate($from);
-			return "on ".$date_info["month"]." ".$date_info["mday"];*/
+			$date_info =getdate($from);
+			return "on ".$date_info["month"]." ".$date_info["mday"];
 		}
 	}
 }

@@ -4,7 +4,7 @@
 				<h3>recent blogs</h3>
 				<ul>
 <?php foreach ($recent_blogs as $blog): 
-$link = "blog/".$blog['id']."/".str_replace(array(" ","/","<",">","&","?",","),"-",$blog['title']);?>
+$link = "blog/".$blog['id']."/".str_replace(array(" ","/","<",">","&","?",",",";","."),"-",$blog['title']);?>
 					<li><span class="like_count"><?php echo $blog['amount_votes']; ?></span><?php echo HTML::anchor($link,$blog['title'],null,null,false);?></li>
 <?php endforeach; ?>
 				</ul>
@@ -13,7 +13,7 @@ $link = "blog/".$blog['id']."/".str_replace(array(" ","/","<",">","&","?",","),"
 				<h3>recent frags</h3>
 				<ul>
 <?php foreach ($recent_frags as $frag): ?>
-					<li><?php echo $frag['content']; ?> <?php echo HTML::anchor("user/".$users_data[$frag['author_id']],'by '.$users_data[$frag['author_id']],null,null,false); ?></li>
+					<li><?php echo HTML::anchor("fragment/".$frag['id'],$frag['content'],array("class"=>"frag_link"),null,false); ?> <?php echo HTML::anchor("user/".$users_data[$frag['author_id']],'by '.$users_data[$frag['author_id']],null,null,false); ?></li>
 <?php endforeach; ?>
 				</ul>
 			</div>
@@ -21,7 +21,7 @@ $link = "blog/".$blog['id']."/".str_replace(array(" ","/","<",">","&","?",","),"
 				<h3>recent threads</h3>
 				<ul>
 <?php foreach($recent_threads as $thread): 
-$link = "thread/".$thread['id']."/".str_replace(array(" ","/","<",">","&","?",","),"-",$thread['title']);?>
+$link = "thread/".$thread['id']."/".str_replace(array(" ","/","<",">","&","?",",",";","."),"-",$thread['title']);?>
 					<li><?php echo HTML::anchor($link,$thread['title'],array("style"=>"color:black;"),null,false); ?>&nbsp;<?php echo HTML::anchor("user/".$users_data[$thread['author_id']],'by '.$users_data[$frag['author_id']],null,null,false);?></li>
 <?php endforeach; ?>
 				</ul>
@@ -30,7 +30,7 @@ $link = "thread/".$thread['id']."/".str_replace(array(" ","/","<",">","&","?",",
 		<div class="main_wrap">
 			<h3>frontpage: featured blogs</h3>
 <?php foreach ($best_blogs as $blog): 
-$link = "blog/".$blog['id']."/".str_replace(array(" ","/"),array("-",""),$blog['title'])
+$link = "blog/".$blog['id']."/".str_replace(array(" ","/","<",">","&","?",",",";","."),"-",$blog['title'])
 ?>
 			<div class="blog">
 				<h4 class="blog_title"><?php echo HTML::anchor($link,$blog['title'],null,null,false); ?></h4>
