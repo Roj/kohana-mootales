@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-12-2011 a las 20:07:52
+-- Tiempo de generación: 29-12-2011 a las 03:57:33
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -44,10 +44,11 @@ CREATE TABLE IF NOT EXISTS `blogs` (
 INSERT INTO `blogs` (`id`, `title`, `content`, `tags`, `author_id`, `time_posted`, `amount_votes`, `amount_comments`) VALUES
 (2, 'first post', 'hello world, this is the first official fifa post.\nnah, jk, just testing the edit thingy.\nhan kj tsuj gnitest eth tide inthyg.\nahn kj tusj gintset eth dite hyntig.\nsouthpark did it too', 'hello, world, first post', 7, '2011-12-08 21:51:32', 0, 0),
 (7, 'Hundred years'' war', 'The Hundred Years'' War was a series of separate wars waged from 1337 to 1453 by the House of Valois and the House of Plantagenet, also known as the House of Anjou, for the French throne, which had become vacant upon the extinction of the senior Capetian line of French kings. The House of Valois claimed the title of King of France, while the Plantagenets claimed the thrones of both France and England. The Plantagenet kings were the 12th-century rulers of the kingdom of England, and had their roots in the French regions of Anjou and Normandy.\nThe conflict was punctuated by several periods of peace, before it finally ended in the expulsion of the Plantagenets from France (except from the Pale of Calais). The final outcome was a victory for the house of Valois, which succeeded in recovering early gains made by the Plantagenets and expelling them from the majority of France by the 1450s. However, the war nearly ruined the Valois, while the Plantagenets enriched themselves with plunder. France suffered greatly from the war, since most of the conflict occurred in that country.\nThe &quot;war&quot; was in fact a series of conflicts and is commonly divided into three or four phases: the Edwardian War (1337&acirc;??1360), the Caroline War (1369&acirc;??1389), the Lancastrian War (1415&acirc;??1429), and the slow decline of Plantagenet fortunes after the appearance of Joan of Arc (1412&acirc;??1431). Several other contemporary European conflicts were directly related to this conflict: the Breton War of Succession, the Castilian Civil War, the War of the Two Peters, and the 1383-1385 Crisis. The term &quot;Hundred Years'' War&quot; was a later term invented by historians to describe the series of events.\nThe war owes its historical significance to a number of factors. Though primarily a dynastic conflict, the war gave impetus to ideas of both French and English nationalism. Militarily, it saw the introduction of new weapons and tactics, which eroded the older system of feudal armies dominated by heavy cavalry in Western Europe. The first standing armies in Western Europe since the time of the Western Roman Empire were introduced for the war, thus changing the role of the peasantry. For all this, as well as for its long duration, it is often viewed as one of the most significant conflicts in the history of medieval warfare. In France, civil wars, deadly epidemics, famines and marauding mercenary armies (turned to banditry) reduced the population by about one-half.[1]', '', 10, '2011-12-09 03:17:55', 2, 3),
-(11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 0, 3),
-(12, '<b>xss</b>, again', '&lt;b&gt;xss&lt;/b&gt;\n140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars ', '<b>xss</b>', 10, '2011-12-09 19:25:44', 0, 0),
+(11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 1, 3),
+(12, '<b>xss</b>, again', '&lt;b&gt;xss&lt;/b&gt;\n140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars ', '<b>xss</b>', 10, '2011-12-09 19:25:44', 0, 1),
 (13, 'bbcode test', '[b]bold [/b]\n[i]talics[/i]\n[b]this bold\ncontinues\nthrough\nnewlines [/b]\n[i]italics[/i]\n[b][i]bolditalic[/i][/b]\n[img]http://i.imgur.com/8a6QA.jpg[/img]\n[divider]\n[url]http://google.com[/url]\n[url=http://google.com]google[/url]\n[code]\nfunction sex($condom = false) {\n    sleep(9 months);\n    return baby * intval(!$condom);\n}\n[/code]\n[quote]hello[/quote]\n140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars ', '', 10, '2011-12-09 23:13:47', 0, 1),
-(24, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:25:43', 1, 0);
+(24, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:25:43', 1, 4),
+(25, 'Pagination test.', 'Gotta test pagination. Don''t really know how to though... it seems to me that kohana 3.2 has deprecated that module :S i''ll see if limits are fast enough', '', 7, '2011-12-22 13:44:16', 1, 22);
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `blog_comments` (
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
 
 --
 -- Volcar la base de datos para la tabla `blog_comments`
@@ -83,7 +84,34 @@ INSERT INTO `blog_comments` (`id`, `author_id`, `blog_id`, `content`, `when`) VA
 (12, 10, 11, '&lt;i&gt;can''t xss now&lt;/i&gt;', '2011-12-09 19:28:16'),
 (13, 10, 7, 'break line\nbreak line\n', '2011-12-09 19:53:07'),
 (14, 10, 13, 'you said\n[quote]140 chars\n140 chars[/quote]\nbut you went over that limit\n(actually testing for comment bbcode and multi line bbcode)', '2011-12-09 23:45:16'),
-(15, 7, 14, 'so brave', '2011-12-12 01:29:56');
+(15, 7, 14, 'so brave', '2011-12-12 01:29:56'),
+(16, 7, 24, 'http://google.com', '2011-12-22 11:46:48'),
+(17, 7, 24, '[url=google.com]link[/url]\n[url]google.com[/url]', '2011-12-22 11:52:59'),
+(18, 7, 24, '[b]so no bbcode works now? great[/b]', '2011-12-22 11:53:11'),
+(19, 7, 24, '[url=http://google.com]google[/url]\n[url]http://google.com[/url]', '2011-12-22 12:12:35'),
+(20, 7, 25, '1', '2011-12-22 13:44:19'),
+(21, 7, 25, '2', '2011-12-22 13:44:21'),
+(22, 7, 25, '3', '2011-12-22 13:44:24'),
+(23, 7, 25, '4', '2011-12-22 13:44:25'),
+(24, 7, 25, '5', '2011-12-22 13:44:28'),
+(25, 7, 25, '6', '2011-12-22 13:44:31'),
+(26, 7, 25, '7', '2011-12-22 13:44:34'),
+(27, 7, 25, '8', '2011-12-22 13:44:36'),
+(28, 7, 25, '9', '2011-12-22 13:44:38'),
+(29, 7, 25, '10', '2011-12-22 13:44:42'),
+(30, 7, 25, '11', '2011-12-22 13:44:45'),
+(31, 7, 25, '12', '2011-12-22 13:44:48'),
+(32, 7, 25, 'sup', '2011-12-28 18:03:59'),
+(33, 7, 25, 'dsfg', '2011-12-28 18:07:44'),
+(34, 7, 25, 'asdf', '2011-12-28 19:24:35'),
+(35, 7, 25, 'asdfasdf', '2011-12-28 19:24:38'),
+(36, 7, 25, 'adsfasdfasdf', '2011-12-28 19:24:42'),
+(37, 7, 25, 'asdfasdfasdf', '2011-12-28 19:24:45'),
+(38, 7, 25, 'asdfasdfasdf', '2011-12-28 19:24:48'),
+(39, 7, 25, 'adsfsdfasdf', '2011-12-28 19:24:51'),
+(40, 7, 25, 'asdfasdfasdf', '2011-12-28 19:24:55'),
+(41, 7, 25, 'Congrats, man! Looks like you sorted it out. :)', '2011-12-28 20:04:33'),
+(42, 7, 12, 'dude... xss is like SO 2005.', '2011-12-28 20:48:34');
 
 -- --------------------------------------------------------
 
@@ -122,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `forum_comments` (
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Volcar la base de datos para la tabla `forum_comments`
@@ -133,7 +161,19 @@ INSERT INTO `forum_comments` (`id`, `author_id`, `thread_id`, `content`, `when`)
 (2, 7, 1, 'YAY!', '2011-12-12 00:23:11'),
 (3, 7, 1, 'i''m so happy right now, it worked on first try &lt;3', '2011-12-12 00:23:22'),
 (4, 7, 1, '''&quot;);', '2011-12-12 00:26:03'),
-(5, 7, 5, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', '2011-12-20 10:29:17');
+(5, 7, 5, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', '2011-12-20 10:29:17'),
+(6, 7, 2, 'testing something.', '2011-12-28 20:34:27'),
+(7, 7, 5, 'Pretty convincing, huh? That wasn''t even a real person!', '2011-12-28 20:53:52'),
+(8, 7, 5, 'Third comment.', '2011-12-28 20:54:03'),
+(9, 7, 5, 'When Lorem Ipsum is not enough...', '2011-12-28 20:54:14'),
+(10, 7, 5, 'when creativity fails...', '2011-12-28 20:54:22'),
+(11, 7, 5, 'all that is left is some inner monologue for other forkers to read.', '2011-12-28 20:54:34'),
+(12, 7, 5, 'wonder when i''ll reach page 2?', '2011-12-28 20:54:45'),
+(13, 7, 5, '''cuz i need it to test thread pagination, y''know', '2011-12-28 20:54:56'),
+(14, 7, 5, 'reminder: add uniq_ids...', '2011-12-28 20:55:06'),
+(15, 7, 5, 'Howard''s nose is pretty big.', '2011-12-28 20:55:26'),
+(16, 7, 5, 'Lucky Baldwins.', '2011-12-28 20:55:36'),
+(17, 7, 5, 'finally! page two! :D', '2011-12-28 20:55:46');
 
 -- --------------------------------------------------------
 
@@ -153,17 +193,17 @@ CREATE TABLE IF NOT EXISTS `forum_threads` (
   `closed` tinyint(1) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Volcar la base de datos para la tabla `forum_threads`
 --
 
 INSERT INTO `forum_threads` (`id`, `author_id`, `category_id`, `title`, `content`, `time_posted`, `last_active`, `sticky`, `closed`, `amount_comments`) VALUES
-(1, 7, 1, 'first thread', 'hasoihoasi foiasufhasuf asf a\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters', '2011-12-11 12:32:30', '2011-12-11 12:32:30', 0, 0, 1),
-(2, 7, 1, 'First thread, man!', 'yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! ', '2011-12-11 23:40:55', '2011-12-11 23:40:55', 0, 0, 1),
-(3, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 1),
-(5, 7, 3, 'General discussion', 'Post your ideas for the project here.\n                                                                                                                                                                                                                                                                                                                                  ', '2011-12-13 18:38:21', '2011-12-13 18:38:21', 0, 0, 1);
+(1, 7, 1, 'first thread', 'hasoihoasi foiasufhasuf asf a\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters', '2011-12-11 12:32:30', '2011-12-11 12:32:30', 0, 0, 13),
+(2, 7, 1, 'First thread, man!', 'yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! ', '2011-12-11 23:40:55', '2011-12-11 23:40:55', 0, 0, 13),
+(3, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 13),
+(5, 7, 3, 'General discussion', 'Post your ideas for the project here.\n                                                                                                                                                                                                                                                                                                                                  ', '2011-12-13 18:38:21', '2011-12-13 18:38:21', 0, 0, 13);
 
 -- --------------------------------------------------------
 
@@ -177,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `fragments` (
   `author_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
 
 --
 -- Volcar la base de datos para la tabla `fragments`
@@ -203,7 +243,9 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 (26, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:15:45'),
 (27, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:24:54'),
 (28, 'testing the date system', 7, '2011-12-20 12:01:12'),
-(29, 'testing a quite long fragment. it''s funny how at nite you become a super programmer! ', 7, '2011-12-20 12:32:40');
+(29, 'testing a quite long fragment. it''s funny how at nite you become a super programmer! ', 7, '2011-12-20 12:32:40'),
+(30, '☭', 7, '2011-12-23 21:32:56'),
+(31, 'today''s april fools where I live', 7, '2011-12-28 09:14:18');
 
 -- --------------------------------------------------------
 
@@ -236,7 +278,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
-(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 2, 28, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
+(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 30, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
 (10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 3, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
 (11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1);
 
@@ -252,7 +294,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
   `blog_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
 -- Volcar la base de datos para la tabla `votes`
@@ -267,5 +309,6 @@ INSERT INTO `votes` (`id`, `user_id`, `blog_id`, `when`) VALUES
 (16, 7, 6, '2011-12-13 18:57:05'),
 (17, 7, 15, '2011-12-19 23:38:16'),
 (18, 7, 23, '2011-12-20 10:04:47'),
-(19, 7, 25, '2011-12-20 10:52:35'),
-(20, 7, 24, '2011-12-20 12:24:04');
+(20, 7, 24, '2011-12-20 12:24:04'),
+(21, 7, 11, '2011-12-28 15:32:06'),
+(27, 7, 25, '2011-12-28 20:04:16');

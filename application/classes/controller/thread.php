@@ -16,7 +16,20 @@ class Controller_Thread extends Controller_Website {
 		}
 		
 		$user = $user_model->get_user_info($thread->get("author_id"));
-		$comments = $forum_model->get_comments($id);
+		
+		//pagination...
+		$total_pages = ceil($thread->get("amount_comments")/10);
+		if (intval($this->request->param("page")) < 2 OR 
+			intval($this->request->param("page")) > $total_pages)
+		{
+			$comments = $forum_model->get_comments($id);
+			$page = 1;
+		} else
+		{
+			$page = ceil(intval($this->request->param("page")));
+			$comments = $forum_model->get_comments($id, ($page*10-10).",".($page*10));
+		}
+		
 		
 		//now we'll go comment through comment querying for each user's information
 		$users_data = array();  //here we'll store each user's info
@@ -24,15 +37,20 @@ class Controller_Thread extends Controller_Website {
 		{
 			if(array_key_exists($comment['author_id'],$users_data))
 				continue;
-			$users_data[$comment['author_id']]=$user_model->get_user_info(intval($comment['author_id']));
+			$users_data[$comment['author_id']]=$user_model->get_user_info(intval($comment['author_id']))->as_array();
 			
 		}
+		//Instead of objects, I like to use associative arrays in views.
+		$thread_array = $thread->as_array();
+		$user_array = $user->as_array();
 		$view = View::factory("thread")
-			->set("thread", $thread)
-			->set("user", $user)
+			->set("thread", $thread_array[0])
+			->set("user", $user_array[0])
 			->set("comments",$comments)
 			->set("users_data",$users_data)
-			->set("show_comment_form",$this->session->get("logged_in"));
+			->set("show_comment_form",$this->session->get("logged_in"))
+			->set("total_pages",$total_pages)
+			->set("actual_page",$page);
 		//echo var_dump($thread->get("content")); 
 		$this->response->body($view);
 	}

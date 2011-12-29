@@ -17,7 +17,18 @@ class Controller_Blog extends Controller_Website {
 			$this->response->body($view);
 			return 1;
 		}
-		$comments = $blog_model->get_blog_comments($id);
+		//pagination...
+		$total_pages = ceil($blog->get("amount_comments")/10);
+		if (intval($this->request->param("page")) < 2 OR 
+			intval($this->request->param("page")) > $total_pages)
+		{
+			$comments = $blog_model->get_blog_comments($id);
+			$page = 1;
+		} else
+		{
+			$page = ceil(intval($this->request->param("page")));
+			$comments = $blog_model->get_blog_comments($id, ($page*10-10).",".($page*10));
+		}
 		$user = $user_model->get_user_info($blog->get('author_id'));
 		$liked = $blog_model->liked($this->session->get('user_id',0),$blog->get('id'));
 		
@@ -27,30 +38,21 @@ class Controller_Blog extends Controller_Website {
 		{
 			if(array_key_exists($comment['author_id'],$users_data))
 				continue;
-			$users_data[$comment['author_id']]=$user_model->get_user_info(intval($comment['author_id']));
+			$users_data[$comment['author_id']]=$user_model->get_user_info(intval($comment['author_id']))->as_array();
 			
 		}
+		$blog_array = $blog->as_array();
+		$user_array = $user->as_array();
 		
 		$view = View::factory("blog")
-			->set("blog", array(
-				"id"=>$blog->get("id"),
-				"title"=>$blog->get("title"),
-				"content"=>$blog->get("content"),
-				"tags"=>$blog->get("tags"),
-				"time_posted"=>$blog->get("time_posted"),
-				"amount_votes"=>$blog->get("amount_votes"),
-				"amount_comments"=>$blog->get("amount_comments")
-			))
-			->set("user",array(
-				"id"=>$user->get("id"),
-				"username"=>$user->get("username"),
-				"avatar"=>$user->get("avatar"),
-
-			))
+			->set("blog", $blog_array[0])
+			->set("user",$user_array[0]	)
 			->set("liked",$liked)
 			->set("comments",$comments)
 			->set("users_data",$users_data)
-			->set("show_comment_form",$this->session->get("logged_in"));
+			->set("show_comment_form",$this->session->get("logged_in"))
+			->set("total_pages",$total_pages)
+			->set("actual_page",$page);
 		$this->response->body($view);
 	}
 	public function action_like()

@@ -116,12 +116,12 @@ Kohana::modules(array(
 		'controller' => 'fragment',
 		'action' => 'view'
 	));
-Route::set('thread','thread/<id>(/<title>)',array('id'=>'[0-9]*'))
+Route::set('thread','thread/<id>(/<title>(/<page>))',array('id'=>'[0-9]*'))
 	->defaults(array(
 		'controller' => 'thread',
 		'action' => 'view'
 	));
-Route::set('blog','blog/<id>(/<title>)',array('id'=>'[0-9]*'))
+Route::set('blog','blog/<id>(/<title>(/<page>))',array('id'=>'[0-9]*'))
 	->defaults(array(
 		'controller' => 'blog',
 		'action' => 'view'

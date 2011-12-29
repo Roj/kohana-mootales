@@ -9,7 +9,7 @@ abstract class Controller_Website extends Controller {
 	public function before()
 	{
 		parent::before();
-		header('Content-Type: text/html; charset=utf-8');
+		
 		$this->session = Session::instance();
 		$this->logged_in = $this->session->get('logged_in',false);
 		View::bind_global('page_title',$this->page_title);
