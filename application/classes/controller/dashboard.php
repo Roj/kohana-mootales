@@ -263,14 +263,14 @@ class Controller_Dashboard extends Controller_Website {
 	public function action_delete_thread()
 	{
 		// This function actually handles two pages.
-		// The first one asks the user if (s)he does want to delete the blog,
+		// The first one asks the user if (s)he does want to delete the thread,
 		// and also prevents some hacking by implementing POST to confirm
 		// if the request is valid.
-		// The second one actually deletes the blog.
+		// The second one actually deletes the thread.
 		$id = $this->request->param("id");
 		$forum_model = Model::factory("forum");
 		$thread = $forum_model->get_thread($id);
-		if (intval($thread->get("id")) == 0)
+		if ( ! intval($thread->get("id")))
 		{
 			$this->errors=" That blog does not exist.";
 			$this->action_index();

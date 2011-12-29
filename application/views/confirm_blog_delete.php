@@ -9,6 +9,4 @@
 			<form action="<?php echo URL::base().'dashboard/manage'; ?>" method="POST">
 				<input type="submit" value="No, I do not want to delete this blog." />
 			</form>
-				
-
 <?php  include Kohana::find_file('views', 'footer');  ?>

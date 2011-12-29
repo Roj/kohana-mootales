@@ -37,6 +37,7 @@ $user_data = $users_data[$comment['author_id']][0];?>
 		</div>
 <?php endforeach; ?>
 <?php endif;  ?>
+		<?php echo Pagination::thread_page_links($actual_page,$total_pages,$thread); ?>
 		<h4>Leave a comment</h4>
 <?php if ($show_comment_form): ?>
 		<form action="<?php echo URL::base();?>thread/comment/<?php echo $thread['id']; ?>" method="POST">

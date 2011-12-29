@@ -34,7 +34,7 @@ class DateHelper {
 			}
 		} else if (86400<=$difference AND $difference < 172800)
 		{
-			return "yesterday";
+			return "one day ago";
 		} else
 		{
 			$date_info =getdate($from);

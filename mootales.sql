@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-12-2011 a las 03:57:33
+-- Tiempo de generación: 29-12-2011 a las 19:41:21
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -231,21 +231,33 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 (5, '&lt;b&gt;xss&lt;/b&gt;?', 7, '2011-12-09 14:47:26'),
 (6, 'html_entities &lt;3', 7, '2011-12-09 14:47:37'),
 (7, 'i noticed all frags in the frontpage were by admin. jojo''s jealous', 10, '2011-12-09 16:23:01'),
-(8, 'ajaosdfjaoisfj aiosdfasdfasf', 10, '2011-12-09 18:33:42'),
-(9, '&lt;b&gt;xss&lt;/b&gt;?', 10, '2011-12-09 19:25:04'),
-(11, 'I&Atilde;&plusmn;t&Atilde;&laquo;rn&Atilde;&cent;ti&Atilde;&acute;n&Atilde;&nbsp;liz&Atilde;&brvbar;ti&Atilde;&cedil;n', 7, '2011-12-20 09:18:22'),
-(15, 'IÃ±tÃ«rnÃ¢tiÃ´nÃ lizÃ¦tiÃ¸n', 7, '2011-12-20 09:25:21'),
-(21, 'I?t?rn?ti?n?liz?ti?n', 7, '2011-12-20 09:34:20'),
-(22, 'IÃ±tÃ«rnÃ¢tiÃ´nÃ lizÃ¦tiÃ¸n', 7, '2011-12-20 09:37:16'),
-(23, 'IÃ±tÃ«rnÃ¢tiÃ´nÃ lizÃ¦tiÃ¸n', 7, '2011-12-20 09:39:22'),
 (24, 'Iñtërnâtiônàlizætiøn', 7, '2011-12-20 09:39:38'),
 (25, 'Iñtërnâtiônàlizætiøn', 7, '2011-12-20 10:11:35'),
 (26, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:15:45'),
 (27, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:24:54'),
 (28, 'testing the date system', 7, '2011-12-20 12:01:12'),
 (29, 'testing a quite long fragment. it''s funny how at nite you become a super programmer! ', 7, '2011-12-20 12:32:40'),
-(30, '☭', 7, '2011-12-23 21:32:56'),
-(31, 'today''s april fools where I live', 7, '2011-12-28 09:14:18');
+(30, '☭', 7, '2011-12-23 21:32:56');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pings`
+--
+
+CREATE TABLE IF NOT EXISTS `pings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pinged_id` int(11) NOT NULL,
+  `author_id` int(11) NOT NULL,
+  `fragment_id` int(11) NOT NULL,
+  `when` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `pings`
+--
+
 
 -- --------------------------------------------------------
 
@@ -278,8 +290,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
-(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 30, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
-(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 3, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
+(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 24, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
+(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 1, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
 (11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1);
 
 -- --------------------------------------------------------

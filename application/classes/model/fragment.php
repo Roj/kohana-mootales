@@ -10,6 +10,12 @@ class Model_Fragment extends Model {
 		DB::update("users")->set(array("count_fragments"=>intval($amount_frags)+1))->where("id","=",$info["author_id"])->execute();
 		return DB::insert("fragments",array_keys($info))->values($info)->execute();
 	}
+	public function delete($id,$user_id)
+	{
+		$amount_frags = DB::select("count_fragments")->from("users")->where("id","=",$user_id)->execute()->get("count_fragments");
+		DB::update("users")->set(array("count_fragments"=>intval($amount_frags)-1))->where("id","=",$user_id)->execute();
+		return DB::delete("fragments")->where("author_id","=",$user_id)->and_where("id","=",$id)->execute();
+	}
 	public function get_fragment($id)
 	{
 		return DB::select()->from("fragments")->where("id","=",intval($id))->execute();

@@ -1,4 +1,4 @@
-Mootales version 0.5 (alpha release) (development status) 12/december/11 4:27 am
+Mootales version 0.5 (alpha release) (development status) 29/12/11 3:40 pm
 uses kohana.
 
 install:
@@ -22,6 +22,7 @@ SQL
 [+] forum_categories table
 [+] forum_threads table
 [+] forum_comments table
+[+] pings table
 [ ] messages table
 [ ] friends table
 etc
@@ -37,12 +38,12 @@ OTHER
 [+] bbcode
 [+] add thread
 [+] add thread_comment
-[-] frontpage (add threads, etc)
+[+] frontpage
+[+] delete fragments
 [-] dashboard (need to add notifications, etc)
 [-] user profiles (- need to do the stats thing, threads, user info, ping, etc)
 [-] update user stats all the time
-[ ] manage blogs (mark as draft, rename, edit, delete)
-[ ] delete fragments
+[-] manage blogs (mark as draft, rename, edit, delete)
 [ ] textarea buttons (bbcode, emoticons, etc)
 [ ] picture blogs
 [ ] mail
@@ -60,8 +61,8 @@ Specific things to do
 [+] make blog/thread does not exist error
 [+] do not display comment form if user ain't logged in
 [+] proper unicode support
+[+] pagination
 [-] prevent code repetition
-[ ] pagination
 [ ] do not submit comments full of spaces
 [ ] add info of user in views/blog.php and views/thread.php
 [ ] css tidy-up
@@ -69,4 +70,3 @@ Specific things to do
 [ ] use table instead of... whatever that is on views/forum_category
 [ ] beautify views (especially forum_category and forum_categories)
 [ ] take advantage of cascading filesystem
-[ ] API
