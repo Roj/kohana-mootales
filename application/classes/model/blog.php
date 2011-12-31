@@ -53,6 +53,8 @@ class Model_Blog extends Model {
 	}
 	public function delete_blog($blog_id,$author_id)
 	{
+		DB::delete("votes")->where("blog_id","=",$blog_id)->execute();
+		DB::delete("blog_comments")->where("blog_id","=",$blog_id)->execute();
 		$amount_blogs = DB::select("count_blogs")->from("users")->where("id","=",$author_id)->execute()->get("count_blogs");
 		DB::update("users")->set(array("count_blogs"=>intval($amount_blogs)-1))->where("id","=",$author_id)->execute();
 		return DB::delete("blogs")->where("id","=",$blog_id)->limit(1)->execute();

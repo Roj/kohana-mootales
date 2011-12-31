@@ -43,6 +43,7 @@ class Model_Forum extends Model {
 	}
 	public function delete_thread($id)
 	{
+		DB::delete("forum_comments")->where("thread_id","=",$id)->execute();
 		return DB::delete("forum_threads")->where("id","=",$id)->limit(1)->execute();
 	}
 }
