@@ -1,4 +1,4 @@
-Mootales version 0.5 (alpha release) (development status) 29/12/11 3:40 pm
+Mootales version 0.5 (alpha release) (development status) 31/12/11 0:43 am
 uses kohana.
 
 install:
@@ -31,19 +31,22 @@ OTHER
 [+] login
 [+] logout
 [+] create a blog
+[+] comment on a blog
 [+] like/unlike a blog
-[+] add a comment to a blog
 [+] create fragments
-[+] view blog
-[+] bbcode
-[+] add thread
-[+] add thread_comment
+[+] create thread
+[+] reply to a thread
+[+] view blog, thread, fragment, etc
+[+] bbcode (need to write a better engine though :S)
 [+] frontpage
-[+] delete fragments
+[+] edit blogs/threads
+[+] delete blogs/threads/fragments
 [-] dashboard (need to add notifications, etc)
 [-] user profiles (- need to do the stats thing, threads, user info, ping, etc)
-[-] update user stats all the time
+[-] update user stats all the time (pageviews etc)
 [-] manage blogs (mark as draft, rename, edit, delete)
+[ ] edit comments, delete 'em
+[ ] quote functionality
 [ ] textarea buttons (bbcode, emoticons, etc)
 [ ] picture blogs
 [ ] mail
@@ -67,6 +70,8 @@ Specific things to do
 [ ] add info of user in views/blog.php and views/thread.php
 [ ] css tidy-up
 [ ] general code tidy-up
-[ ] use table instead of... whatever that is on views/forum_category
-[ ] beautify views (especially forum_category and forum_categories)
+[+] use table instead of... whatever that is on views/forum_category
+[+] beautify views (especially forum_category and forum_categories)
+[ ] when deleting something, delete all other data that depends on it (e.g. comments and likes when deleting a blog)
 [ ] take advantage of cascading filesystem
+[ ] jquery, animations, etc

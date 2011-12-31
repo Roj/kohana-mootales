@@ -5,7 +5,7 @@ class Controller_Forum extends Controller_Website {
 	{
 		$forum_model = Model::factory("forum");
 		$categories = $forum_model->get_categories();
-		$view = View::factory("forum_categories")
+		$view = View::factory("forum/categories")
 			->set("categories",$categories);
 		$this->response->body($view);
 	}
@@ -25,7 +25,7 @@ class Controller_Forum extends Controller_Website {
 			$users_data[$thread['author_id']]=$user_model->get_username(intval($thread['author_id']));
 			
 		}
-		$view = View::factory("forum_category")
+		$view = View::factory("forum/category")
 			->set("category_name",$category_name)
 			->set("threads",$threads)
 			->set("users_data",$users_data);

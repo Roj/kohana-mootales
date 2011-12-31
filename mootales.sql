@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 29-12-2011 a las 19:41:21
+-- Tiempo de generación: 31-12-2011 a las 04:42:09
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -42,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `blogs` (
 --
 
 INSERT INTO `blogs` (`id`, `title`, `content`, `tags`, `author_id`, `time_posted`, `amount_votes`, `amount_comments`) VALUES
-(2, 'first post', 'hello world, this is the first official fifa post.\nnah, jk, just testing the edit thingy.\nhan kj tsuj gnitest eth tide inthyg.\nahn kj tusj gintset eth dite hyntig.\nsouthpark did it too', 'hello, world, first post', 7, '2011-12-08 21:51:32', 0, 0),
 (7, 'Hundred years'' war', 'The Hundred Years'' War was a series of separate wars waged from 1337 to 1453 by the House of Valois and the House of Plantagenet, also known as the House of Anjou, for the French throne, which had become vacant upon the extinction of the senior Capetian line of French kings. The House of Valois claimed the title of King of France, while the Plantagenets claimed the thrones of both France and England. The Plantagenet kings were the 12th-century rulers of the kingdom of England, and had their roots in the French regions of Anjou and Normandy.\nThe conflict was punctuated by several periods of peace, before it finally ended in the expulsion of the Plantagenets from France (except from the Pale of Calais). The final outcome was a victory for the house of Valois, which succeeded in recovering early gains made by the Plantagenets and expelling them from the majority of France by the 1450s. However, the war nearly ruined the Valois, while the Plantagenets enriched themselves with plunder. France suffered greatly from the war, since most of the conflict occurred in that country.\nThe &quot;war&quot; was in fact a series of conflicts and is commonly divided into three or four phases: the Edwardian War (1337&acirc;??1360), the Caroline War (1369&acirc;??1389), the Lancastrian War (1415&acirc;??1429), and the slow decline of Plantagenet fortunes after the appearance of Joan of Arc (1412&acirc;??1431). Several other contemporary European conflicts were directly related to this conflict: the Breton War of Succession, the Castilian Civil War, the War of the Two Peters, and the 1383-1385 Crisis. The term &quot;Hundred Years'' War&quot; was a later term invented by historians to describe the series of events.\nThe war owes its historical significance to a number of factors. Though primarily a dynastic conflict, the war gave impetus to ideas of both French and English nationalism. Militarily, it saw the introduction of new weapons and tactics, which eroded the older system of feudal armies dominated by heavy cavalry in Western Europe. The first standing armies in Western Europe since the time of the Western Roman Empire were introduced for the war, thus changing the role of the peasantry. For all this, as well as for its long duration, it is often viewed as one of the most significant conflicts in the history of medieval warfare. In France, civil wars, deadly epidemics, famines and marauding mercenary armies (turned to banditry) reduced the population by about one-half.[1]', '', 10, '2011-12-09 03:17:55', 2, 3),
 (11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 1, 3),
 (12, '<b>xss</b>, again', '&lt;b&gt;xss&lt;/b&gt;\n140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars ', '<b>xss</b>', 10, '2011-12-09 19:25:44', 0, 1),
@@ -133,9 +132,9 @@ CREATE TABLE IF NOT EXISTS `forum_categories` (
 --
 
 INSERT INTO `forum_categories` (`id`, `name`, `description`, `count_threads`, `count_comments`) VALUES
-(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 6, 0),
-(2, 'The train wreck and forum games', 'Mindless rubbish here!', 6, 0),
-(3, 'Project discussion', 'Discuss about this project.', 6, 0);
+(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 8, 0),
+(2, 'The train wreck and forum games', 'Mindless rubbish here!', 8, 0),
+(3, 'Project discussion', 'Discuss about this project.', 8, 0);
 
 -- --------------------------------------------------------
 
@@ -193,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `forum_threads` (
   `closed` tinyint(1) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Volcar la base de datos para la tabla `forum_threads`
@@ -201,9 +200,9 @@ CREATE TABLE IF NOT EXISTS `forum_threads` (
 
 INSERT INTO `forum_threads` (`id`, `author_id`, `category_id`, `title`, `content`, `time_posted`, `last_active`, `sticky`, `closed`, `amount_comments`) VALUES
 (1, 7, 1, 'first thread', 'hasoihoasi foiasufhasuf asf a\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters', '2011-12-11 12:32:30', '2011-12-11 12:32:30', 0, 0, 13),
-(2, 7, 1, 'First thread, man!', 'yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! yayyayayay, forum threads! ', '2011-12-11 23:40:55', '2011-12-11 23:40:55', 0, 0, 13),
-(3, 7, 2, 'another thread!!!', 'so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man so happy man ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 13),
-(5, 7, 3, 'General discussion', 'Post your ideas for the project here.\n                                                                                                                                                                                                                                                                                                                                  ', '2011-12-13 18:38:21', '2011-12-13 18:38:21', 0, 0, 13);
+(3, 7, 2, 'Another thread.', 'Mindless rubbish here.                                                                                                                                                                        ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 13),
+(5, 7, 3, 'General discussion', 'Post your ideas for the project here.\n                                                                                                                                                                                                                                                                                                                                  ', '2011-12-13 18:38:21', '2011-12-13 18:38:21', 0, 0, 13),
+(7, 7, 3, 'Do you like the new look?', 'I noticed that the forums didn''t look quite well, so I tried to make it look better. What do you think? Do you have any suggestions? Leave a comment below!', '2011-12-30 21:32:40', '2011-12-30 21:32:40', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -283,16 +282,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `date_last_seen` datetime NOT NULL,
   `rank` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Volcar la base de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
-(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 24, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
+(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 2, 24, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
 (10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 1, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
-(11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1);
+(11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1),
+(12, 'joaaco', '38a19ce6879126eb450cf94723f8a0c4', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-30', '2011-12-30 17:29:41', 1);
 
 -- --------------------------------------------------------
 

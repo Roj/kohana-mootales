@@ -10,7 +10,7 @@ class Controller_Thread extends Controller_Website {
 		
 		if(intval($thread->get("id")) == 0)
 		{
-			$view = View::factory("thread_notexist");
+			$view = View::factory("404");
 			$this->response->body($view);
 			return 1;
 		}
@@ -43,7 +43,7 @@ class Controller_Thread extends Controller_Website {
 		//Instead of objects, I like to use associative arrays in views.
 		$thread_array = $thread->as_array();
 		$user_array = $user->as_array();
-		$view = View::factory("thread")
+		$view = View::factory("forum/thread/thread")
 			->set("thread", $thread_array[0])
 			->set("user", $user_array[0])
 			->set("comments",$comments)

@@ -13,13 +13,13 @@ class Controller_Fragment extends Controller_Website {
 		$frag = $frag_model->get_fragment($id);
 		if(!intval($frag->get("id")))
 		{
-			$view = View::factory("fragment_notexist");
+			$view = View::factory("404");
 			$this->response->body($view);
 			return 0;
 		}
 		
 		$user = $user_model->get_user_info($frag->get("author_id"));
-		$view = View::factory("fragment")
+		$view = View::factory("fragment/fragment")
 			->set("frag",$frag)
 			->set("user",$user);
 		$this->response->body($view);
@@ -41,7 +41,7 @@ class Controller_Fragment extends Controller_Website {
 		$frag = $frag_model->get_fragment($id);
 		if ( ! intval($frag->get("id")))
 		{
-			$view = View::factory("fragment_notexist");
+			$view = View::factory("404");
 			$this->response->body($view);
 			return 0;
 		}
@@ -55,7 +55,7 @@ class Controller_Fragment extends Controller_Website {
 		if ($_POST == array() OR 
 			intval($_POST['confirm']) != 1)
 		{
-			$view = View::factory("confirm_frag_delete")
+			$view = View::factory("fragment/confirm_delete")
 				->set("frag",$frag);
 			$this->response->body($view);
 			return 0;

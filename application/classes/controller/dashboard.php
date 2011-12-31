@@ -192,7 +192,7 @@ class Controller_Dashboard extends Controller_Website {
 		$blog_model = Model::factory("blog");
 		$blog = $blog_model->get_blog($id);
 		$predef_values = array_merge(array("title"=>$blog->get("title"),"tags"=>$blog->get("tags"),"content"=>$blog->get("content")),$_POST);
-		if ( ! $this->check_edit_form($blog,"edit_blog",$predef_values))
+		if ( ! $this->check_edit_form($blog,"blog/edit",$predef_values))
 		{
 			return 0;
 		}
@@ -212,7 +212,7 @@ class Controller_Dashboard extends Controller_Website {
 		$forum_model = Model::factory("forum");
 		$thread = $forum_model->get_thread($id);
 		$predef_values = array_merge(array("title"=>$thread->get("title"),"tags"=>$thread->get("tags"),"content"=>$thread->get("content")),$_POST);
-		if ( ! $this->check_edit_form($thread,"edit_thread",$predef_values))
+		if ( ! $this->check_edit_form($thread,"forum/thread/edit",$predef_values))
 		{
 			return 0;
 		}
@@ -251,7 +251,7 @@ class Controller_Dashboard extends Controller_Website {
 		if ($_POST == array() OR 
 			intval($_POST['confirm']) != 1) // has the user gone through the confirm page?
 		{
-			$view = View::factory("confirm_blog_delete")
+			$view = View::factory("blog/confirm_delete")
 				->set("blog",$blog);
 			$this->response->body($view);
 			return 0;
@@ -287,7 +287,7 @@ class Controller_Dashboard extends Controller_Website {
 		if ($_POST == array() OR 
 			intval($_POST['confirm']) != 1) // has the user gone through the confirm page?
 		{
-			$view = View::factory("confirm_thread_delete")
+			$view = View::factory("forum/thread/confirm_delete")
 				->set("thread",$thread);
 			$this->response->body($view);
 			return 0;

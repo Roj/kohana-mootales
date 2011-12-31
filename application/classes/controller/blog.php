@@ -13,7 +13,7 @@ class Controller_Blog extends Controller_Website {
 		$blog = $blog_model->get_blog($id);
 		if(intval($blog->get("id")) == 0)
 		{
-			$view = View::factory("blog_notexist");
+			$view = View::factory("404");
 			$this->response->body($view);
 			return 1;
 		}
@@ -44,7 +44,7 @@ class Controller_Blog extends Controller_Website {
 		$blog_array = $blog->as_array();
 		$user_array = $user->as_array();
 		
-		$view = View::factory("blog")
+		$view = View::factory("blog/blog")
 			->set("blog", $blog_array[0])
 			->set("user",$user_array[0]	)
 			->set("liked",$liked)
