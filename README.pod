@@ -20,6 +20,12 @@ edit modules/database/config/database.php lines 21-24
 [-] = halfway-done  <br/>
 [ ] = todo  <br/>
 
+=end html
+
+=head4 SQL
+
+=begin html
+
 [+] user table  <br/>
 [+] blogs table  <br/>
 [+] votes table  <br/>
