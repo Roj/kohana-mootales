@@ -14,6 +14,7 @@ edit modules/database/config/database.php lines 21-24
 =head2 TODO list  
 
 =begin html
+
 <b>legend:</b> <br/>
 [+] = done <br/>
 [-] = halfway-done  <br/>
