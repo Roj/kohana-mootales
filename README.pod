@@ -1,0 +1,78 @@
+=head1 Mootales version 0.5 (alpha release)
+
+=head2 about
+Mootales is a reverse-engineered L<VuTales|http://vutales.com>, with a couple of changes. It is a site in which people can write blogs and share with others. People can like, comment on and share blogs. The site features a frontpage, in which the most liked blogs are shown, as well as recent ones and other stuff, including official announcements. It also has a forum, private messages and a fragment system. Admin and moderator control panels make it easier to regulate the content that is published, check the statistics of the site, ban users, etc .
+
+=head2 installation
+create database, execute commands in mootales.sql.
+edit .htaccess
+edit application/bootstrap.php line 83, with trailing /
+edit modules/database/config/database.php lines 21-24
+
+=head2 TODO list
+legend:
+[+] = done
+[-] = halfway-done
+[ ] = todo
+---
+SQL
+[+] user table
+[+] blogs table
+[+] votes table
+[+] blog_comments table
+[+] fragments table
+[+] forum_categories table
+[+] forum_threads table
+[+] forum_comments table
+[+] pings table
+[ ] messages table
+[ ] friends table
+
+OTHER
+[+] register
+[+] login
+[+] logout
+[+] create a blog
+[+] comment on a blog
+[+] like/unlike a blog
+[+] create fragments
+[+] create thread
+[+] reply to a thread
+[+] view blog, thread, fragment, etc
+[+] bbcode (need to write a better engine though :S)
+[+] frontpage
+[+] edit blogs/threads
+[+] delete blogs/threads/fragments
+[-] dashboard (need to add notifications, etc)
+[-] user profiles (- need to do the stats thing, threads, user info, ping, etc)
+[-] update user stats all the time (pageviews etc)
+[-] manage blogs (mark as draft, rename, edit, delete)
+[ ] edit comments, delete 'em
+[ ] quote functionality
+[ ] textarea buttons (bbcode, emoticons, etc)
+[ ] picture blogs
+[ ] mail
+[ ] friendship
+[ ] admin cp
+[ ] admin cms
+[ ] block user
+[ ] help page
+[ ] contact/report bug page
+
+code-specific list
+
+[+] use array_merge instead of multiple foreach
+[+] make blog/thread does not exist error
+[+] do not display comment form if user ain't logged in
+[+] proper unicode support
+[+] pagination
+[-] prevent code repetition
+[ ] do not submit comments full of spaces
+[ ] add info of user in views/blog.php and views/thread.php
+[ ] css tidy-up
+[ ] general code tidy-up
+[+] use table instead of... whatever that is on views/forum_category
+[+] beautify views (especially forum_category and forum_categories)
+[ ] when deleting something, delete all other data that depends on it (e.g. comments and likes when deleting a blog)
+[ ] take advantage of cascading filesystem
+[ ] jquery, animations, etc
