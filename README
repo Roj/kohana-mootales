@@ -1,14 +1,16 @@
-Mootales version 0.5 (alpha release) (development status) 31/12/11 0:43 am
-uses kohana.
+=head1 Mootales version 0.5 (alpha release)
 
-install:
+=head2 about
+Mootales is a reverse-engineered L<VuTales|http://vutales.com>, with a couple of changes. It is a site in which people can write blogs and share with others. People can like, comment on and share blogs. The site features a frontpage, in which the most liked blogs are shown, as well as recent ones and other stuff, including official announcements. It also has a forum, private messages and a fragment system. Admin and moderator control panels make it easier to regulate the content that is published, check the statistics of the site, ban users, etc .
+
+=head2 installation
 create database, execute commands in mootales.sql.
 edit .htaccess
 edit application/bootstrap.php line 83, with trailing /
 edit modules/database/config/database.php lines 21-24
 
-
-list:
+=head2 TODO list
+legend:
 [+] = done
 [-] = halfway-done
 [ ] = todo
@@ -25,7 +27,7 @@ SQL
 [+] pings table
 [ ] messages table
 [ ] friends table
-etc
+
 OTHER
 [+] register
 [+] login
@@ -57,8 +59,7 @@ OTHER
 [ ] help page
 [ ] contact/report bug page
 
-
-Specific things to do
+code-specific list
 
 [+] use array_merge instead of multiple foreach
 [+] make blog/thread does not exist error
