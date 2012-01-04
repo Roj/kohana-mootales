@@ -1,6 +1,7 @@
 =head1 Mootales version 0.5 (alpha release)  
 
 =head2 about  
+
 Mootales is a reverse-engineered L<VuTales|http://vutales.com>, with a couple of changes. It is a site in which people can write blogs and share with others. People can like, comment on and share blogs. The site features a frontpage, in which the most liked blogs are shown, as well as recent ones and other stuff, including official announcements. It also has a forum, private messages and a fragment system. Admin and moderator control panels make it easier to regulate the content that is published, check the statistics of the site, ban users, etc .
 
 =head2 installation  
