@@ -13,71 +13,80 @@ edit modules/database/config/database.php lines 21-24
 
 =head2 TODO list  
 
-legend:  
-[+] = done  
-[-] = halfway-done  
-[ ] = todo  
+=begin html
+<b>legend:</b> <br/>
+[+] = done <br/>
+[-] = halfway-done  <br/>
+[ ] = todo  <br/>
 
-=head4 SQL 
+[+] user table  <br/>
+[+] blogs table  <br/>
+[+] votes table  <br/>
+[+] blog_comments table  <br/>
+[+] fragments table  <br/>
+[+] forum_categories table  <br/>
+[+] forum_threads table  <br/>
+[+] forum_comments table  <br/>
+[+] pings table  <br/>
+[ ] messages table  <br/>
+[ ] friends table  <br/>
 
-[+] user table  
-[+] blogs table  
-[+] votes table  
-[+] blog_comments table  
-[+] fragments table  
-[+] forum_categories table  
-[+] forum_threads table  
-[+] forum_comments table  
-[+] pings table  
-[ ] messages table  
-[ ] friends table  
+=end html
   
 =head4 OTHER  
 
-[+] register  
-[+] login  
-[+] logout  
-[+] create a blog  
-[+] comment on a blog  
-[+] like/unlike a blog  
-[+] create fragments  
-[+] create thread  
-[+] reply to a thread  
-[+] view blog, thread, fragment, etc  
-[+] bbcode (need to write a better engine though :S)  
-[+] frontpage  
-[+] edit blogs/threads  
-[+] delete blogs/threads/fragments  
-[-] dashboard (need to add notifications, etc)  
-[-] user profiles (- need to do the stats thing, threads, user info, ping, etc)  
-[-] update user stats all the time (pageviews etc)  
-[-] manage blogs (mark as draft, rename, edit, delete)  
-[ ] edit comments, delete 'em  
-[ ] quote functionality  
-[ ] textarea buttons (bbcode, emoticons, etc)  
-[ ] picture blogs  
-[ ] mail  
-[ ] friendship  
-[ ] admin cp  
-[ ] admin cms  
-[ ] block user  
-[ ] help page  
-[ ] contact/report bug page  
+=begin html
+
+[+] register  <br/>
+[+] login  <br/>
+[+] logout  <br/>
+[+] create a blog <br/> 
+[+] comment on a blog <br/> 
+[+] like/unlike a blog  <br/>
+[+] create fragments  <br/>
+[+] create thread  <br/>
+[+] reply to a thread  <br/>
+[+] view blog, thread, fragment, etc  <br/>
+[+] bbcode (need to write a better engine though :S)  <br/>
+[+] frontpage  <br/>
+[+] edit blogs/threads  <br/>
+[+] delete blogs/threads/fragments  <br/>
+[-] dashboard (need to add notifications, etc)  <br/>
+[-] user profiles (- need to do the stats thing, threads, user info, ping, etc)  <br/>
+[-] update user stats all the time (pageviews etc)  <br/>
+[-] manage blogs (mark as draft, rename, edit, delete)  <br/>
+[ ] edit comments, delete 'em  <br/>
+[ ] quote functionality  <br/>
+[ ] textarea buttons (bbcode, emoticons, etc)  <br/>
+[ ] picture blogs  <br/>
+[ ] mail  <br/>
+[ ] friendship  <br/>
+[ ] admin cp  <br/>
+[ ] admin cms  <br/>
+[ ] block user  <br/>
+[ ] help page  <br/>
+[ ] contact/report bug page  <br/>
+
+=end html
 
 =head4 code-specific list
 
-[+] use array_merge instead of multiple foreach
-[+] make blog/thread does not exist error
-[+] do not display comment form if user ain't logged in
-[+] proper unicode support
-[+] pagination
-[-] prevent code repetition
-[ ] do not submit comments full of spaces
-[ ] add info of user in views/blog.php and views/thread.php
-[ ] css tidy-up
-[ ] general code tidy-up
-[+] use table instead of... whatever that is on views/forum_category
-[+] beautify views (especially forum_category and forum_categories)
-[ ] when deleting something, delete all other data that depends on it (e.g. comments and likes when deleting a blog)
-[ ] take advantage of cascading filesystem
-[ ] jquery, animations, etc
+=begin html
+
+[+] use array_merge instead of multiple foreach<br/>
+[+] make blog/thread does not exist error<br/>
+[+] do not display comment form if user ain't logged in<br/>
+[+] proper unicode support<br/>
+[+] pagination<br/>
+[-] prevent code repetition<br/>
+[ ] do not submit comments full of spaces<br/>
+[ ] add info of user in views/blog.php and views/thread.php<br/>
+[ ] css tidy-up<br/>
+[ ] general code tidy-up<br/>
+[+] use table instead of... whatever that is on views/forum_category<br/>
+[+] beautify views (especially forum_category and forum_categories)<br/>
+[ ] when deleting something, delete all other data that depends on it (e.g. comments and likes when deleting a blog)<br/>
+[ ] take advantage of cascading filesystem<br/>
+[ ] jquery, animations, etc<br/>
+
+=end html
