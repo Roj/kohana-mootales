@@ -8,11 +8,9 @@
 			<form action="<?php echo URL::base()."dashboard/edit_thread/".$item->get("id"); ?>" method="POST" class="blog_form">
 				<label for="title">Title</label>
 				<input type="text" name="title" id="title" value="<?php echo $values['title']; ?>" maxlength="100" size="50"/> <br/>
-				<label for="tags">Tags</label>
-				<input type="text" name="tags" id="tags" value="<?php echo $values['tags'];?>" maxlength="100" size="50"/> <br/>
 				<label for="content">Content</label>
 				<textarea name="content" id="content"><?php echo $values["content"]; ?></textarea> <br/>
-				<input type="submit" value="Submit blog"/>
+				<input type="submit" value="Edit thread"/>
 			</form>
 		</div>
 <?php  include Kohana::find_file('views', 'footer');  ?>

@@ -1,5 +1,6 @@
 <?php
 class Controller_Dashboard extends Controller_Website {
+	public $message;
 	public $errors;
 	public $form_values;
 	public function before() {
@@ -17,11 +18,31 @@ class Controller_Dashboard extends Controller_Website {
 			? $empty_values
 			: array_merge($empty_values,$this->form_values);
 		$forum_model = Model::factory("forum");
+		$frag_model = Model::factory("fragment");
+		$user_model = Model::factory("user");
+		
+		$user_info = $user_model->get_user_info($this->session->get("user_id"))->as_array();
 		$categories = $forum_model->get_categories();
+		$pings = $frag_model->get_users_pings($this->session->get("user_id"));
+		$users_data = array();  //here we'll store each user's info
+		$fragments = array(); //here we'll store fragments in which the user was pinged
+		foreach ($pings as $item) 
+		{
+			$fragments[$item['id']]=$frag_model->get_fragment($item['fragment_id'])->as_array();
+			if(array_key_exists($item['author_id'],$users_data)) // Why query two times for the same user?
+				continue;
+			$users_data[$item['author_id']]=$user_model->get_username($item['author_id']);
+		}
+		
 		$view = View::factory("dashboard")
+			->set("user_info",$user_info[0])
 			->set("errors",$this->errors)
+			->set("message",$this->message)
 			->set("form_values",$this->form_values)
-			->set("categories",$categories);
+			->set("categories",$categories)
+			->set("pings",$pings)
+			->set("users_data",$users_data)
+			->set("fragments",$fragments);
 		$this->response->body($view);
 	}
 	public function action_create_fragment()
@@ -38,11 +59,35 @@ class Controller_Dashboard extends Controller_Website {
 		{
 			$this->errors.="The fragment can contain up to 140 characters, including spaces. It can't be left empty.";
 		}
-		if ( $this->errors == '')
+		if ( $this->errors == '') // no errors
 		{
+			//submit fragment
+			$user_model = Model::factory("user");
 			$model = Model::factory("fragment");
-			$model->create($this->session->get("user_id"),$post['fragment_content']);
-			$this->request->redirect("user/".$this->session->get("username"));
+			$fragment_id = $model->create($this->session->get("user_id"),$post['fragment_content']);
+			//check for pings
+			$pattern = "/@(\w+)/i";
+			$matches = array();
+			preg_match_all($pattern,$post['fragment_content'],$matches);
+			$already_pinged = array(); // as not to ping the same user twice
+			foreach ($matches[1] as $pinged_username)
+			{
+				//ping users
+				$pinged_id = $user_model->get_user_id($pinged_username);
+				if($pinged_id != 0 AND 
+					$pinged_id != $this->session->get("user_id") AND
+					! in_array($pinged_id,$already_pinged))
+				{
+					$model->add_ping(array(
+						"pinged_id"=>$pinged_id,
+						"author_id"=>$this->session->get("user_id"),
+						"fragment_id"=>$fragment_id[0],
+						"when"=> date("Y-m-d H:i:s")
+					));
+					$already_pinged[] = $pinged_id;
+				}
+			}
+			$this->request->redirect("fragment/{$fragment_id[0]}");
 			return;
 		}
 		$this->form_values = $post;
@@ -294,6 +339,44 @@ class Controller_Dashboard extends Controller_Website {
 		}
 		$forum_model->delete_thread($id);
 		$this->action_manage();
+	}
+	public function action_edit_info() 
+	{
+		$post = $_POST;
+		if ($post == array())
+		{
+			$this->request->redirect("dashboard");
+			return 0;
+		}
+		$user_id = $this->session->get("user_id");
+		$user_model = Model::factory("user");
+		$user_model->edit_personal_info(array(
+			'name'=>htmlentities(@$post['name']),
+			'avatar'=>htmlentities(@$post['avatar']),
+			'age'=>htmlentities(@$post['age']),
+			'country'=>htmlentities(@$post['country']),
+			'gender'=>htmlentities(@$post['gender'])
+		),$user_id);
+		$this->message = "Successfully edited your personal information.";
+		$this->action_index();
+		return 1;
+	}
+	public function action_delete_ping()
+	{
+		$post = $_POST;
+		if($post == array() OR 
+			intval($post['ping_id']) == 0) 
+		{
+			$this->errors="There is no ping to delete.";
+			$this->action_index();
+			return 0;
+		} else {
+			$fragment_model = Model::factory("fragment");
+			$fragment_model->delete_ping($post['ping_id']);
+			$this->message="Successfully deleted that ping.";
+			$this->action_index();
+			return 1;
+		}
 	}
 }
 ?>

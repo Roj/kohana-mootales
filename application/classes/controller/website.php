@@ -12,11 +12,32 @@ abstract class Controller_Website extends Controller {
 		
 		$this->session = Session::instance();
 		$this->logged_in = $this->session->get('logged_in',false);
+		$this->user_rank = $this->session->get('rank',0);
+		if (Kohana::$profiling === TRUE)
+		{
+			$this->benchmark = Profiler::start('Controller',$this->request->action());
+		}
+		$frag_model = Model::factory("fragment");
+		$mail_model = Model::factory("mail");
+		$amount_pings = ($this->logged_in)? $frag_model->get_amount_pings($this->session->get("user_id")):0;
+		$amount_mails = ($this->logged_in)? $mail_model->get_amount_unread_mails($this->session->get("user_id")):0;
+		
 		View::bind_global('page_title',$this->page_title);
 		View::bind_global('logged_in',$this->logged_in);
-		View::set_global('user_rank',$this->session->get("rank",0));
+		View::set_global('user_rank',$this->user_rank);
 		View::set_global('username',$this->session->get('username','anonymous'));
 		View::set_global('user_id',$this->session->get("user_id",0));
+		View::set_global('amount_mails',$amount_mails);
+		View::set_global('amount_pings',$amount_pings);
 		$this->page_title = 'Mootales';
+	}
+	public function after()
+	{
+		parent::after();
+		if(isset($this->benchmark))
+		{
+			Profiler::stop($this->benchmark);
+		}
+		
 	}
 }

@@ -1,16 +1,39 @@
 <?php include Kohana::find_file('views', 'header');  ?>
+		<script language="javascript" type="text/javascript">
+			$(document).ready(function(){
+				$('#delete').fancybox();
+				$('#edit').fancybox();
+			});
+		</script>
+		<div class="hidden">
+			<div id="edit_form">
+				<h3>Edit thread</h3>
+				<form action="<?php echo URL::base()."dashboard/edit_thread/".$thread["id"]; ?>" method="POST" class="thread_form">
+					<label for="title">Title</label>
+					<input type="text" name="title" id="title" value="<?php echo $thread['title']; ?>" maxlength="100" size="50"/> <br/>
+					<label for="content">Content</label>
+					<textarea name="content" id="content"><?php echo $thread["content"]; ?></textarea> <br/>
+					<input type="submit" value="Submit thread"/>
+				</form>
+			</div>
+			<div id="delete_form">
+				<h3>Confirm thread deletion?</h3>
+				<p>Do you really want to delete the thread titled "<?php echo $thread["title"]; ?>"?</p>
+				<form action="<?php echo URL::base().'dashboard/delete_thread/'.$thread['id'];?>" method="POST">
+					<input type="hidden" name="confirm" value="1"/>
+					<input type="submit" value="Yes, I do want to delete this thread." />
+				</form>
+			</div>
+		</div>
 		<div class="thread_wrap">
 			<span class="thread_info"> written by <?php 
 			echo Link::user($user["username"]);
 			echo "&nbsp;";
 			echo DateHelper::human_readable($thread["time_posted"]); 
-			echo " (";
-			if($user_rank > 1 OR $thread['author_id'] == $user_id): 
-				echo HTML::anchor("dashboard/edit_thread/{$thread['id']}","edit",null,null,false);
-				echo "/";
-				echo HTML::anchor("dashboard/delete_thread/{$thread['id']}","delete",null,null,false);
-			endif;
-			echo ")"; ?></span>
+			if($user_rank > 1 OR $thread['author_id'] == $user_id):  ?>
+				(<a href="#edit_form" id="edit">edit</a>/<a href="#delete_form" id="delete">delete</a>)
+<?php  endif; ?>
+			</span>
 			<h3><?php echo $thread["title"];?></h3>
 			
 			<div class="thread_content">
@@ -40,14 +63,13 @@ $user_data = $users_data[$comment['author_id']][0];?>
 		<?php echo Pagination::thread_page_links($actual_page,$total_pages,$thread); ?>
 		<h4>Leave a comment</h4>
 <?php if ($show_comment_form): ?>
-		<form action="<?php echo URL::base();?>thread/comment/<?php echo $thread['id']; ?>" method="POST">
-			<label for="content">comment</label>
-			<textarea name="content" rows="10" cols="50"></textarea><br/>
-			<label>&nbsp;</label><input type="submit" value="Submit comment"/>
+		<form action="<?php echo URL::base();?>thread/comment/<?php echo $thread['id']; ?>" method="POST" class="comment_form">
+<?php echo BBCode::textarea_buttons('textarea_comment'); ?>
+			<textarea name="content" rows="10" cols="50" id="textarea_comment"></textarea><br/>
+			<input type="submit" value="Submit comment"/>
 		</form>
 <?php else: ?>
 		<p>You need to <?php echo Link::login(); ?> or <?php echo Link::register();?> in order to be able to comment.</p>
 
-<?php
-endif;
-include Kohana::find_file('views', 'footer');  ?>
+<?php endif;?>
+<?php include Kohana::find_file('views', 'footer');  ?>

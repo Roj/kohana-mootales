@@ -14,15 +14,20 @@ class Model_User extends Model {
 			->execute();
 		return $query; //if it goes okay, it returns the ID of the row
 	}
+	public function edit_personal_info($info,$user_id) {
+		return DB::update("users")->set($info)->where("id","=",$user_id)->execute();
+	}
+	public function get_user_id($username)
+	{
+		return db::select("id")->from('users')->where('username','=',addslashes($username))->limit('1')->execute()->get('id');
+	}
 	public function get_username($id)
 	{
-		$query = db::select("username")->from('users')->where('id','=',intval($id))->limit('1')->execute()->get('username');
-		return $query;
+		return db::select("username")->from('users')->where('id','=',intval($id))->limit('1')->execute()->get('username');
 	}
 	public function get_password_by_username($username)
 	{
-		$query = db::select("password")->from('users')->where('username','=',addslashes($username))->limit('1')->execute()->get('password');
-		return $query;
+		return db::select("password")->from('users')->where('username','=',addslashes($username))->limit('1')->execute()->get('password');
 	}
 	public function get_user_info($id)
 	{
@@ -30,8 +35,7 @@ class Model_User extends Model {
 	}
 	public function get_user_info_by_username($username)
 	{
-		$query = db::select()->from('users')->where('username','=',addslashes($username))->limit('1')->execute();
-		return $query;
+		return db::select()->from('users')->where('username','=',addslashes($username))->limit('1')->execute();
 	}
 	public function unique_username($username)
 	{
@@ -44,5 +48,6 @@ class Model_User extends Model {
 			->execute()
 			->get('amount');
 	}
+	
 }
 ?>

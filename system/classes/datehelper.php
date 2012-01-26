@@ -32,9 +32,18 @@ class DateHelper {
 					return "{$amount_hours} hours ago";
 					break;
 			}
-		} else if (86400<=$difference AND $difference < 172800)
+		} else if (86400<=$difference AND $difference < 864000)
 		{
-			return "one day ago";
+			$amount_days = floor($difference/86400);
+			switch($amount_days)
+			{
+				case 1:
+					return "one day ago";
+					break;
+				default:
+					return "{$amount_days} days ago";
+					break;
+			}
 		} else
 		{
 			$date_info =getdate($from);

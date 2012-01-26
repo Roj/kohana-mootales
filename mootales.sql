@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 31-12-2011 a las 04:42:09
+-- Tiempo de generación: 26-01-2012 a las 22:36:01
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -44,10 +44,8 @@ CREATE TABLE IF NOT EXISTS `blogs` (
 INSERT INTO `blogs` (`id`, `title`, `content`, `tags`, `author_id`, `time_posted`, `amount_votes`, `amount_comments`) VALUES
 (7, 'Hundred years'' war', 'The Hundred Years'' War was a series of separate wars waged from 1337 to 1453 by the House of Valois and the House of Plantagenet, also known as the House of Anjou, for the French throne, which had become vacant upon the extinction of the senior Capetian line of French kings. The House of Valois claimed the title of King of France, while the Plantagenets claimed the thrones of both France and England. The Plantagenet kings were the 12th-century rulers of the kingdom of England, and had their roots in the French regions of Anjou and Normandy.\nThe conflict was punctuated by several periods of peace, before it finally ended in the expulsion of the Plantagenets from France (except from the Pale of Calais). The final outcome was a victory for the house of Valois, which succeeded in recovering early gains made by the Plantagenets and expelling them from the majority of France by the 1450s. However, the war nearly ruined the Valois, while the Plantagenets enriched themselves with plunder. France suffered greatly from the war, since most of the conflict occurred in that country.\nThe &quot;war&quot; was in fact a series of conflicts and is commonly divided into three or four phases: the Edwardian War (1337&acirc;??1360), the Caroline War (1369&acirc;??1389), the Lancastrian War (1415&acirc;??1429), and the slow decline of Plantagenet fortunes after the appearance of Joan of Arc (1412&acirc;??1431). Several other contemporary European conflicts were directly related to this conflict: the Breton War of Succession, the Castilian Civil War, the War of the Two Peters, and the 1383-1385 Crisis. The term &quot;Hundred Years'' War&quot; was a later term invented by historians to describe the series of events.\nThe war owes its historical significance to a number of factors. Though primarily a dynastic conflict, the war gave impetus to ideas of both French and English nationalism. Militarily, it saw the introduction of new weapons and tactics, which eroded the older system of feudal armies dominated by heavy cavalry in Western Europe. The first standing armies in Western Europe since the time of the Western Roman Empire were introduced for the war, thus changing the role of the peasantry. For all this, as well as for its long duration, it is often viewed as one of the most significant conflicts in the history of medieval warfare. In France, civil wars, deadly epidemics, famines and marauding mercenary armies (turned to banditry) reduced the population by about one-half.[1]', '', 10, '2011-12-09 03:17:55', 2, 3),
 (11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 1, 3),
-(12, '<b>xss</b>, again', '&lt;b&gt;xss&lt;/b&gt;\n140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars 140chars ', '<b>xss</b>', 10, '2011-12-09 19:25:44', 0, 1),
-(13, 'bbcode test', '[b]bold [/b]\n[i]talics[/i]\n[b]this bold\ncontinues\nthrough\nnewlines [/b]\n[i]italics[/i]\n[b][i]bolditalic[/i][/b]\n[img]http://i.imgur.com/8a6QA.jpg[/img]\n[divider]\n[url]http://google.com[/url]\n[url=http://google.com]google[/url]\n[code]\nfunction sex($condom = false) {\n    sleep(9 months);\n    return baby * intval(!$condom);\n}\n[/code]\n[quote]hello[/quote]\n140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars 140 chars ', '', 10, '2011-12-09 23:13:47', 0, 1),
-(24, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:25:43', 1, 4),
-(25, 'Pagination test.', 'Gotta test pagination. Don''t really know how to though... it seems to me that kohana 3.2 has deprecated that module :S i''ll see if limits are fast enough', '', 7, '2011-12-22 13:44:16', 1, 22);
+(24, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:25:43', 2, 4),
+(25, 'Pagination test :)', 'Gotta test pagination. Don''t really know how to though... it seems to me that kohana 3.2 has deprecated that module :S i''ll try doing it with limits, this is my first time implementing pagination!', 'php is easy :D', 7, '2011-12-22 13:44:16', 3, 23);
 
 -- --------------------------------------------------------
 
@@ -62,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `blog_comments` (
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Volcar la base de datos para la tabla `blog_comments`
@@ -82,7 +80,6 @@ INSERT INTO `blog_comments` (`id`, `author_id`, `blog_id`, `content`, `when`) VA
 (11, 10, 11, 'fuck', '2011-12-09 19:21:33'),
 (12, 10, 11, '&lt;i&gt;can''t xss now&lt;/i&gt;', '2011-12-09 19:28:16'),
 (13, 10, 7, 'break line\nbreak line\n', '2011-12-09 19:53:07'),
-(14, 10, 13, 'you said\n[quote]140 chars\n140 chars[/quote]\nbut you went over that limit\n(actually testing for comment bbcode and multi line bbcode)', '2011-12-09 23:45:16'),
 (15, 7, 14, 'so brave', '2011-12-12 01:29:56'),
 (16, 7, 24, 'http://google.com', '2011-12-22 11:46:48'),
 (17, 7, 24, '[url=google.com]link[/url]\n[url]google.com[/url]', '2011-12-22 11:52:59'),
@@ -110,7 +107,8 @@ INSERT INTO `blog_comments` (`id`, `author_id`, `blog_id`, `content`, `when`) VA
 (39, 7, 25, 'adsfsdfasdf', '2011-12-28 19:24:51'),
 (40, 7, 25, 'asdfasdfasdf', '2011-12-28 19:24:55'),
 (41, 7, 25, 'Congrats, man! Looks like you sorted it out. :)', '2011-12-28 20:04:33'),
-(42, 7, 12, 'dude... xss is like SO 2005.', '2011-12-28 20:48:34');
+(43, 7, 26, 'coooommment!!!', '2011-12-31 13:43:53'),
+(44, 7, 25, 'ಠ_ಠ', '2012-01-08 22:44:18');
 
 -- --------------------------------------------------------
 
@@ -132,9 +130,9 @@ CREATE TABLE IF NOT EXISTS `forum_categories` (
 --
 
 INSERT INTO `forum_categories` (`id`, `name`, `description`, `count_threads`, `count_comments`) VALUES
-(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 8, 0),
-(2, 'The train wreck and forum games', 'Mindless rubbish here!', 8, 0),
-(3, 'Project discussion', 'Discuss about this project.', 8, 0);
+(1, 'General chat', 'Chat about anything that doesn''t fit in any other category and/or a blog.', 11, 0),
+(2, 'The train wreck and forum games', 'Mindless rubbish here!', 11, 0),
+(3, 'Project discussion', 'Discuss about this project.', 11, 0);
 
 -- --------------------------------------------------------
 
@@ -149,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `forum_comments` (
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Volcar la base de datos para la tabla `forum_comments`
@@ -172,7 +170,11 @@ INSERT INTO `forum_comments` (`id`, `author_id`, `thread_id`, `content`, `when`)
 (14, 7, 5, 'reminder: add uniq_ids...', '2011-12-28 20:55:06'),
 (15, 7, 5, 'Howard''s nose is pretty big.', '2011-12-28 20:55:26'),
 (16, 7, 5, 'Lucky Baldwins.', '2011-12-28 20:55:36'),
-(17, 7, 5, 'finally! page two! :D', '2011-12-28 20:55:46');
+(17, 7, 5, 'finally! page two! :D', '2011-12-28 20:55:46'),
+(18, 7, 9, '[b][i][s][s][u][center][justify][/justify][/center][/u][/s][/s][/i][/b]', '2012-01-08 13:16:18'),
+(19, 7, 7, 'I don''t intend to discomfit my readers, but I do need to point out that I wouldn''t waste my time trying to point the high-powered fire hose of truth at Tarheel''s unsophisticated, lamebrained bunco games to wash away their multiple layers of propagandism if Tarheel''s philippics weren''t parroted by so many prissy louts. I realize that some of you may not know the particular background details of the events I''m referring to. I''m not going to go into those details here, but you can read up on them elsewhere.\n\nI''m not particularly old, but I do remember a time when honesty, decency, and respect for others were the norm. Nowadays, thanks to Tarheel''s fatuous, counterproductive mind games, people everywhere live in fear that the worst classes of grotty weasels there are will subject human beings to indignities. Even worse, many people are being prevented from knowing that I have a tendency to report the more sensational things that Tarheel is up to, the more shocking things, things like how he wants to squander irreplaceable treasures. And I realize the difficulty that the average person has in coming to grips with that, but you might have heard the story that he once agreed to help us win the culture war and save this country. No one has located the document in which Tarheel said that. No one has identified when or where Tarheel said that. That''s because he never said it. As you might have suspected, I know more about elitism than most people. You might even say that I''m an expert on the subject. I can therefore state with confidence that one can only speculate how much worse things would be if Tarheel were to relabel millions of people as "egotism-oriented". More emphatically, Tarheel''s method (or school, or ideology&mdash;it is hard to know exactly what to call it) goes by the name of "Tarheel-ism". It is a headlong and avowedly bloody-minded philosophy that aims to introduce disease, ignorance, squalor, idleness, and want into affluent neighborhoods.\n\nCynical slumlords are more susceptible to Tarheel''s brainwashing tactics than are any other group. Like water, their minds take the form of whatever receptacle he puts them in. They then lose all recollection that as Tarheel matures emotionally he''ll eventually grow out of his present way of thinking and come to realize that whenever I turn around I see him preventing the real problems from being solved. To deny such a truth would be to deny the evidence of our own senses. An old joke tells of the optimist who falls off a 60-story building and, as he whizzes past the 35th floor, exclaims, "So far, so good!" But it is not such blind optimism that causes Tarheel''s legatees to think that they can pooh-pooh the concerns of others. Tarheel has allowed himself to become a spokesman for the same point of view shared by impertinent blowhards, bloodthirsty half-wits, and inimical pipsqueaks while masquerading as an outspoken radical bucking the system.\n\nTarheel can''t seriously believe that he has a "special" perspective on factionalism that carries with it a "special" right to make self-deceiving, loathsome adulterers out to be something they''re not, can he? We should be able to look into our own souls for the answer. If we do, I suspect we''ll find that society must soon decide either to maximize our individual potential for effectiveness and success in combatting him or else to let Tarheel persecute the innocent and let the guilty go unpunished. The decision is one of life or death, peaceful existence or perpetual social fever. I can hope only that those in charge realize that Tarheel is an unambitious meany. I''m being super-extra nice when I say that. If I weren''t so polite I instead would have stated that Tarheel has been known to destroy the heart and fabric of our nation. That always spurs on his bedfellows to cause the destruction of human ambition and joy. That, in turn, encourages Tarheel to envelop us in a nameless, unreasoning, unjustified terror. This cycle inevitably, inexorably ratchets upwards and outwards until at last some snarky nitwit winds up diluting the nation''s sense of common purpose and shared sacrifice.\n\nTarheel may unwittingly transmogrify society''s petty gripes and irrational fears into "issues" to be catered to. I say "unwittingly" because he is apparently unaware that he operates under the influence of a particular ideology&mdash;a set of beliefs based on the root metaphor of the transmission of forces. Until you understand this root metaphor you won''t be able to grasp why we must reach out to people with the message that the Orwellian implications of Tarheel''s maneuvers are clear. We must alert people of that. We must educate them. We must inspire them. And we must encourage them to supply the missing ingredient that could stop the worldwide slide into metagrobolism.\n\nEven though Tarheel gives flattering titles to his natural distempers, in Tarheel''s sentiments, Trotskyism is witting and unremitting, militant and mawkish. He revels in it, rolls in it, and uses it to ignite a maelstrom of alarmism. His pronouncements are geared toward the continuation of social stratification under the rubric of "tradition". Funny, that was the same term that Tarheel''s intimates once used to prosecute, sentence, and label people as evil tricksters without the benefit of any evidence whatsoever.\n\nRather than respond to my letters with reasoned arguments, Tarheel prefers to shame the poor into blaming themselves for losing the birth lottery. Although this method of attack is unparalleled in any other sphere of literary controversy it does prove that sometimes I think that Tarheel is simply a willing pawn of those rambunctious smear merchants who exclude all people and proposals that oppose his backwards editorials. I typically drop that willing-pawn notion, however, whenever I remember that in a recent tell-all, a former member of Tarheel''s faction writes that "anal-retentive doomsday prophets thrive on hatred rather than love". Those are some pretty harsh words even when one considers that if you intend to challenge someone''s assertions, you need to present a counterargument. Tarheel provides none. Tarheel says that bad things "just happen" (i.e., they''re not caused by Tarheel himself). But then he turns around and says that censorship could benefit us. You know, you can''t have it both ways, Tarheel.\n\nI am not concerned with rumors or hearsay about Tarheel. I am interested only in ascertained facts attested by published documents and in these primarily as an illustration that Tarheel frequently avers his support of democracy and his love of freedom. But one need only look at what Tarheel is doing&mdash;as opposed to what he is saying&mdash;to understand his true aims. I do not appreciate being labeled. No one does. Nevertheless, if we don''t do something soon, his raving programs of Gleichschaltung will rise like a golem with a million hands on a million throats to choke the honor out of decent, hardworking people.\n\nTo change the topic slightly, Tarheel has stated that skin color means more than skill, and gender is more impressive than genius. I find such declaratory statements quite telling. They tell me that the first lies that Tarheel told us were relatively benign. Still, they have been progressing. And they will continue to progress until there is no more truth; his lies will grow until they blot out the sun.\n\nJust because Tarheel and his subordinates don''t like being labelled as "capricious hoodwinkers" or "crude, chauvinistic evildoers" doesn''t mean the shoe doesn''t fit. Honor means nothing to him. Principles mean nothing to him. All he cares about is how best to work hand-in-glove with harebrained Huns. When asked to mend his ways, Tarheel will give people a wink and a smile, but when the wheels begin to turn, it''s business as usual. His short-sighted words are meticulously designed to keep the population unaware, uneducated, dumbed down, and focused on stupefying activities like video games. The intention is to prevent people from noticing that Tarheel has been quoting me out of context. Before he spews any more psychoanalytical drivel, let me assure him that he uses the word "chromatographic" to justify making incorrect leaps of logic. In doing so, he is reversing the meaning of that word as a means of disguising the fact that in these days of political correctness and the changing of how history is taught in schools to fulfill a particular agenda, if the only way to condemn&mdash;without hesitation, without remorse&mdash;all those who turn our country into a high-handed cesspool overrun with scum, disease, and crime is for me to become increasingly frustrated, humiliated and angry, then so be it. It would truly be worth it because contrary to my personal preferences, I''m thinking about what''s best for all of us. My conclusion is that what''s best for all of us is for me to improve the physical and spiritual quality of life for the population at present and for those yet to come. Let me point out that the reader who has followed me through this lengthy letter will have been able to gather an idea of Tarheel''s general character and disposition. Hence, I shall conclude simply by stating that whenever a will-o''-the-wisp of narcissism, however unreal, turns up anywhere, Tarheel is off at a trot.', '2012-01-18 18:35:09'),
+(20, 7, 9, 'what are they doing here?', '2012-01-20 20:32:43'),
+(21, 7, 3, 'ಠ_ಠ', '2012-01-22 18:20:58');
 
 -- --------------------------------------------------------
 
@@ -192,17 +194,17 @@ CREATE TABLE IF NOT EXISTS `forum_threads` (
   `closed` tinyint(1) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcar la base de datos para la tabla `forum_threads`
 --
 
 INSERT INTO `forum_threads` (`id`, `author_id`, `category_id`, `title`, `content`, `time_posted`, `last_active`, `sticky`, `closed`, `amount_comments`) VALUES
-(1, 7, 1, 'first thread', 'hasoihoasi foiasufhasuf asf a\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters\n140 characters140 characters140 characters140 characters', '2011-12-11 12:32:30', '2011-12-11 12:32:30', 0, 0, 13),
-(3, 7, 2, 'Another thread.', 'Mindless rubbish here.                                                                                                                                                                        ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 13),
-(5, 7, 3, 'General discussion', 'Post your ideas for the project here.\n                                                                                                                                                                                                                                                                                                                                  ', '2011-12-13 18:38:21', '2011-12-13 18:38:21', 0, 0, 13),
-(7, 7, 3, 'Do you like the new look?', 'I noticed that the forums didn''t look quite well, so I tried to make it look better. What do you think? Do you have any suggestions? Leave a comment below!', '2011-12-30 21:32:40', '2011-12-30 21:32:40', 0, 0, 0);
+(3, 7, 2, 'Another thread.', 'Mindless rubbish here.                                                                                                                                                                        ', '2011-12-12 00:27:23', '2011-12-12 00:27:23', 0, 0, 4),
+(5, 7, 3, 'General discussion', 'Post your ideas for the project here.\n                                                                                                                                                                                                                                                                                                                                  ', '2011-12-13 18:38:21', '2011-12-13 18:38:21', 0, 0, 4),
+(7, 7, 3, 'Are you enjoying the new look?', 'I noticed that the forums didn''t look quite well, so I tried to make them look better. What do you think? Do you have any suggestions? Leave a comment below!', '2011-12-30 21:32:40', '2011-12-30 21:32:40', 0, 0, 4),
+(9, 7, 1, 'bbcode test', 'http://google.com \nhttp://google.com \nhttp://google.com \nhttp://google.com \nhttp://www.google.com \nhttps://www.google.com \nhttps://google.com \nhttp://000webhost.com\nhttp://www.000webhost.com\nhttps://000webhost.com\nhttps://www.000webhost.com\nhttp://ip-us_info.google.reddit.com\nhttp://reddit.com/r/reddit.com\nhttp://localhost/mootales\nhttp://word\n[url=http://www.vutales.com]vutales[/url]\n[url]http://reddit.com/r/google[/url]\nhttp://"style="color:red;"attr="\n', '2012-01-07 15:51:40', '2012-01-07 15:51:40', 0, 0, 4);
 
 -- --------------------------------------------------------
 
@@ -216,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `fragments` (
   `author_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=49 ;
 
 --
 -- Volcar la base de datos para la tabla `fragments`
@@ -231,12 +233,51 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 (6, 'html_entities &lt;3', 7, '2011-12-09 14:47:37'),
 (7, 'i noticed all frags in the frontpage were by admin. jojo''s jealous', 10, '2011-12-09 16:23:01'),
 (24, 'Iñtërnâtiônàlizætiøn', 7, '2011-12-20 09:39:38'),
-(25, 'Iñtërnâtiônàlizætiøn', 7, '2011-12-20 10:11:35'),
 (26, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:15:45'),
 (27, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:24:54'),
 (28, 'testing the date system', 7, '2011-12-20 12:01:12'),
 (29, 'testing a quite long fragment. it''s funny how at nite you become a super programmer! ', 7, '2011-12-20 12:32:40'),
-(30, '☭', 7, '2011-12-23 21:32:56');
+(30, '☭', 7, '2011-12-23 21:32:56'),
+(35, '@common_user @common_user @common_user', 7, '2012-01-07 03:07:34'),
+(36, 'here''s a ping to you, @admin!', 13, '2012-01-07 10:32:42'),
+(38, 'What happens when I ping you with a very long fragment, eh, mister @admin? what happensssssssssss?', 13, '2012-01-07 10:36:48'),
+(41, '@admin that''s awesome! keep up the good work :)', 13, '2012-01-07 12:32:47'),
+(42, 'Listenin'' to the album "Seven years" by ATB. http://tny.gs/wHEd1s', 10, '2012-01-07 12:59:58'),
+(45, '@jojo You should listen to even earlier albums, mang.', 7, '2012-01-19 21:20:30'),
+(46, ' Ծ_Ծ', 7, '2012-01-23 19:06:24'),
+(47, '@admin Loving the UTF-8 support, huh? :D', 13, '2012-01-26 13:44:22'),
+(48, 'Tiesto - Surrounded by Light [8:52]', 7, '2012-01-26 13:45:33');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mail`
+--
+
+CREATE TABLE IF NOT EXISTS `mail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `author_id` int(11) NOT NULL,
+  `receiver_id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `content` text NOT NULL,
+  `read` tinyint(1) NOT NULL DEFAULT '0',
+  `receiver_hidden` tinyint(1) NOT NULL DEFAULT '0',
+  `when` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Volcar la base de datos para la tabla `mail`
+--
+
+INSERT INTO `mail` (`id`, `author_id`, `receiver_id`, `title`, `content`, `read`, `receiver_hidden`, `when`) VALUES
+(1, 7, 13, 'There aint no problem', 'just do it, mang.', 1, 0, '2012-01-23 16:28:32'),
+(2, 7, 13, 'There aint no problem', 'just do it, mang.', 1, 0, '2012-01-23 16:45:52'),
+(3, 7, 7, 'Your first message!', 'I didn''t have anything on my inbox so... :)', 1, 0, '2012-01-23 16:50:08'),
+(4, 7, 7, 'Just another message', 'So I can test something. :P', 1, 0, '2012-01-26 13:46:03'),
+(5, 13, 10, 'Your first message!', 'Thought you''d like one, too  ;)', 0, 0, '2012-01-26 14:26:05'),
+(6, 13, 7, 'hello man', 'this is the german on the dance floor', 1, 0, '2012-01-26 14:27:50'),
+(7, 13, 7, 'hello man', 'what u doinnn', 1, 0, '2012-01-26 14:28:04');
 
 -- --------------------------------------------------------
 
@@ -251,12 +292,16 @@ CREATE TABLE IF NOT EXISTS `pings` (
   `fragment_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Volcar la base de datos para la tabla `pings`
 --
 
+INSERT INTO `pings` (`id`, `pinged_id`, `author_id`, `fragment_id`, `when`) VALUES
+(5, 13, 7, 35, '2012-01-07 03:07:34'),
+(6, 13, 7, 35, '2012-01-07 03:07:34'),
+(7, 7, 13, 47, '2012-01-26 13:44:22');
 
 -- --------------------------------------------------------
 
@@ -269,10 +314,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `avatar` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'http://i.imgur.com/Wrado.png',
-  `name` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
-  `age` int(11) NOT NULL DEFAULT '-1',
-  `country` varchar(70) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
-  `gender` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'unknown',
+  `name` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `age` int(11) NOT NULL,
+  `country` varchar(70) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `gender` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `count_blogs` int(11) NOT NULL DEFAULT '0',
   `count_fragments` int(11) NOT NULL DEFAULT '0',
@@ -282,17 +327,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `date_last_seen` datetime NOT NULL,
   `rank` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Volcar la base de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
-(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 2, 24, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
-(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'joa.dev@live.com', 3, 1, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
-(11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1),
-(12, 'joaaco', '38a19ce6879126eb450cf94723f8a0c4', 'http://i.imgur.com/Wrado.png', 'unknown', -1, 'unknown', 'unknown', 'me@example.com', 0, 0, 0, 0, '2011-12-30', '2011-12-30 17:29:41', 1);
+(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'JoJo', 16, 'Argentina', 'Male', 'joa.dev@live.com', 2, 27, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
+(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', '', 0, '', '', 'joa.dev@live.com', 1, 2, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
+(11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', '', 0, '', '', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1),
+(12, 'joaaco', '38a19ce6879126eb450cf94723f8a0c4', 'http://i.imgur.com/Wrado.png', '', 0, '', '', 'me@example.com', 0, 0, 0, 0, '2011-12-30', '2011-12-30 17:29:41', 1),
+(13, 'common_user', 'f30a20b53eb9eb61a87108545283d1be', 'http://i.imgur.com/Wrado.png', '', 0, '', '', '', 0, 4, 0, 0, '2012-01-06', '2012-01-06 23:20:28', 1);
 
 -- --------------------------------------------------------
 
@@ -306,7 +352,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
   `blog_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
 -- Volcar la base de datos para la tabla `votes`
@@ -323,4 +369,8 @@ INSERT INTO `votes` (`id`, `user_id`, `blog_id`, `when`) VALUES
 (18, 7, 23, '2011-12-20 10:04:47'),
 (20, 7, 24, '2011-12-20 12:24:04'),
 (21, 7, 11, '2011-12-28 15:32:06'),
-(27, 7, 25, '2011-12-28 20:04:16');
+(27, 7, 25, '2011-12-28 20:04:16'),
+(28, 7, 26, '2011-12-31 13:43:49'),
+(31, 13, 25, '2012-01-07 13:27:08'),
+(32, 10, 25, '2012-01-07 13:27:21'),
+(33, 13, 24, '2012-01-18 15:27:56');

@@ -1,4 +1,4 @@
-=head1 Mootales version 0.5 (alpha release)  
+=head1 Mootales version 0.8 (beta release)  
 
 =head2 about  
 
@@ -36,7 +36,7 @@ edit modules/database/config/database.php lines 21-24
 [+] forum_threads table  <br/>
 [+] forum_comments table  <br/>
 [+] pings table  <br/>
-[ ] messages table  <br/>
+[+] mail table  <br/>
 [ ] friends table  <br/>
 
 =end html
@@ -59,17 +59,19 @@ edit modules/database/config/database.php lines 21-24
 [+] frontpage  <br/>
 [+] edit blogs/threads  <br/>
 [+] delete blogs/threads/fragments  <br/>
-[-] dashboard (need to add notifications, etc)  <br/>
+[+] send mail  <br/>
+[+] read mail  <br/>
+[+] dashboard (optional: tell when someone quotes)<br/>
+[+] textarea buttons  <br/>
 [-] user profiles (- need to do the stats thing, threads, user info, ping, etc)  <br/>
 [-] update user stats all the time (pageviews etc)  <br/>
 [-] manage blogs (mark as draft, rename, edit, delete)  <br/>
+[-] admin cp  <br/>
 [ ] edit comments, delete 'em  <br/>
 [ ] quote functionality  <br/>
-[ ] textarea buttons (bbcode, emoticons, etc)  <br/>
 [ ] picture blogs  <br/>
-[ ] mail  <br/>
+[ ] mail functions  <br/>
 [ ] friendship  <br/>
-[ ] admin cp  <br/>
 [ ] admin cms  <br/>
 [ ] block user  <br/>
 [ ] help page  <br/>
@@ -87,7 +89,7 @@ edit modules/database/config/database.php lines 21-24
 [+] proper unicode support<br/>
 [+] pagination<br/>
 [-] prevent code repetition<br/>
-[ ] do not submit comments full of spaces<br/>
+[ ] do not submit comments full of spaces (regex?)<br/>
 [ ] add info of user in views/blog.php and views/thread.php<br/>
 [ ] css tidy-up<br/>
 [ ] general code tidy-up<br/>
@@ -95,6 +97,6 @@ edit modules/database/config/database.php lines 21-24
 [+] beautify views (especially forum_category and forum_categories)<br/>
 [ ] when deleting something, delete all other data that depends on it (e.g. comments and likes when deleting a blog)<br/>
 [ ] take advantage of cascading filesystem<br/>
-[ ] jquery, animations, etc<br/>
+[-] jquery, animations, etc<br/>
 
 =end html

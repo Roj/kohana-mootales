@@ -2,7 +2,7 @@
 class Link {
 	public static function linkify_string($string)
 	{
-		return str_replace(array(" ","/","<",">","&","?",",",";","."),array("-",""),$string);
+		return URL::title($string); //d'oh! Didn't know this function existed.
 	}
 	public static function simple_link($page)
 	{
@@ -25,6 +25,11 @@ class Link {
 		$filler_text= ($filler_text)? $filler_text:$username; //if no filler_text is specified, use username
 		$attributes=($class)? array("class"=>$class):null;
 		return HTML::anchor("user/".$username,$username,$attributes,null,false);
+	}
+	public static function mail($id,$filler_text,$class='')
+	{
+		$attributes=($class)? array("class"=>$class):null;
+		return HTML::anchor("mail/read/".$id,$filler_text,$attributes,null,false);
 	}
 	public static function thread($id,$filler_text,$title='',$page='',$class='')
 	{
