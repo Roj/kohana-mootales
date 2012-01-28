@@ -37,6 +37,27 @@ class Controller_Mail extends Controller_Website {
 			->set('users_data',$users_data);
 		$this->response->body($view);
 	}
+	public function action_outbox()
+	{
+		$mail_model = Model::factory("mail");
+		$user_model = Model::factory("user");
+		$mails = $mail_model->get_outbox_for_user($this->session->get("user_id"));
+		//We'll do it the same way we query for the commenters' info on Controller_Home->action_index()
+		$users_data = array();  //here we'll store each user's info
+		foreach ($mails->as_array() as $item) 
+		{
+			if(array_key_exists($item['receiver_id'],$users_data)) // Why query two times for the same user?
+				continue;
+			$users_data[$item['receiver_id']]=$user_model->get_username($item['receiver_id']);
+			
+		}
+		$view = View::factory("mail/outbox")
+			->set('errors',$this->errors)
+			->set('message',$this->message)
+			->set('mails',$mails->as_array())
+			->set('users_data',$users_data);
+		$this->response->body($view);
+	}
 	public function action_create()
 	{
 		$post = $_POST;

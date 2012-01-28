@@ -8,6 +8,10 @@ class Model_Mail extends Model {
 	{
 		return DB::select()->from("mail")->where("receiver_id","=",intval($user_id))->order_by("when","DESC")->execute();
 	}
+	public function get_outbox_for_user($user_id)
+	{
+		return DB::select()->from("mail")->where("author_id","=",intval($user_id))->order_by("when","DESC")->execute();
+	}
 	public function get_mail($mail_id)
 	{
 		return DB::select()->from("mail")->where("id","=",intval($mail_id))->execute();

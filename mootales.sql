@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-01-2012 a las 22:36:01
+-- Tiempo de generación: 28-01-2012 a las 20:57:08
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -264,7 +264,7 @@ CREATE TABLE IF NOT EXISTS `mail` (
   `receiver_hidden` tinyint(1) NOT NULL DEFAULT '0',
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Volcar la base de datos para la tabla `mail`
@@ -275,9 +275,10 @@ INSERT INTO `mail` (`id`, `author_id`, `receiver_id`, `title`, `content`, `read`
 (2, 7, 13, 'There aint no problem', 'just do it, mang.', 1, 0, '2012-01-23 16:45:52'),
 (3, 7, 7, 'Your first message!', 'I didn''t have anything on my inbox so... :)', 1, 0, '2012-01-23 16:50:08'),
 (4, 7, 7, 'Just another message', 'So I can test something. :P', 1, 0, '2012-01-26 13:46:03'),
-(5, 13, 10, 'Your first message!', 'Thought you''d like one, too  ;)', 0, 0, '2012-01-26 14:26:05'),
+(5, 13, 10, 'Your first message!', 'Thought you''d like one, too  ;)', 1, 0, '2012-01-26 14:26:05'),
 (6, 13, 7, 'hello man', 'this is the german on the dance floor', 1, 0, '2012-01-26 14:27:50'),
-(7, 13, 7, 'hello man', 'what u doinnn', 1, 0, '2012-01-26 14:28:04');
+(7, 13, 7, 'hello man', 'what u doinnn', 1, 0, '2012-01-26 14:28:04'),
+(8, 10, 13, 'Heey!', 'Thanks for the message, man. Really appreciate it. :)', 1, 0, '2012-01-28 13:54:22');
 
 -- --------------------------------------------------------
 
@@ -299,8 +300,6 @@ CREATE TABLE IF NOT EXISTS `pings` (
 --
 
 INSERT INTO `pings` (`id`, `pinged_id`, `author_id`, `fragment_id`, `when`) VALUES
-(5, 13, 7, 35, '2012-01-07 03:07:34'),
-(6, 13, 7, 35, '2012-01-07 03:07:34'),
 (7, 7, 13, 47, '2012-01-26 13:44:22');
 
 -- --------------------------------------------------------
@@ -335,7 +334,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
 (7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'JoJo', 16, 'Argentina', 'Male', 'joa.dev@live.com', 2, 27, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
-(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://i.imgur.com/Wrado.png', '', 0, '', '', 'joa.dev@live.com', 1, 2, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
+(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://www.vutales.com/assets/user_avatars/Joaco.png', '', 0, '', '', 'joa.dev@live.com', 1, 2, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
 (11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', '', 0, '', '', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1),
 (12, 'joaaco', '38a19ce6879126eb450cf94723f8a0c4', 'http://i.imgur.com/Wrado.png', '', 0, '', '', 'me@example.com', 0, 0, 0, 0, '2011-12-30', '2011-12-30 17:29:41', 1),
 (13, 'common_user', 'f30a20b53eb9eb61a87108545283d1be', 'http://i.imgur.com/Wrado.png', '', 0, '', '', '', 0, 4, 0, 0, '2012-01-06', '2012-01-06 23:20:28', 1);
@@ -352,7 +351,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
   `blog_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=35 ;
 
 --
 -- Volcar la base de datos para la tabla `votes`
@@ -371,6 +370,6 @@ INSERT INTO `votes` (`id`, `user_id`, `blog_id`, `when`) VALUES
 (21, 7, 11, '2011-12-28 15:32:06'),
 (27, 7, 25, '2011-12-28 20:04:16'),
 (28, 7, 26, '2011-12-31 13:43:49'),
-(31, 13, 25, '2012-01-07 13:27:08'),
 (32, 10, 25, '2012-01-07 13:27:21'),
-(33, 13, 24, '2012-01-18 15:27:56');
+(33, 13, 24, '2012-01-18 15:27:56'),
+(34, 13, 25, '2012-01-28 13:38:56');

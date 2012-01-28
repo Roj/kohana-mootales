@@ -50,7 +50,7 @@
 $user_data = $users_data[$comment['author_id']][0];?>
 		<div class="comment_wrap">
 			<div class="comment_topbar">
-				<img src="<?php echo $user_data['avatar'];?>" height="100px" width="170px" />
+				<img src="<?php echo $user_data['avatar'];?>" class="avatar" />
 				<span><?php echo $user_data['username'];?></span>
 			</div>
 			<div class="comment_content">

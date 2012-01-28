@@ -14,9 +14,9 @@ $(document).ready(function(){
 });
 		</script>
 		<div class="mail_wrap">
-			<div style="float:right;margin-top:6px;">
-				<span style="background: #2F9BE0; color: white; padding: 2px 4px; border-radius:4px; font-weight:bold;">Inbox</span> 
-				<span style="background: white; color: #2F9BE0;">Outbox</span> 
+			<div class="mail_tabs">
+				<a href="#" class="active">Inbox</a> 
+				<a href="<?php echo URL::base();?>mail/outbox">Outbox</a> 
 			</div>
 			<h3>Inbox</h3>
 			<br/>
