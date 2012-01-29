@@ -100,3 +100,80 @@
 #6 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
 #7 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
 #8 {main}
+2012-01-29 15:40:14 --- ERROR: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+2012-01-29 15:40:14 --- STRACE: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+--
+#0 C:\xampp\htdocs\mootales\application\classes\controller\user.php(14): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\xampp\htdocs...', 14, Array)
+#1 [internal function]: Controller_User->action_view()
+#2 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_User))
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#6 {main}
+2012-01-29 15:47:38 --- ERROR: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+2012-01-29 15:47:38 --- STRACE: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+--
+#0 C:\xampp\htdocs\mootales\application\classes\controller\user.php(14): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\xampp\htdocs...', 14, Array)
+#1 [internal function]: Controller_User->action_view()
+#2 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_User))
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#6 {main}
+2012-01-29 15:48:10 --- ERROR: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+2012-01-29 15:48:10 --- STRACE: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+--
+#0 C:\xampp\htdocs\mootales\application\classes\controller\user.php(14): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\xampp\htdocs...', 14, Array)
+#1 [internal function]: Controller_User->action_view()
+#2 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_User))
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#6 {main}
+2012-01-29 15:50:39 --- ERROR: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 13 ]
+2012-01-29 15:50:39 --- STRACE: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 13 ]
+--
+#0 C:\xampp\htdocs\mootales\application\classes\controller\user.php(13): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\xampp\htdocs...', 13, Array)
+#1 [internal function]: Controller_User->action_view()
+#2 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_User))
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#6 {main}
+2012-01-29 16:00:25 --- ERROR: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+2012-01-29 16:00:25 --- STRACE: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+--
+#0 C:\xampp\htdocs\mootales\application\classes\controller\user.php(14): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\xampp\htdocs...', 14, Array)
+#1 [internal function]: Controller_User->action_view()
+#2 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_User))
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#6 {main}
+2012-01-29 16:00:29 --- ERROR: View_Exception [ 0 ]: The requested view profile could not be found ~ SYSPATH\classes\kohana\view.php [ 252 ]
+2012-01-29 16:00:29 --- STRACE: View_Exception [ 0 ]: The requested view profile could not be found ~ SYSPATH\classes\kohana\view.php [ 252 ]
+--
+#0 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(137): Kohana_View->set_filename('profile')
+#1 C:\xampp\htdocs\mootales\system\classes\kohana\view.php(30): Kohana_View->__construct('profile', NULL)
+#2 C:\xampp\htdocs\mootales\application\classes\controller\user.php(20): Kohana_View::factory('profile')
+#3 [internal function]: Controller_User->action_view()
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_User))
+#5 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#6 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#7 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#8 {main}
+2012-01-29 16:00:59 --- ERROR: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+2012-01-29 16:00:59 --- STRACE: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\classes\controller\user.php [ 14 ]
+--
+#0 C:\xampp\htdocs\mootales\application\classes\controller\user.php(14): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\xampp\htdocs...', 14, Array)
+#1 [internal function]: Controller_User->action_view()
+#2 C:\xampp\htdocs\mootales\system\classes\kohana\request\client\internal.php(118): ReflectionMethod->invoke(Object(Controller_User))
+#3 C:\xampp\htdocs\mootales\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#4 C:\xampp\htdocs\mootales\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#5 C:\xampp\htdocs\mootales\index.php(109): Kohana_Request->execute()
+#6 {main}
+2012-01-29 16:17:58 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected ',', expecting ']' ~ APPPATH\views\user\profile.php [ 58 ]
+2012-01-29 16:17:58 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected ',', expecting ']' ~ APPPATH\views\user\profile.php [ 58 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
