@@ -14,6 +14,16 @@ class Model_User extends Model {
 			->execute();
 		return $query; //if it goes okay, it returns the ID of the row
 	}
+	public function update_last_seen($user_id)
+	{
+		return DB::update("users")->set(array('date_last_seen'=>date("Y-m-d H:i:s")))->where("id","=",$user_id)->execute();
+	}
+	public function update_pageviews($user_id, $pageviews = false)
+	{
+		//$pageviews is an optional argument. if not specified, we'll query it.
+		$pageviews = ($pageviews)? $pageviews:DB::select('count_pageviews')->from('users')->where('id','=',$user_id)->execute()->get('count_pageviews');
+		return DB::update("users")->set(array('count_pageviews'=>$pageviews+1))->where("id","=",$user_id)->execute();
+	}
 	public function edit_personal_info($info,$user_id) {
 		return DB::update("users")->set($info)->where("id","=",$user_id)->execute();
 	}

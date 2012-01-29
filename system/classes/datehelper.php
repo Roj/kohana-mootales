@@ -1,7 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 class DateHelper {
-	public static function human_readable($from)
+	public static function human_readable($from, $long_date_prefix='on ')
 	{
 		$from = strtotime($from);
 		$difference = abs(time()- $from);
@@ -20,7 +20,7 @@ class DateHelper {
 					return "{$amount_minutes} minutes ago";
 					break;
 			}
-		} else if ( 3600 <= $difference AND $difference < 86400) //between one and 24 hours from now
+		} else if ($difference < 86400) //between one and 24 hours from now
 		{
 			$amount_hours = floor($difference/3600);
 			switch($amount_hours)
@@ -32,7 +32,7 @@ class DateHelper {
 					return "{$amount_hours} hours ago";
 					break;
 			}
-		} else if (86400<=$difference AND $difference < 864000)
+		} else if ($difference < 864000)
 		{
 			$amount_days = floor($difference/86400);
 			switch($amount_days)
@@ -47,7 +47,8 @@ class DateHelper {
 		} else
 		{
 			$date_info =getdate($from);
-			return "on ".$date_info["month"]." ".$date_info["mday"];
+			$year = ($difference >= 3.154 * pow(10,7))? ", ".$date_info["year"]:"";
+			return $long_date_prefix.$date_info["month"]." ".$date_info["mday"].$year;
 		}
 	}
 }

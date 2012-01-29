@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-01-2012 a las 20:57:08
+-- Tiempo de generación: 29-01-2012 a las 22:08:37
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `blogs` (
   `amount_votes` int(11) NOT NULL DEFAULT '0',
   `amount_comments` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
 -- Volcar la base de datos para la tabla `blogs`
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `blogs` (
 
 INSERT INTO `blogs` (`id`, `title`, `content`, `tags`, `author_id`, `time_posted`, `amount_votes`, `amount_comments`) VALUES
 (7, 'Hundred years'' war', 'The Hundred Years'' War was a series of separate wars waged from 1337 to 1453 by the House of Valois and the House of Plantagenet, also known as the House of Anjou, for the French throne, which had become vacant upon the extinction of the senior Capetian line of French kings. The House of Valois claimed the title of King of France, while the Plantagenets claimed the thrones of both France and England. The Plantagenet kings were the 12th-century rulers of the kingdom of England, and had their roots in the French regions of Anjou and Normandy.\nThe conflict was punctuated by several periods of peace, before it finally ended in the expulsion of the Plantagenets from France (except from the Pale of Calais). The final outcome was a victory for the house of Valois, which succeeded in recovering early gains made by the Plantagenets and expelling them from the majority of France by the 1450s. However, the war nearly ruined the Valois, while the Plantagenets enriched themselves with plunder. France suffered greatly from the war, since most of the conflict occurred in that country.\nThe &quot;war&quot; was in fact a series of conflicts and is commonly divided into three or four phases: the Edwardian War (1337&acirc;??1360), the Caroline War (1369&acirc;??1389), the Lancastrian War (1415&acirc;??1429), and the slow decline of Plantagenet fortunes after the appearance of Joan of Arc (1412&acirc;??1431). Several other contemporary European conflicts were directly related to this conflict: the Breton War of Succession, the Castilian Civil War, the War of the Two Peters, and the 1383-1385 Crisis. The term &quot;Hundred Years'' War&quot; was a later term invented by historians to describe the series of events.\nThe war owes its historical significance to a number of factors. Though primarily a dynastic conflict, the war gave impetus to ideas of both French and English nationalism. Militarily, it saw the introduction of new weapons and tactics, which eroded the older system of feudal armies dominated by heavy cavalry in Western Europe. The first standing armies in Western Europe since the time of the Western Roman Empire were introduced for the war, thus changing the role of the peasantry. For all this, as well as for its long duration, it is often viewed as one of the most significant conflicts in the history of medieval warfare. In France, civil wars, deadly epidemics, famines and marauding mercenary armies (turned to banditry) reduced the population by about one-half.[1]', '', 10, '2011-12-09 03:17:55', 2, 3),
-(11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 1, 3),
+(11, 'blog', 'blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog blog ', '', 10, '2011-12-09 18:33:29', 1, 4),
 (24, 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n ', 'I&ntilde;t&euml;rn&acirc;ti&ocirc;n&agrave;liz&aelig;ti&oslash;n', 7, '2011-12-20 10:25:43', 2, 4),
 (25, 'Pagination test :)', 'Gotta test pagination. Don''t really know how to though... it seems to me that kohana 3.2 has deprecated that module :S i''ll try doing it with limits, this is my first time implementing pagination!', 'php is easy :D', 7, '2011-12-22 13:44:16', 3, 23);
 
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `blog_comments` (
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=46 ;
 
 --
 -- Volcar la base de datos para la tabla `blog_comments`
@@ -107,8 +107,8 @@ INSERT INTO `blog_comments` (`id`, `author_id`, `blog_id`, `content`, `when`) VA
 (39, 7, 25, 'adsfsdfasdf', '2011-12-28 19:24:51'),
 (40, 7, 25, 'asdfasdfasdf', '2011-12-28 19:24:55'),
 (41, 7, 25, 'Congrats, man! Looks like you sorted it out. :)', '2011-12-28 20:04:33'),
-(43, 7, 26, 'coooommment!!!', '2011-12-31 13:43:53'),
-(44, 7, 25, 'ಠ_ಠ', '2012-01-08 22:44:18');
+(44, 7, 25, 'ಠ_ಠ', '2012-01-08 22:44:18'),
+(45, 13, 11, '[url]http://google.com[/url]', '2012-01-28 14:02:38');
 
 -- --------------------------------------------------------
 
@@ -218,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `fragments` (
   `author_id` int(11) NOT NULL,
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=49 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=50 ;
 
 --
 -- Volcar la base de datos para la tabla `fragments`
@@ -246,7 +246,8 @@ INSERT INTO `fragments` (`id`, `content`, `author_id`, `when`) VALUES
 (45, '@jojo You should listen to even earlier albums, mang.', 7, '2012-01-19 21:20:30'),
 (46, ' Ծ_Ծ', 7, '2012-01-23 19:06:24'),
 (47, '@admin Loving the UTF-8 support, huh? :D', 13, '2012-01-26 13:44:22'),
-(48, 'Tiesto - Surrounded by Light [8:52]', 7, '2012-01-26 13:45:33');
+(48, 'Tiesto - Surrounded by Light [8:52]', 7, '2012-01-26 13:45:33'),
+(49, 'Testing DateHelper.', 11, '2004-01-31 16:59:02');
 
 -- --------------------------------------------------------
 
@@ -264,7 +265,7 @@ CREATE TABLE IF NOT EXISTS `mail` (
   `receiver_hidden` tinyint(1) NOT NULL DEFAULT '0',
   `when` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcar la base de datos para la tabla `mail`
@@ -278,7 +279,8 @@ INSERT INTO `mail` (`id`, `author_id`, `receiver_id`, `title`, `content`, `read`
 (5, 13, 10, 'Your first message!', 'Thought you''d like one, too  ;)', 1, 0, '2012-01-26 14:26:05'),
 (6, 13, 7, 'hello man', 'this is the german on the dance floor', 1, 0, '2012-01-26 14:27:50'),
 (7, 13, 7, 'hello man', 'what u doinnn', 1, 0, '2012-01-26 14:28:04'),
-(8, 10, 13, 'Heey!', 'Thanks for the message, man. Really appreciate it. :)', 1, 0, '2012-01-28 13:54:22');
+(8, 10, 13, 'Heey!', 'Thanks for the message, man. Really appreciate it. :)', 1, 0, '2012-01-28 13:54:22'),
+(9, 7, 7, 'Oldest message ever', 'Testing DateHelper!', 0, 0, '2005-01-29 14:07:27');
 
 -- --------------------------------------------------------
 
@@ -333,10 +335,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `avatar`, `name`, `age`, `country`, `gender`, `email`, `count_blogs`, `count_fragments`, `count_pageviews`, `count_friends`, `date_joined`, `date_last_seen`, `rank`) VALUES
-(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'JoJo', 16, 'Argentina', 'Male', 'joa.dev@live.com', 2, 27, 0, 0, '2011-12-08', '2011-12-08 19:01:39', 3),
-(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://www.vutales.com/assets/user_avatars/Joaco.png', '', 0, '', '', 'joa.dev@live.com', 1, 2, 0, 0, '2011-12-09', '2011-12-09 03:02:11', 1),
-(11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://i.imgur.com/Wrado.png', '', 0, '', '', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2011-12-09 03:22:14', 1),
-(12, 'joaaco', '38a19ce6879126eb450cf94723f8a0c4', 'http://i.imgur.com/Wrado.png', '', 0, '', '', 'me@example.com', 0, 0, 0, 0, '2011-12-30', '2011-12-30 17:29:41', 1),
+(7, 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'http://i.imgur.com/DLpg4.jpg', 'JoJo', 16, 'Argentina', 'Male', 'joa.dev@live.com', 2, 27, 24, 0, '2011-12-08', '2012-01-29 14:05:04', 3),
+(10, 'jojo', '7f1d2b3a4016c460a93cdca536f3acce', 'http://www.vutales.com/assets/user_avatars/Joaco.png', '', 0, '', '', 'joa.dev@live.com', 1, 2, 0, 0, '2011-12-09', '2012-01-29 13:40:20', 1),
+(11, 'username', '5f4dcc3b5aa765d61d8327deb882cf99', 'http://www.vutales.com/assets/user_avatars/Joaco.png', '', 20, 'Rumania', 'Cualquiera', 'me@example.com', 0, 0, 0, 0, '2011-12-09', '2012-01-29 13:59:46', 1),
 (13, 'common_user', 'f30a20b53eb9eb61a87108545283d1be', 'http://i.imgur.com/Wrado.png', '', 0, '', '', '', 0, 4, 0, 0, '2012-01-06', '2012-01-06 23:20:28', 1);
 
 -- --------------------------------------------------------
@@ -369,7 +370,6 @@ INSERT INTO `votes` (`id`, `user_id`, `blog_id`, `when`) VALUES
 (20, 7, 24, '2011-12-20 12:24:04'),
 (21, 7, 11, '2011-12-28 15:32:06'),
 (27, 7, 25, '2011-12-28 20:04:16'),
-(28, 7, 26, '2011-12-31 13:43:49'),
 (32, 10, 25, '2012-01-07 13:27:21'),
 (33, 13, 24, '2012-01-18 15:27:56'),
 (34, 13, 25, '2012-01-28 13:38:56');

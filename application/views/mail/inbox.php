@@ -35,7 +35,7 @@ $email_icon_src = URL::base() . 'images/email' . (($mail['read'])? '_open.png':'
 
 				<tr>
 					<td><img src='<?php echo $email_icon_src;?>'></td>
-					<td><?php echo DateHelper::human_readable($mail['when']); ?></td>
+					<td><?php echo DateHelper::human_readable($mail['when'],''); ?></td>
 					<td><?php echo Link::user($users_data[$mail['author_id']]);?></td>
 					<td><?php echo Link::mail($mail['id'],$mail['title']); ?></td>
 					<td>delete</td>

@@ -26,7 +26,8 @@ class Controller_Login extends Controller_Website {
 			$this->session->set("logged_in",true)
 				->set("user_id",$user_info->get('id'))
 				->set("username",$user_info->get('username'))
-				->set("rank",$user_info->get('rank'));
+				->set("rank",$user_info->get('rank'))
+				->set("last_seen",$user_info->get('date_last_seen'));
 			//$model->update_lastseen($user_info->get('id')); //later
 			//redirect
 			$this->request->redirect("home");

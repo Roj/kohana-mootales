@@ -13,14 +13,26 @@ abstract class Controller_Website extends Controller {
 		$this->session = Session::instance();
 		$this->logged_in = $this->session->get('logged_in',false);
 		$this->user_rank = $this->session->get('rank',0);
+		$frag_model = Model::factory("fragment");
+		$mail_model = Model::factory("mail");
+		$user_model = Model::factory("user");
+		$amount_pings = ($this->logged_in)? $frag_model->get_amount_pings($this->session->get("user_id")):0;
+		$amount_mails = ($this->logged_in)? $mail_model->get_amount_unread_mails($this->session->get("user_id")):0;
+		
 		if (Kohana::$profiling === TRUE)
 		{
 			$this->benchmark = Profiler::start('Controller',$this->request->action());
 		}
-		$frag_model = Model::factory("fragment");
-		$mail_model = Model::factory("mail");
-		$amount_pings = ($this->logged_in)? $frag_model->get_amount_pings($this->session->get("user_id")):0;
-		$amount_mails = ($this->logged_in)? $mail_model->get_amount_unread_mails($this->session->get("user_id")):0;
+		if ($this->logged_in)
+		{
+			
+			if (strtotime(date("Y-m-d H:i:s")) - strtotime($this->session->get('last_seen')) >= 86400)
+			{
+				$user_model->update_last_seen($this->session->get('user_id'));
+				$this->session->set('last_seen', date("Y-m-d H:i:s"));
+			}
+		}
+		
 		
 		View::bind_global('page_title',$this->page_title);
 		View::bind_global('logged_in',$this->logged_in);
