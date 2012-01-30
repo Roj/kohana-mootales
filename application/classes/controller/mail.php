@@ -117,8 +117,11 @@ class Controller_Mail extends Controller_Website {
 				{
 					$mail_model->mark_read($mail[0]['id']);
 				}
+				$user_model = Model::factory("user");
+				$author = $user_model->get_username($mail[0]['author_id']);
 				$view = View::factory("mail/read")
-					->set("mail",$mail[0]);
+					->set("mail",$mail[0])
+					->set("author",$author);
 				$this->response->body($view);
 			} else {
 				$this->errors="You can't view this message.";

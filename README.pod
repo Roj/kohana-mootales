@@ -63,12 +63,13 @@ edit modules/database/config/database.php lines 21-24
 [+] read mail  <br/>
 [+] dashboard (optional: tell when someone quotes)<br/>
 [+] textarea buttons  <br/>
-[-] user profiles (- need to do the stats thing, threads, user info, ping, etc)  <br/>
-[-] update user stats all the time (pageviews etc)  <br/>
+[+] user profiles (need to add friends though) <br/>
+[+] update user stats all the time (should filter by IP)  <br/>
 [-] manage blogs (mark as draft, rename, edit, delete)  <br/>
 [-] admin cp  <br/>
+-] quote functionality  (<u><b>need to fix</b></u> quote within a quote)<br/>
 [ ] edit comments, delete 'em  <br/>
-[ ] quote functionality  <br/>
+[
 [ ] picture blogs  <br/>
 [ ] mail functions  <br/>
 [ ] friendship  <br/>

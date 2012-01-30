@@ -15,6 +15,10 @@ class BBCode {
 					</div>
 HTML;
 	}
+	public static function parse_plain_urls($content)
+	{
+		return preg_replace('#(http|https|ftp)://([a-zA-Z0-9_/\.-]+)(\t|\n|\r|\f|\v| )#i',  '<a href="$1://$2">$1://$2</a>$3', $content.' ');
+	}
 	public static function parse($content) {
 		//Taken from  http://www.bloogie.es/tecnologia/programacion/237-bbcode-parser-con-php#ixzz1g6gOqx4u 
 		//They saved me from a regex hell
@@ -36,6 +40,7 @@ HTML;
 			'#\[u\](.*?)\[/u\]#is', // Underline ([u]text[/u])
 			'#\[s\](.*?)\[/s\]#is', // Strikethrough ([s]text[/s])
 			'#\[quote\](.*?)\[/quote\]#is', // Quote ([quote]text[/quote])
+			'#\[quote=(.*?)\](.*?)\[/quote\]#is',
 			'#\[code\](.*?)\[/code\]#is', // Inline code [code]text[/code])
 			'#\[color=\#?([A-F0-9]{3}|[A-F0-9]{6})\](.*?)\[/color\]#is', // Font colour ([color=#00F]texto[/color])
 			'#\[url=((?:ftp|https?)://.*?)\](.*?)\[/url\]#i', // Link with text ([url=http://url]texto[/url])
@@ -50,7 +55,8 @@ HTML;
 			'<span class="italic">$1</span>',
 			'<span class="underline">$1</span>',
 			'<span class="strikethrough">$1</span>',
-			'<blockquote>$1</blockquote>',
+			'<div class="quote">$1</div>',
+			'<div class="quote"><span class="bold">$1</span> said: $2</div>',
 			'<pre>$1</'.'pre>',
 			'<span style="color: #$1;">$2</span>',
 			'<a href="$1">$2</a>',
