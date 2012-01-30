@@ -1,6 +1,19 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
 class DateHelper {
+	public static function human_readable_day($from,$long_date_prefix='on ')
+	{
+		//This function returns the day in a human-readable way.
+		//in other words, return values are 'today', 'x days ago' (x<=10)
+		//and full date.
+		//This function is used on profiles, when outputting last date active.
+		$difference = abs(time()- strtotime($from));
+		if ($difference < 86400)
+		{
+			return "Today";
+		}
+		return DateHelper::human_readable($from,$long_date_prefix);
+	}
 	public static function human_readable($from, $long_date_prefix='on ')
 	{
 		$from = strtotime($from);

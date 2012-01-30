@@ -3,6 +3,9 @@
 			$(document).ready(function(){
 				$('#delete').fancybox();
 				$('#edit').fancybox();
+				$('.comment_options_open').click(function(){
+					$(this).siblings('.comment_options').fadeToggle("fast");
+				});
 			});
 		</script>
 		<div class="hidden">
@@ -49,12 +52,21 @@
 <?php foreach($comments as $comment): 
 $user_data = $users_data[$comment['author_id']][0];?>
 		<div class="comment_wrap">
-			<div class="comment_topbar">
+			<div class="comment_avatar">
 				<img src="<?php echo $user_data['avatar'];?>" class="avatar" />
-				<span><?php echo $user_data['username'];?></span>
 			</div>
-			<div class="comment_content">
-				<p><?php echo BBCode::parse($comment['content']); ?></p>
+			<div class="comment_bubble left">
+				<div class="topbar">
+					<?php echo $user_data['username'];?>
+					<div class="right">
+						<span class="comment_options">PM  | Report | Quote | Permalink</span>
+						<span class="comment_options_open">+</span>
+						<span class="when"><?php echo DateHelper::human_readable($comment['when']); ?></span>
+					</div>
+				</div>
+				<div class="content">
+					<p><?php echo BBCode::parse($comment['content']); ?></p>
+				</div>
 			</div>
 			
 		</div>
