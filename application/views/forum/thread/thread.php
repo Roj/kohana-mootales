@@ -57,7 +57,7 @@ $user_data = $users_data[$comment['author_id']][0];?>
 			</div>
 			<div class="comment_bubble left">
 				<div class="topbar">
-					<?php echo $user_data['username'];?>
+					<span><?php echo $user_data['username'];?> </span>
 					<div class="right">
 						<span class="comment_options">PM  | Report | Quote | Permalink</span>
 						<span class="comment_options_open">+</span>
@@ -83,5 +83,6 @@ $user_data = $users_data[$comment['author_id']][0];?>
 <?php else: ?>
 		<p>You need to <?php echo Link::login(); ?> or <?php echo Link::register();?> in order to be able to comment.</p>
 
-<?php endif;?>
-<?php include Kohana::find_file('views', 'footer');  ?>
+<?php endif;?> 
+
+<?php include Kohana::find_file('views', 'footer');  ?> 

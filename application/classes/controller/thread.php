@@ -7,7 +7,6 @@ class Controller_Thread extends Controller_Website {
 		$user_model = Model::factory("user");
 		$id = intval($this->request->param("id"));
 		$thread = $forum_model->get_thread($id);
-		
 		if(intval($thread->get("id")) == 0)
 		{
 			$view = View::factory("404");
@@ -40,6 +39,7 @@ class Controller_Thread extends Controller_Website {
 			$users_data[$comment['author_id']]=$user_model->get_user_info(intval($comment['author_id']))->as_array();
 			
 		}
+		$category = $forum_model->get_category_name($thread->get('category_id'));
 		//Instead of objects, I like to use associative arrays in views.
 		$thread_array = $thread->as_array();
 		$user_array = $user->as_array();
@@ -50,7 +50,8 @@ class Controller_Thread extends Controller_Website {
 			->set("users_data",$users_data)
 			->set("show_comment_form",$this->session->get("logged_in"))
 			->set("total_pages",$total_pages)
-			->set("actual_page",$page);
+			->set("actual_page",$page)
+			->set("category_name",$category);
 		//echo var_dump($thread->get("content")); 
 		$this->response->body($view);
 	}

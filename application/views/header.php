@@ -24,7 +24,7 @@
 			} else if(typeof messagebox.selectionStart!=="undefined") {
 				rangeStart=messagebox.selectionStart;
 				var rangeEnd=messagebox.selectionEnd;
-				i=messagebox.value.substring(0,rangeStart)+a+messagebox.value.substring(rangeStart,rangeEnd)+i+messagebox.value.substring(rangeEnd,messagebox.value.length);
+				i=messagebox.value.substring(0,rangeStart) + a +messagebox.value.substring(rangeStart,rangeEnd) + i + messagebox.value.substring(rangeEnd,messagebox.value.length);
 				messagebox.value=i;
 				rangeStart+=a.length;
 				rangeEnd+=a.length;
@@ -84,9 +84,12 @@
 				</form>
 			</div>
 		</div>
-<?php if(@$message): ?>
+<?php if(@$announcement): ?>
+	<p class="announcement"><img src="<?php echo URL::base();?>images/information.png"/><?php echo $announcement; ?></p>
+<?php endif; 
+	if(@$message): ?>
 		<p class="sys_message"><img src="<?php echo URL::base();?>images/accept.png"/><?php echo $message; ?></p>
 <?php endif; 
-		if (@$errors):?>
+	if (@$errors):?>
 		<p class="errors"><img src="<?php echo URL::base();?>images/error.png"/><?php echo $errors; ?></p>
 <?php endif; ?>

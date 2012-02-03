@@ -38,7 +38,7 @@
 				<div class="blog_preview">
 <?php echo BBCode::parse(substr($blog['content'],0,400)); ?>
 				</div>
-				<div class="blog_info"><span class="bold"><img src="<?php echo URL::base();?>images/user.png"/>Author:</span> <?php echo Link::user($users_data[$blog['author_id']]); ?> <span class="bold"><img src="<?php echo URL::base();?>images/comments.png"/> Comments:</span> <?php echo $blog['amount_comments']; ?> <span class="bold"> <img src="<?php echo URL::base();?>images/date.png"/> Submitted:</span> <?php echo $blog['time_posted']; ?></div>
+				<div class="blog_info"><span class="bold"><img src="<?php echo URL::base();?>images/user.png"/>Author:</span> <?php echo Link::user($users_data[$blog['author_id']]); ?> <span class="bold"><img src="<?php echo URL::base();?>images/comments.png"/>Comments:</span> <?php echo $blog['amount_comments']; ?> <span class="bold"> <img src="<?php echo URL::base();?>images/date.png"/>Submitted:</span> <?php echo $blog['time_posted']; ?></div>
 			</div>
 <?php endforeach; ?>
 		</div>

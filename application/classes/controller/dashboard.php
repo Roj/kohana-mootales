@@ -152,9 +152,9 @@ class Controller_Dashboard extends Controller_Website {
 		{
 			$this->errors.=" The category is invalid.";
 		}
-		if ( ! Valid::min_length($post['thread_content'],141))
+		if ( ! Valid::min_length($post['thread_content'],10))
 		{
-			$this->errors.=" The thread content has to be longer than 140 characters, you should use a fragment instead.";
+			$this->errors.=" The thread content has to be longer than 10 characters, try to elaborate a bit more.";
 		}
 		if ($this->errors == '')
 		{
@@ -215,10 +215,11 @@ class Controller_Dashboard extends Controller_Website {
 		{
 			$this->errors.=" The title has to be between 4 and 100 characters, and it can not be left blank.";
 		}
+		$min_content_length = ($form_view_name == 'forum/thread/edit')? 10:140;
 		if( ! Valid::not_empty($_POST['content']) OR 
-			! Valid::min_length($_POST['content'],141))
+			! Valid::min_length($_POST['content'],$min_content_length))
 		{
-			$this->errors.="The content has to be over 140 characters. You should use a fragment instead.";
+			$this->errors.="The content has to be over {$min_content_length} characters. You should use a fragment instead.";
 		}
 		if($this->errors != "")
 		{

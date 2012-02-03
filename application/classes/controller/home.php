@@ -12,6 +12,7 @@ class Controller_Home extends Controller_Website {
 		$best_blogs = $blog_model->get_best_recent();
 		$recent_frags = $frag_model->get_most_recent();
 		$recent_threads = $forum_model->get_recent_threads();
+		
 		//We need to query for the name of the authors featured in the frontpage.
 		//We'll do it the same way we query for the commenters' info on Controller_Blog->action_view()
 		

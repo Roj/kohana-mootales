@@ -6,6 +6,7 @@ abstract class Controller_Website extends Controller {
 	public $footer;
 	public $session;
 	public $logged_in;
+	public $announcement;
 	public function before()
 	{
 		parent::before();
@@ -36,6 +37,7 @@ abstract class Controller_Website extends Controller {
 		
 		View::bind_global('page_title',$this->page_title);
 		View::bind_global('logged_in',$this->logged_in);
+		View::bind_global('announcement',$this->announcement);
 		View::set_global('user_rank',$this->user_rank);
 		View::set_global('username',$this->session->get('username','anonymous'));
 		View::set_global('user_id',$this->session->get("user_id",0));
